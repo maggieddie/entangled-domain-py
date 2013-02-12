@@ -1,0 +1,34 @@
+(program
+ (def
+  (read_array a i lo hi)
+  (suite
+   (cond
+    ((comparison i (">=" (indexed len (called a)))) (suite (return)))
+    (else
+     (suite
+      (= (num) (indexed read_int (called)))
+      (= ((indexed a (subscript i))) num)
+      (= (i) (arith i ("+" 1)))
+      (expr (indexed read_array (called a i lo hi))))))))
+ (def (read_verts) (suite (return (list 1 2 3 4))))
+ (def
+  (emit_mesh vrt mesh i)
+  (suite
+   (cond
+    ((comparison i (">=" (indexed len (called mesh)))) (suite (return)))
+    (else
+     (suite
+      (= (elem_ind) (indexed mesh (subscript i)))
+      (= (elem) (indexed vrt (subscript elem_ind)))
+      (expr (indexed print (called elem)))
+      (= (i) (arith i ("+" 1)))
+      (expr (indexed emit_mesh (called vrt mesh i))))))))
+ (def
+  (test)
+  (suite
+   (= (vertex) (indexed read_verts (called)))
+   (=
+    (mesh)
+    (indexed read_array (called vertex 0 0 (indexed len (called vertex)))))
+   (expr (indexed emit_mesh (called vertex mesh 0))))))
+

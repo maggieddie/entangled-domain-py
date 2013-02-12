@@ -1,0 +1,6 @@
+(program
+ (= (lst) (list 1 2))
+ (= (lst2) (list 3 4))
+ (def (f) (suite (return 100)))
+ (expr (indexed f (called))))
+

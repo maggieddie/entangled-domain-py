@@ -1,0 +1,77 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a (void))
+ (define g$foo (void))
+ (define g$bar (void))
+ (set-then!
+  g$foo
+  (lambda (k0)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k1)
+       ((lambda (k2)
+          (dict-k
+           ("a" 1)
+           ("b" "horray!")
+           ("c" 3)
+           (lambda (rv3) (return rv3 k2))))
+        k1))
+     k0))
+  (set-then!
+   g$bar
+   (lambda (k4)
+     ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+      (lambda (return k5)
+        ((lambda (k6)
+           (g$foo
+            (lambda (rv7) (tuple-k rv7 1 (lambda (rv8) (return rv8 k6))))))
+         k5))
+      k4))
+   (g$bar
+    (lambda (rv21)
+      ((lambda (e15 k16)
+         ((lambda (i14 k17)
+            ((cps py-list?)
+             e15
+             (lambda (rv18)
+               (if rv18
+                 ((cps py-list-ref) e15 i14 k17)
+                 ((cps tuple?)
+                  e15
+                  (lambda (rv19)
+                    (if rv19
+                      ((cps tuple-ref) e15 i14 k17)
+                      ((cps dict?)
+                       e15
+                       (lambda (rv20)
+                         (if rv20
+                           ((cps dict-ref) e15 i14 k17)
+                           (error "cannot index object" k17)))))))))))
+          0
+          k16))
+       rv21
+       (lambda (rv15)
+         ((lambda (e17 k10)
+            ((lambda (i16 k11)
+               ((cps py-list?)
+                e17
+                (lambda (rv12)
+                  (if rv12
+                    ((cps py-list-ref) e17 i16 k11)
+                    ((cps tuple?)
+                     e17
+                     (lambda (rv13)
+                       (if rv13
+                         ((cps tuple-ref) e17 i16 k11)
+                         ((cps dict?)
+                          e17
+                          (lambda (rv14)
+                            (if rv14
+                              ((cps dict-ref) e17 i16 k11)
+                              (error "cannot index object" k11)))))))))))
+             "b"
+             k10))
+          rv15
+          (lambda (rv9) (set-then! g$a rv9 ($halt (void))))))))))))

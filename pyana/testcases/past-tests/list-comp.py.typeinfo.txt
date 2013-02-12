@@ -1,0 +1,53 @@
+Number of States = 135
+
+Types Info --- 
+
+tmpdict21:
+	dict5
+	dict12
+
+res:
+	dict12
+
+$seq13:
+	OOdict8
+
+set:
+	class
+
+$loop14:
+	class
+
+$i:
+	0
+
+gbl-dict:
+	dict4
+
+tmp-dict12:
+	dict5
+	dict12
+
+return:
+	exp
+
+$current-handler:
+
+g$vec:
+	OOdict8
+
+x:
+
+tuple:
+	class
+
+object:
+	class
+
+continue:
+
+g$freshfruit:
+
+List:
+	class
+

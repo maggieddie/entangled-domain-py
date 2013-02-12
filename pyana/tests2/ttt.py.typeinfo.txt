@@ -1,0 +1,50 @@
+Number of States = 127
+
+set: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict19) (call/ec (lambda (return) (let (($localo20 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo20 __init__))) (let ((_35 (b34 tmp-dict19))) (let ((b36 (return $localo20))) b36))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$a . #(struct:BAddr g$a ())) (g$b . #(struct:BAddr g$b ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+continue: 
+object: 
+	#<Cls>
+	#(struct:closure (lambda () (void)) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (object . #(struct:BAddr object ())) (List . #(struct:BAddr List ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$a . #(struct:BAddr g$a ())) (g$b . #(struct:BAddr g$b ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+tmp-dict16: 
+	 object: 
+		#hash((0 . #<set: 1000>))
+	 object: 
+		#hash((0 . #<set: 1>))
+$localo17: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+List: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict16) (call/ec (lambda (return) (let (($localo17 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo17 __init__))) (let ((_29 (b28 tmp-dict16))) (let ((b30 (return $localo17))) b30))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (List . #(struct:BAddr List ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$a . #(struct:BAddr g$a ())) (g$b . #(struct:BAddr g$b ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+tuple: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict22) (call/ec (lambda (return) (let (($localo23 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo23 __init__))) (let ((_41 (b40 tmp-dict22))) (let ((b42 (return $localo23))) b42))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$a . #(struct:BAddr g$a ())) (g$b . #(struct:BAddr g$b ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+gbl-dict: 
+	 object: 
+		#hash()
+self24: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+tmpdict25: 
+	 object: 
+		#hash((0 . #<set: 1000>))
+	 object: 
+		#hash((0 . #<set: 1>))
+g$a: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+g$b: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$current-handler: 
+return: 
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>

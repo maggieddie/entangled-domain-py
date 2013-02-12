@@ -1,0 +1,159 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$v1 (void))
+ (define g$v2 (void))
+ (define g$v3 (void))
+ (define g$v5 (void))
+ (define g$v4 (void))
+ (dict-k
+  ("c" 2)
+  (lambda (rv0)
+    (dict-k
+     (false "bar")
+     (lambda (rv1)
+       (py-list*-k
+        "hi"
+        rv1
+        (lambda (rv2)
+          (dict-k
+           ("a" 1)
+           ("b" rv0)
+           ("d" rv2)
+           (lambda (rv3)
+             (set-then!
+              g$v1
+              rv3
+              ((lambda (e15 k29)
+                 ((lambda (i14 k30)
+                    ((cps py-list?)
+                     e15
+                     (lambda (rv31)
+                       (if rv31
+                         ((cps py-list-ref) e15 i14 k30)
+                         ((cps tuple?)
+                          e15
+                          (lambda (rv32)
+                            (if rv32
+                              ((cps tuple-ref) e15 i14 k30)
+                              ((cps dict?)
+                               e15
+                               (lambda (rv33)
+                                 (if rv33
+                                   ((cps dict-ref) e15 i14 k30)
+                                   (error "cannot index object" k30)))))))))))
+                  "b"
+                  k29))
+               g$v1
+               (lambda (rv4)
+                 (set-then!
+                  g$v2
+                  rv4
+                  ((lambda (e17 k24)
+                     ((lambda (i16 k25)
+                        ((cps py-list?)
+                         e17
+                         (lambda (rv26)
+                           (if rv26
+                             ((cps py-list-ref) e17 i16 k25)
+                             ((cps tuple?)
+                              e17
+                              (lambda (rv27)
+                                (if rv27
+                                  ((cps tuple-ref) e17 i16 k25)
+                                  ((cps dict?)
+                                   e17
+                                   (lambda (rv28)
+                                     (if rv28
+                                       ((cps dict-ref) e17 i16 k25)
+                                       (error
+                                        "cannot index object"
+                                        k25)))))))))))
+                      "d"
+                      k24))
+                   g$v1
+                   (lambda (rv5)
+                     (set-then!
+                      g$v3
+                      rv5
+                      ((lambda (e19 k19)
+                         ((lambda (i18 k20)
+                            ((cps py-list?)
+                             e19
+                             (lambda (rv21)
+                               (if rv21
+                                 ((cps py-list-ref) e19 i18 k20)
+                                 ((cps tuple?)
+                                  e19
+                                  (lambda (rv22)
+                                    (if rv22
+                                      ((cps tuple-ref) e19 i18 k20)
+                                      ((cps dict?)
+                                       e19
+                                       (lambda (rv23)
+                                         (if rv23
+                                           ((cps dict-ref) e19 i18 k20)
+                                           (error
+                                            "cannot index object"
+                                            k20)))))))))))
+                          0
+                          k19))
+                       g$v3
+                       (lambda (rv6)
+                         (set-then!
+                          g$v4
+                          rv6
+                          ((lambda (e21 k14)
+                             ((lambda (i20 k15)
+                                ((cps py-list?)
+                                 e21
+                                 (lambda (rv16)
+                                   (if rv16
+                                     ((cps py-list-ref) e21 i20 k15)
+                                     ((cps tuple?)
+                                      e21
+                                      (lambda (rv17)
+                                        (if rv17
+                                          ((cps tuple-ref) e21 i20 k15)
+                                          ((cps dict?)
+                                           e21
+                                           (lambda (rv18)
+                                             (if rv18
+                                               ((cps dict-ref) e21 i20 k15)
+                                               (error
+                                                "cannot index object"
+                                                k15)))))))))))
+                              1
+                              k14))
+                           g$v3
+                           (lambda (rv13)
+                             ((lambda (e23 k8)
+                                ((lambda (i22 k9)
+                                   ((cps py-list?)
+                                    e23
+                                    (lambda (rv10)
+                                      (if rv10
+                                        ((cps py-list-ref) e23 i22 k9)
+                                        ((cps tuple?)
+                                         e23
+                                         (lambda (rv11)
+                                           (if rv11
+                                             ((cps tuple-ref) e23 i22 k9)
+                                             ((cps dict?)
+                                              e23
+                                              (lambda (rv12)
+                                                (if rv12
+                                                  ((cps dict-ref) e23 i22 k9)
+                                                  (error
+                                                   "cannot index object"
+                                                   k9)))))))))))
+                                 false
+                                 k8))
+                              rv13
+                              (lambda (rv7)
+                                (set-then!
+                                 g$v5
+                                 rv7
+                                 ($halt (void))))))))))))))))))))))))))

@@ -1,0 +1,6 @@
+(program
+ (= (a) (list (list (tuple "0" 1) 2) 3))
+ (= (b) (indexed a (subscript 0)))
+ (= (c) (indexed b (subscript 0)))
+ (= (d) (indexed c (subscript 0))))
+

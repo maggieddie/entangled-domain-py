@@ -1,0 +1,224 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define g$read_verts (void))
+ (define g$test (void))
+ (define g$emit_mesh (void))
+ (define g$read_array (void))
+ (begin
+   (set! len
+     (lambda (seq17)
+       (call/ec
+        (lambda (return)
+          (let ((cnt18 0))
+            (begin
+              (if (let ((t11 (py-list? seq17)))
+                    (begin
+                      (if t11
+                        t11
+                        (let ((t12 (set? seq17)))
+                          (begin (if t12 t12 (tuple? seq17)))))))
+                (let ((container19 (dict-ref seq17 "__containerdict__")))
+                  (begin
+                    (call/ec
+                     (lambda (break)
+                       ((lambda ($seq13 $loop14)
+                          (begin
+                            (begin (for-container $seq13 $loop14) (void))))
+                        container19
+                        (lambda (entry20)
+                          (call/ec
+                           (lambda (continue) (set! cnt18 (+ 1 cnt18))))))))
+                    (return cnt18)))
+                (cond
+                 (else
+                  (call/ec
+                   (lambda (break)
+                     ((lambda ($seq15 $loop16)
+                        (begin (begin (for-container $seq15 $loop16) (void))))
+                      seq17
+                      (lambda (entry20)
+                        (call/ec
+                         (lambda (continue) (set! cnt18 (+ cnt18 1))))))))
+                  (return cnt18))))))))))
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict22)
+       (call/ec
+        (lambda (return)
+          (let (($localo23
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo23 "__init__") tmp-dict22)
+              (return $localo23)))))))
+   (set! set
+     (lambda (tmp-dict25)
+       (call/ec
+        (lambda (return)
+          (let (($localo26 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo26 "__init__") tmp-dict25)
+              (return $localo26)))))))
+   (set! tuple
+     (lambda (tmp-dict28)
+       (call/ec
+        (lambda (return)
+          (let (($localo29
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo29 "__init__") tmp-dict28)
+              (return $localo29)))))))
+   (set! gbl-dict (dict))
+   (dict-set!
+    gbl-dict
+    object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (dict-set!
+    gbl-dict
+    List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self30 tmpdict31)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict31)
+             (set-field!
+              self30
+              "__containerdict__"
+              (dict-ref tmpdict31 "__containerdict__"))
+             (set-field! self30 "__containerdict__" tmpdict31))))))
+     ("append"
+      (lambda (self32 elem33)
+        (let ((max34 (len self32)))
+          (begin
+            (dict-set!
+             (dict-ref self32 "__containerdict__")
+             max34
+             elem33)))))))
+   (dict-set!
+    gbl-dict
+    set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self35 tmpdict36)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict36)
+             (set-field!
+              self35
+              "__containerdict__"
+              (dict-ref tmpdict36 "__containerdict__"))
+             (set-field! self35 "__containerdict__" tmpdict36))))))))
+   (dict-set!
+    gbl-dict
+    tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self37 tmp-dict38)
+        (call/ec
+         (lambda (return)
+           (if (let ((t17 (py-list? tmp-dict38)))
+                 (begin
+                   (if t17
+                     t17
+                     (let ((t18 (tuple? tmp-dict38)))
+                       (begin (if t18 t18 (set? tmp-dict38)))))))
+             (set-field!
+              self37
+              "__containerdict__"
+              (dict-ref tmp-dict38 "__containerdict__"))
+             (set-field! self37 "__containerdict__" tmp-dict38))))))))
+   (set! g$read_array
+     (lambda (a i lo hi)
+       (call/ec
+        (lambda (return)
+          (let ((num (void)))
+            (begin
+              (if (>= i (len a))
+                (begin (return (void)))
+                (begin
+                  (set! num (g$read_int))
+                  (if (if (<= lo num) (< num hi) #f)
+                    (begin
+                      (let ((b11 a))
+                        (begin
+                          (let ((i12 i))
+                            (begin
+                              (if (py-list? b11)
+                                (py-list-set! b11 i12 num)
+                                (if (dict? b11)
+                                  (dict-set! b11 i12 num)
+                                  (void)))))))
+                      (set! i (+ i 1))
+                      (g$read_array a i lo hi))
+                    (begin (return (void))))))))))))
+   (set! g$read_verts
+     (lambda ()
+       (call/ec
+        (lambda (return)
+          (begin (return (List (dict (0 1) (1 2) (2 3) (3 4)))))))))
+   (set! g$emit_mesh
+     (lambda (vrt mesh i)
+       (call/ec
+        (lambda (return)
+          (let ((elem (void)))
+            (let ((elem_ind (void)))
+              (begin
+                (if (>= i (len mesh))
+                  (begin (return (void)))
+                  (begin
+                    (set! elem_ind
+                      (let ((e13 mesh))
+                        (begin
+                          (let ((i14 i))
+                            (begin
+                              (if (py-list? e13)
+                                (py-list-ref e13 i14)
+                                (if (tuple? e13)
+                                  (tuple-ref e13 i14)
+                                  (if (dict? e13)
+                                    (dict-ref e13 i14)
+                                    (error "cannot index object")))))))))
+                    (set! elem
+                      (let ((e15 vrt))
+                        (begin
+                          (let ((i16 elem_ind))
+                            (begin
+                              (if (py-list? e15)
+                                (py-list-ref e15 i16)
+                                (if (tuple? e15)
+                                  (tuple-ref e15 i16)
+                                  (if (dict? e15)
+                                    (dict-ref e15 i16)
+                                    (error "cannot index object")))))))))
+                    (set! i (+ i 1))
+                    (g$emit_mesh vrt mesh i))))))))))
+   (set! g$test
+     (lambda ()
+       (call/ec
+        (lambda (return)
+          (let ((vertex (void)))
+            (let ((mesh (void)))
+              (begin
+                (set! mesh (List (dict (0 1) (1 1) (2 1) (3 1))))
+                (set! vertex (g$read_verts))
+                (g$read_array mesh 0 0 (len vertex))
+                (g$emit_mesh vertex mesh 0))))))))
+   (g$test)))

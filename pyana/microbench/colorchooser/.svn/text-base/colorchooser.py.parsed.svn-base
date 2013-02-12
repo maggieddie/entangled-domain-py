@@ -1,0 +1,80 @@
+(program
+ (expr (indexed print (called "Content-type: text/html\r\n")))
+ (expr
+  (indexed
+   print
+   (called
+    "<html>\n<head>\n<title>Color Chooser</title>\n</head>\n<body>\n<h1>Color Chooser</h1>")))
+ (= (form) (dict ("red" 100) ("green" 20) ("blue" 200)))
+ (= (mock_helper) (dict (100 "100") (20 "20") (200 "200")))
+ (class (Colorchooser)
+   (suite
+    (def
+     (__init__ self r g b)
+     (suite
+      (= ((indexed self (dot r))) r)
+      (= ((indexed self (dot g))) g)
+      (= ((indexed self (dot b))) b)))
+    (def
+     (do_color self)
+     (suite
+      (return
+       (tuple
+        (indexed self (dot r))
+        (indexed self (dot g))
+        (indexed self (dot b))))))
+    (def
+     (proc_color self)
+     (suite
+      (cond
+       ((comparison (indexed self (dot r)) (">" 255))
+        (= ((indexed self (dot r))) 255)))
+      (cond
+       ((comparison (indexed self (dot g)) (">" 255))
+        (= ((indexed self (dot g))) 255)))
+      (cond
+       ((comparison (indexed self (dot b)) (">" 255))
+        (= ((indexed self (dot b))) 255)))))))
+ (= (red) (indexed form (subscript "red")))
+ (= (green) (indexed form (subscript "green")))
+ (= (blue) (indexed form (subscript "blue")))
+ (= (colorchooser) (indexed Colorchooser (called red green blue)))
+ (expr
+  (indexed
+   print
+   (called
+    (arith
+     "<form action=\"colorchooser.py\" method=GET>\n\n<table>\n<tr><td>red<td><input type=\"text\" name=\"red\" value="
+     ("+" (indexed mock_helper (subscript (indexed colorchooser (dot r)))))
+     ("+" "sizee=3>\n<td rowspan=3 width=16><br>")))))
+ (expr
+  (indexed
+   print
+   (called
+    (arith
+     "<td rowspan=3 width=96 bgcolor=\"%02X%02X%02X\"><br>"
+     ("+" (indexed mock_helper (subscript (indexed colorchooser (dot r)))))
+     ("+" (indexed mock_helper (subscript (indexed colorchooser (dot g)))))
+     ("+" (indexed mock_helper (subscript (indexed colorchooser (dot b)))))))))
+ (expr
+  (indexed
+   print
+   (called
+    (arith
+     "<tr><td>green<td> <input type=\"text\" name=\"green\" value="
+     ("+" " size=3>")
+     ("+" (indexed mock_helper (subscript (indexed colorchooser (dot g)))))))))
+ (expr
+  (indexed
+   print
+   (called
+    (arith
+     "<tr><td>blue<td> <input type=\"text\" name=\"blue\" value="
+     ("+" "size=3>")
+     ("+" (indexed mock_helper (subscript (indexed colorchooser (dot b)))))))))
+ (expr
+  (indexed
+   print
+   (called
+    "</table>\n\n<p><input type=\"submit\" value=\"Update\">\n\n</form>\n\n<p><hr>\n\n<p>Maintained by <a href=\"http://www.johnloomis.org\"> John Loomis</a>, \nlast updated <i>29 February 2008 </i></p>\n\n</body>\n</html>"))))
+

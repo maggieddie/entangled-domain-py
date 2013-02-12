@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ucombinator/!svn/ver/1396/projects/pyana/testcases/fact
+END
+utils_pytrans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/fact/utils_pytrans.rkt
+END
+fact.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1394/projects/pyana/testcases/fact/fact.py.parsed
+END
+fact.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ucombinator/!svn/ver/1394/projects/pyana/testcases/fact/fact.py
+END
+fact.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1394/projects/pyana/testcases/fact/fact.py.desug.rkt
+END
+fact.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1394/projects/pyana/testcases/fact/fact.py.trans.rkt
+END
+README_fact
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/fact/README_fact
+END
+fact.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1396/projects/pyana/testcases/fact/fact.py.desug
+END
+fact.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1396/projects/pyana/testcases/fact/fact.py.trans
+END
+fact.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1396/projects/pyana/testcases/fact/fact.py.anormalnt
+END
+fact.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1394/projects/pyana/testcases/fact/fact.py.typeinfo.txt
+END

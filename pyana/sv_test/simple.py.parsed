@@ -1,0 +1,12 @@
+(program
+ (= (lst) (list 1 2 3))
+ (def
+  (simple_arr_set x)
+  (suite
+   (cond
+    ((comparison x ("<" (indexed len (called lst))))
+     (suite (= ((indexed lst (subscript x))) 100) (return 100)))
+    (else (suite (return ("-" 1)))))))
+ (expr (indexed simple_arr_set (called 10)))
+ (expr (indexed print (called lst))))
+

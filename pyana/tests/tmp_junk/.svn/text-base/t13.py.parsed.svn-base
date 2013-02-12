@@ -1,0 +1,2 @@
+(program (= (a) o) (= (b) o) (= ((indexed o (dot x))) 1))
+

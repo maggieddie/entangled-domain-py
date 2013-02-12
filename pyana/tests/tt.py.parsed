@@ -1,0 +1,8 @@
+(program
+ (= (a) (list 0 1 2 3))
+ (= ((indexed a (subscript 1))) (list "1" "2" "3"))
+ (= (y) (indexed a (subscript 1)))
+ (= (b) (indexed y (subscript 1)))
+ (expr (indexed print (called y)))
+ (expr (indexed print (called b))))
+

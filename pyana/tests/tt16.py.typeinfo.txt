@@ -1,0 +1,84 @@
+Number of States = 191
+
+set: 
+	proc
+	class
+a: 
+	num
+	bool
+	string
+$localo19: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c28 c15))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c25 c15))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c16 c15))>) ("__class__" . #<set: List>))
+List: 
+	proc
+	class
+tmp-dict18: 
+	 object: 
+		#hash((0 . #<set: #f>) (1 . #<set: 2>))
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: "hi">))
+	 object: 
+		#hash((0 . #<set: "hi">) (1 . #<set: #f>))
+tuple: 
+	class
+	proc
+tmpdict27: 
+	 object: 
+		#hash((0 . #<set: #f>) (1 . #<set: 2>))
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: "hi">))
+	 object: 
+		#hash((0 . #<set: "hi">) (1 . #<set: #f>))
+self26: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c28 c15))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c25 c15))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c16 c15))>) ("__class__" . #<set: List>))
+g$f: 
+	proc
+g$y: 
+	string
+g$z: 
+	bool
+g$x: 
+	num
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e11: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c16 c15))>) ("__class__" . #<set: List>))
+i12: 
+	num
+e13: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c25 c15))>) ("__class__" . #<set: List>))
+i14: 
+	num
+e15: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c28 c15))>) ("__class__" . #<set: List>))
+i16: 
+	num
+return: 
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP

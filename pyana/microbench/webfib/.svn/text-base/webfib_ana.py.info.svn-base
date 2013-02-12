@@ -1,0 +1,125 @@
+# States Explored = 573
+
+cpu time: 661 real time: 661 gc time: 0
+
+!!! Vulnerabilities #: 1 
+ 
+ ((anf py-print) b148): XSS Attacks 
+--------
+
+ i: 
+	0
+	10
+	9
+	8
+	7
+	6
+	5
+	4
+	3
+	2
+	1
+
+ set: 
+	#<Cls>
+	(lambda (tmp-dict22) (call/ec (lambda (return) (let (($localo23 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo23 __init__))) (let ((_35 (b34 tmp-dict22))) (let ((b36 (return $localo23))) b36)))))))
+
+ a: 
+	21
+	34
+	0
+	13
+	8
+	5
+	3
+	2
+	1
+	55
+
+ b: 
+	21
+	34
+	13
+	8
+	5
+	3
+	2
+	1
+	89
+	55
+
+ len: 
+	(lambda (seq14) (call/ec (lambda (return) (let ((cnt15 0)) (let ((t11 ((anf py-list?) seq14))) (let ((b1 (if t11 t11 (let ((t12 ((anf set?) seq14))) (let ((b2 (if t12 t12 ((anf tuple?) seq14)))) b2))))) (let ((b0 (if b1 (let ((container16 ((anf dict-ref) seq14 __containerdict__))) (let ((_10 (call/ec (lambda (break) (let ((b6 (lambda ($seq13 $loop14) (let ((_4 ((anf for-container) $seq13 $loop14))) (let ((b5 (void))) (let ((b3 b5)) b3)))))) (let ((b9 (lambda (entry17) (call/ec (lambda (continue) (let ((b7 ((anf +) 1 cnt15))) (let ((_8 (set! cnt15 b7))) (void)))))))) (b6 container16 b9))))))) (let ((b11 (return cnt15))) b11))) (let ((b19 (call/ec (lambda (break) (let ((b15 (lambda ($seq15 $loop16) (let ((_13 ((anf for-container) $seq15 $loop16))) (let ((b14 (void))) (let ((b12 b14)) b12)))))) (let ((b18 (lambda (entry17) (call/ec (lambda (continue) (let ((b16 ((anf +) cnt15 1))) (let ((_17 (set! cnt15 b16))) (void)))))))) (b15 seq14 b18))))))) (let ((b20 (return cnt15))) (let ((b21 (else b19 b20))) (cond b21))))))) b0)))))))
+
+ object: 
+	#<Cls>
+	(lambda () (void))
+
+ List: 
+	#<Cls>
+	(lambda (tmp-dict19) (call/ec (lambda (return) (let (($localo20 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo20 __init__))) (let ((_29 (b28 tmp-dict19))) (let ((b30 (return $localo20))) b30)))))))
+
+ tuple: 
+	#<Cls>
+	(lambda (tmp-dict25) (call/ec (lambda (return) (let (($localo26 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo26 __init__))) (let ((_41 (b40 tmp-dict25))) (let ((b42 (return $localo26))) b42)))))))
+
+ gbl-dict: 
+	 inst 
+		 fields and taints are: 
+		 fields and values are: 
+
+ n: 
+	10
+
+ g$WebFib: 
+	#<Cls>
+	(lambda (n) (call/ec (lambda (return) (let (($localo11 (dict (__class__ g$WebFib) (__type__ instWebFib)))) (let ((b79 (get-field $localo11 __init__))) (let ((_80 (b79 n))) (let ((b81 (return $localo11))) b81)))))))
+
+ tmp: 
+	21
+	34
+	0
+	13
+	8
+	5
+	3
+	2
+	1
+
+ loop: 
+	(lambda () (let ((b97 (get-field self n))) (let ((b98 ((anf <) i b97))) (if b98 (let ((_109 (call/ec (lambda (continue) (let ((_99 (set! tmp a))) (let ((_100 (void))) (let ((_101 (set! a b))) (let ((_102 (void))) (let ((b103 ((anf +) tmp b))) (let ((_104 (set! b b103))) (let ((_105 (void))) (let ((b107 ((anf +) i 1))) (let ((_108 (set! i b107))) (let ((b106 (void))) b106)))))))))))))) (let ((b110 (loop))) b110)) (void)))))
+
+ any_int: 
+	10
+	55
+
+ g$str_my: 
+	(lambda (any_int) (call/ec (lambda (return) (let ((b129 ((anf -) any_int 1))) (let ((b130 ((anf -) any_int b129))) (let ((b131 ((anf *) b130 get-tainted))) (let ((b128 (return b131))) b128)))))))
+
+ g$form: 
+	 inst 
+		 fields and taints are: 
+			 "terms" #<set: "tainted"> 
+ 		 fields and values are: 
+			 "terms" #<set: 10> 
+ 
+ g$num: 
+	10
+
+ g$fib: 
+	 inst 
+		 fields and taints are: 
+			 "n" #<set: "tainted"> 
+ 			 "res" #<set: "untainted"> 
+ 			 "__type__" #<set: "untainted"> 
+ 			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "n" #<set: 10> 
+ 			 "res" #<set: 0 55> 
+ 			 "__type__" #<set: "instWebFib"> 
+ 			 "__class__" #<set: g$WebFib> 
+ # of terms: 18 
+# of singleton set of terms: 8 
+% of singleton set in all terms: 4/9 
+# of inst: 3 
+: 

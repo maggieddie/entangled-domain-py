@@ -1,0 +1,17 @@
+(program
+ (= (a) (list "b" (list "A" "B") "c"))
+ (expr (indexed print (called a)))
+ (expr (indexed print (called (indexed a (subscript 0)))))
+ (expr (indexed print (called (indexed a (subscript 1)))))
+ (expr (indexed print (called (indexed a (subscript 2)))))
+ (expr (indexed print (called "before deleting....")))
+ (expr (indexed len (called a)))
+ (del (indexed a (subscript 0)))
+ (expr (indexed print (called a)))
+ (expr (indexed print (called "after deleting...")))
+ (expr (indexed len (called a)))
+ (expr (indexed print (called (indexed a (subscript 0) (subscript 0)))))
+ (for x a (suite (expr (indexed print (called x)))))
+ (expr (indexed a (dot append) (called "D")))
+ (expr (indexed print (called a))))
+

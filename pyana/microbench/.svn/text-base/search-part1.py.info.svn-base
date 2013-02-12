@@ -1,0 +1,501 @@
+Number of States = 3018
+
+
+ i: 
+	2
+	3
+	0
+	1
+
+ set: 
+	#<Cls>
+	(lambda (tmp-dict39) (call/ec (lambda (return) (let (($localo40 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo40 __init__))) (let ((_35 (b34 tmp-dict39))) (let ((b36 (return $localo40))) b36)))))))
+
+ l: 
+	3
+
+ p: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+				3 #<set: "untainted"> 
+				4 #<set: "untainted"> 
+				5 #<set: "untainted"> 
+				6 #<set: "untainted"> 
+				7 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "<"> 
+				1 #<set: "s"> 
+				2 #<set: "c"> 
+				3 #<set: "r"> 
+				4 #<set: "i"> 
+				5 #<set: "p"> 
+				6 #<set: "t"> 
+				7 #<set: ">"> 
+			 "__class__" #<set: List> 
+ 
+ entry34: 
+	r
+	e
+	s
+	t
+	p
+	i
+	c
+	>
+	<
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instTuple"> 
+ 			 "details:" 
+				0 #<set: "Numbers and Colors"> 
+				1 #<set: "numbersandcolors.html"> 
+			 "__class__" #<set: tuple> 
+ 	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instTuple"> 
+ 			 "details:" 
+				0 #<set: "Numbers and Colors With Tag"> 
+				1 #<set: "numbersandcolorswithtag.html"> 
+			 "__class__" #<set: tuple> 
+ 	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instTuple"> 
+ 			 "details:" 
+				0 #<set: "Numbers"> 
+				1 #<set: "numbers.html"> 
+			 "__class__" #<set: tuple> 
+ 	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instTuple"> 
+ 			 "details:" 
+				0 #<set: "Colors"> 
+				1 #<set: "colors.html"> 
+			 "__class__" #<set: tuple> 
+ 	red
+	blue
+	three
+
+ len: 
+	(lambda (seq31) (call/ec (lambda (return) (let ((cnt32 0)) (let ((t11 ((anf py-list?) seq31))) (let ((b1 (if t11 t11 (let ((t12 ((anf set?) seq31))) (let ((b2 (if t12 t12 ((anf tuple?) seq31)))) b2))))) (let ((b0 (if b1 (let ((container33 ((anf dict-ref) seq31 __containerdict__))) (let ((_10 (call/ec (lambda (break) (let ((b6 (lambda ($seq13 $loop14) (let ((_4 ((anf for-container) $seq13 $loop14))) (let ((b5 (void))) (let ((b3 b5)) b3)))))) (let ((b9 (lambda (entry34) (call/ec (lambda (continue) (let ((b7 ((anf +) 1 cnt32))) (let ((_8 (set! cnt32 b7))) (void)))))))) (b6 container33 b9))))))) (let ((b11 (return cnt32))) b11))) (let ((b19 (call/ec (lambda (break) (let ((b15 (lambda ($seq15 $loop16) (let ((_13 ((anf for-container) $seq15 $loop16))) (let ((b14 (void))) (let ((b12 b14)) b12)))))) (let ((b18 (lambda (entry34) (call/ec (lambda (continue) (let ((b16 ((anf +) cnt32 1))) (let ((_17 (set! cnt32 b16))) (void)))))))) (b15 seq31 b18))))))) (let ((b20 (return cnt32))) (let ((b21 (else b19 b20))) (cond b21))))))) b0)))))))
+
+ object: 
+	#<Cls>
+	(lambda () (void))
+
+ List: 
+	#<Cls>
+	(lambda (tmp-dict36) (call/ec (lambda (return) (let (($localo37 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo37 __init__))) (let ((_29 (b28 tmp-dict36))) (let ((b30 (return $localo37))) b30)))))))
+
+ tuple: 
+	#<Cls>
+	(lambda (tmp-dict42) (call/ec (lambda (return) (let (($localo43 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo43 __init__))) (let ((_41 (b40 tmp-dict42))) (let ((b42 (return $localo43))) b42)))))))
+
+ gbl-dict: 
+	 inst 
+		 fields and taints are: 
+		 fields and values are: 
+
+ g$OR: 
+	OR
+
+ g$CASE_SENSITIVE: 
+	Sensitive
+
+ g$SCRIPT_PAT: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+				3 #<set: "untainted"> 
+				4 #<set: "untainted"> 
+				5 #<set: "untainted"> 
+				6 #<set: "untainted"> 
+				7 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "<"> 
+				1 #<set: "s"> 
+				2 #<set: "c"> 
+				3 #<set: "r"> 
+				4 #<set: "i"> 
+				5 #<set: "p"> 
+				6 #<set: "t"> 
+				7 #<set: ">"> 
+			 "__class__" #<set: List> 
+ 
+ lst: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "red"> 
+				1 #<set: "blue"> 
+				2 #<set: "three"> 
+			 "__class__" #<set: List> 
+ 
+ res_str: 
+	
+	red
+	redblue
+	redbluethree
+
+ loop: 
+	(lambda () (let ((b94 ((anf <) i l))) (if b94 (let ((_108 (call/ec (lambda (continue) (let ((e11 lst)) (let ((i12 i)) (let ((b99 ((anf py-list?) e11))) (let ((b98 (if b99 ((anf py-list-ref) e11 i12) (let ((b100 ((anf tuple?) e11))) (if b100 ((anf tuple-ref) e11 i12) (let ((b101 ((anf dict?) e11))) (if b101 ((anf dict-ref) e11 i12) (error cannot index object)))))))) (let ((b97 b98)) (let ((b96 b97)) (let ((b95 b96)) (let ((b102 ((anf +) res_str b95))) (let ((_103 (set! res_str b102))) (let ((_104 (void))) (let ((b106 ((anf +) i 1))) (let ((_107 (set! i b106))) (let ((b105 (void))) b105))))))))))))))))) (let ((b109 (loop))) b109)) (void))))
+	(lambda () (let ((b231 ((anf <) indx len_res))) (if b231 (let ((_276 (call/ec (lambda (continue) (let ((b232 (get-field self body))) (let ((b233 ((anf +) b232 <li <a href="test/))) (let ((e17 (get-field self result))) (let ((i18 indx)) (let ((b238 ((anf py-list?) e17))) (let ((b237 (if b238 ((anf py-list-ref) e17 i18) (let ((b239 ((anf tuple?) e17))) (if b239 ((anf tuple-ref) e17 i18) (let ((b240 ((anf dict?) e17))) (if b240 ((anf dict-ref) e17 i18) (error cannot index object)))))))) (let ((b236 b237)) (let ((b235 b236)) (let ((b234 b235)) (let ((e19 b234)) (let ((i20 1)) (let ((b245 ((anf py-list?) e19))) (let ((b244 (if b245 ((anf py-list-ref) e19 i20) (let ((b246 ((anf tuple?) e19))) (if b246 ((anf tuple-ref) e19 i20) (let ((b247 ((anf dict?) e19))) (if b247 ((anf dict-ref) e19 i20) (error cannot index object)))))))) (let ((b243 b244)) (let ((b242 b243)) (let ((b241 b242)) (let ((b248 ((anf +) b233 b241))) (let ((b249 ((anf +) b248 ?search=true&term=))) (let ((b250 (get-field self req))) (let ((b251 (get-field b250 getData))) (let ((b252 (b251))) (let ((b253 (g$lst_to_str b252))) (let ((b254 ((anf +) b249 b253))) (let ((b255 ((anf +) b254 ">
+))) (let ((e21 (get-field self result))) (let ((i22 indx)) (let ((b260 ((anf py-list?) e21))) (let ((b259 (if b260 ((anf py-list-ref) e21 i22) (let ((b261 ((anf tuple?) e21))) (if b261 ((anf tuple-ref) e21 i22) (let ((b262 ((anf dict?) e21))) (if b262 ((anf dict-ref) e21 i22) (error cannot index object)))))))) (let ((b258 b259)) (let ((b257 b258)) (let ((b256 b257)) (let ((e23 b256)) (let ((i24 0)) (let ((b267 ((anf py-list?) e23))) (let ((b266 (if b267 ((anf py-list-ref) e23 i24) (let ((b268 ((anf tuple?) e23))) (if b268 ((anf tuple-ref) e23 i24) (let ((b269 ((anf dict?) e23))) (if b269 ((anf dict-ref) e23 i24) (error cannot index object)))))))) (let ((b265 b266)) (let ((b264 b265)) (let ((b263 b264)) (let ((b270 ((anf +) b255 b263))) (let ((b271 ((anf +) b270 </a>
+))) (let ((_272 (set-field! self body b271))) (let ((b274 ((anf +) indx 1))) (let ((_275 (set! indx b274))) (let ((b273 (void))) b273)))))))))))))))))))))))))))))))))))))))))))))))) (let ((b277 (loop))) b277)) (void))))
+	(lambda () (let ((b125 (len s))) (let ((b126 ((anf -) b125 tmpl))) (let ((b127 ((anf <=) i b126))) (if b127 (let ((_159 (call/ec (lambda (continue) (let ((_128 (set! j i))) (let ((_129 (void))) (let ((_155 (call/ec (lambda (break) (let ((b133 (lambda ($seq19 $loop20) (let ((_131 ((anf for-container) $seq19 $loop20))) (let ((b132 (void))) (let ((b130 b132)) b130)))))) (let ((b154 (lambda (i15) (call/ec (lambda (continue) (let ((_134 (set! c i15))) (let ((_135 (void))) (let ((e13 s)) (let ((i14 j)) (let ((b142 ((anf py-list?) e13))) (let ((b141 (if b142 ((anf py-list-ref) e13 i14) (let ((b143 ((anf tuple?) e13))) (if b143 ((anf tuple-ref) e13 i14) (let ((b144 ((anf dict?) e13))) (if b144 ((anf dict-ref) e13 i14) (error cannot index object)))))))) (let ((b140 b141)) (let ((b139 b140)) (let ((b138 b139)) (let ((b145 ((anf not-equal?) c b138))) (let ((b137 (if b145 (let ((b146 (break))) b146) (let ((b147 ((anf +) j 1))) (let ((_148 (set! j b147))) (let ((_149 (void))) (let ((b151 ((anf -) j i))) (let ((b152 ((anf equal?) b151 tmpl))) (let ((b150 (if b152 (let ((b153 (return #t))) b153) (void)))) b150))))))))) (let ((b136 b137)) b136))))))))))))))))) (b133 p b154))))))) (let ((b157 ((anf +) i 1))) (let ((_158 (set! i b157))) (let ((b156 (void))) b156)))))))))) (let ((b160 (loop))) b160)) (void))))))
+
+ g$lst_to_str: 
+	(lambda (lst) (call/ec (lambda (return) (let ((l (void))) (let ((i (void))) (let ((res_str (void))) (let ((b87 (len lst))) (let ((_88 (set! l b87))) (let ((_89 (void))) (let ((_90 (set! i 0))) (let ((_91 (void))) (let ((_92 (set! res_str ))) (let ((_93 (void))) (let ((_115 (call/ec (lambda (break) (let ((loop (void))) (let ((b110 (lambda () (let ((b94 ((anf <) i l))) (if b94 (let ((_108 (call/ec (lambda (continue) (let ((e11 lst)) (let ((i12 i)) (let ((b99 ((anf py-list?) e11))) (let ((b98 (if b99 ((anf py-list-ref) e11 i12) (let ((b100 ((anf tuple?) e11))) (if b100 ((anf tuple-ref) e11 i12) (let ((b101 ((anf dict?) e11))) (if b101 ((anf dict-ref) e11 i12) (error cannot index object)))))))) (let ((b97 b98)) (let ((b96 b97)) (let ((b95 b96)) (let ((b102 ((anf +) res_str b95))) (let ((_103 (set! res_str b102))) (let ((_104 (void))) (let ((b106 ((anf +) i 1))) (let ((_107 (set! i b106))) (let ((b105 (void))) b105))))))))))))))))) (let ((b109 (loop))) b109)) (void)))))) (let ((_111 (set! loop b110))) (let ((_112 (void))) (let ((_113 (loop))) (let ((b114 (void))) b114)))))))))) (let ((b116 (return res_str))) b116)))))))))))))))
+
+ s: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+				3 #<set: "untainted"> 
+				4 #<set: "untainted"> 
+				5 #<set: "untainted"> 
+				6 #<set: "untainted"> 
+				7 #<set: "untainted"> 
+				8 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "e"> 
+				1 #<set: "<"> 
+				2 #<set: "s"> 
+				3 #<set: "c"> 
+				4 #<set: "r"> 
+				5 #<set: "i"> 
+				6 #<set: "p"> 
+				7 #<set: "t"> 
+				8 #<set: ">"> 
+			 "__class__" #<set: List> 
+ 	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "red"> 
+				1 #<set: "blue"> 
+				2 #<set: "three"> 
+			 "__class__" #<set: List> 
+ 
+ j: 
+	6
+	7
+	4
+	5
+	2
+	3
+	0
+	1
+	8
+	9
+
+ c: 
+	r
+	s
+	t
+	p
+	i
+	c
+	>
+	<
+
+ tmpl: 
+	8
+
+ g$issubstring: 
+	(lambda (s p) (call/ec (lambda (return) (let ((j (void))) (let ((c (void))) (let ((tmpl (void))) (let ((i (void))) (let ((_120 (set! i 0))) (let ((_121 (void))) (let ((b122 (len p))) (let ((_123 (set! tmpl b122))) (let ((_124 (void))) (let ((_166 (call/ec (lambda (break) (let ((loop (void))) (let ((b161 (lambda () (let ((b125 (len s))) (let ((b126 ((anf -) b125 tmpl))) (let ((b127 ((anf <=) i b126))) (if b127 (let ((_159 (call/ec (lambda (continue) (let ((_128 (set! j i))) (let ((_129 (void))) (let ((_155 (call/ec (lambda (break) (let ((b133 (lambda ($seq19 $loop20) (let ((_131 ((anf for-container) $seq19 $loop20))) (let ((b132 (void))) (let ((b130 b132)) b130)))))) (let ((b154 (lambda (i15) (call/ec (lambda (continue) (let ((_134 (set! c i15))) (let ((_135 (void))) (let ((e13 s)) (let ((i14 j)) (let ((b142 ((anf py-list?) e13))) (let ((b141 (if b142 ((anf py-list-ref) e13 i14) (let ((b143 ((anf tuple?) e13))) (if b143 ((anf tuple-ref) e13 i14) (let ((b144 ((anf dict?) e13))) (if b144 ((anf dict-ref) e13 i14) (error cannot index object)))))))) (let ((b140 b141)) (let ((b139 b140)) (let ((b138 b139)) (let ((b145 ((anf not-equal?) c b138))) (let ((b137 (if b145 (let ((b146 (break))) b146) (let ((b147 ((anf +) j 1))) (let ((_148 (set! j b147))) (let ((_149 (void))) (let ((b151 ((anf -) j i))) (let ((b152 ((anf equal?) b151 tmpl))) (let ((b150 (if b152 (let ((b153 (return #t))) b153) (void)))) b150))))))))) (let ((b136 b137)) b136))))))))))))))))) (b133 p b154))))))) (let ((b157 ((anf +) i 1))) (let ((_158 (set! i b157))) (let ((b156 (void))) b156)))))))))) (let ((b160 (loop))) b160)) (void)))))))) (let ((_162 (set! loop b161))) (let ((_163 (void))) (let ((_164 (loop))) (let ((b165 (void))) b165)))))))))) (let ((b167 (return #f))) b167))))))))))))))
+
+ data: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+				3 #<set: "untainted"> 
+				4 #<set: "untainted"> 
+				5 #<set: "untainted"> 
+				6 #<set: "untainted"> 
+				7 #<set: "untainted"> 
+				8 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "e"> 
+				1 #<set: "<"> 
+				2 #<set: "s"> 
+				3 #<set: "c"> 
+				4 #<set: "r"> 
+				5 #<set: "i"> 
+				6 #<set: "p"> 
+				7 #<set: "t"> 
+				8 #<set: ">"> 
+			 "__class__" #<set: List> 
+ 	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "red"> 
+				1 #<set: "blue"> 
+				2 #<set: "three"> 
+			 "__class__" #<set: List> 
+ 
+ g$Request: 
+	#<Cls>
+	(lambda (data) (call/ec (lambda (return) (let (($localo16 (dict (__class__ g$Request) (__type__ instRequest)))) (let ((b171 (get-field $localo16 __init__))) (let ((_172 (b171 data))) (let ((b173 (return $localo16))) b173)))))))
+
+ res: 
+	#f
+	#t
+
+ req: 
+	 inst 
+		 fields and taints are: 
+			 "data" #<set: "tainted"> 
+ 			 "__type__" #<set: "untainted"> 
+ 			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "data" #<set: #<OLoc> -1> 
+ 			 "__type__" #<set: "instRequest"> 
+ 			 "__class__" #<set: g$Request> 
+ 	 inst 
+		 fields and taints are: 
+			 "data" 
+				"__type__" #<set: "untainted"> 
+				"__containerdict__" #<set: "untainted"> 
+				"__class__" #<set: "untainted"> 
+			 "__type__" #<set: "untainted"> 
+ 			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "data" 
+				"__type__" #<set: "instPyList"> 
+				"__containerdict__" #<set: #<OLoc>> 
+				"__class__" #<set: List> 
+			 "__type__" #<set: "instRequest"> 
+ 			 "__class__" #<set: g$Request> 
+ 
+ g$Response: 
+	#<Cls>
+	(lambda (req) (call/ec (lambda (return) (let (($localo25 (dict (__class__ g$Response) (__type__ instResponse)))) (let ((b201 (get-field $localo25 __init__))) (let ((_202 (b201 req))) (let ((b203 (return $localo25))) b203)))))))
+
+ tmp: 
+	<div id= "search_results">
+<ol>)
+
+
+ indx: 
+	4
+	2
+	3
+	0
+	1
+
+ len_res: 
+	4
+
+ input: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+				3 #<set: "untainted"> 
+				4 #<set: "untainted"> 
+				5 #<set: "untainted"> 
+				6 #<set: "untainted"> 
+				7 #<set: "untainted"> 
+				8 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "e"> 
+				1 #<set: "<"> 
+				2 #<set: "s"> 
+				3 #<set: "c"> 
+				4 #<set: "r"> 
+				5 #<set: "i"> 
+				6 #<set: "p"> 
+				7 #<set: "t"> 
+				8 #<set: ">"> 
+			 "__class__" #<set: List> 
+ 	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+				2 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: "red"> 
+				1 #<set: "blue"> 
+				2 #<set: "three"> 
+			 "__class__" #<set: List> 
+ 
+ g$Search: 
+	#<Cls>
+	(lambda (input) (call/ec (lambda (return) (let (($localo26 (dict (__class__ g$Search) (__type__ instSearch)))) (let ((b297 (get-field $localo26 __init__))) (let ((_298 (b297 input))) (let ((b299 (return $localo26))) b299)))))))
+
+ simulated_cgi_entry1: 
+	 inst 
+		 fields and taints are: 
+			 "case" #<set: "untainted"> 
+ 			 "files" 
+				"__type__" #<set: "untainted"> 
+				"__containerdict__" #<set: "untainted"> 
+				"__class__" #<set: "untainted"> 
+			 "terms" 
+				"__type__" #<set: "untainted"> 
+				"__containerdict__" #<set: "untainted"> 
+				"__class__" #<set: "untainted"> 
+			 "boolean" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "case" #<set: "Sensitive"> 
+ 			 "files" 
+				"__type__" #<set: "instPyList"> 
+				"__containerdict__" #<set: #<OLoc>> 
+				"__class__" #<set: List> 
+			 "terms" 
+				"__type__" #<set: "instPyList"> 
+				"__containerdict__" #<set: #<OLoc>> 
+				"__class__" #<set: List> 
+			 "boolean" #<set: "OR"> 
+ 
+ g$test_init_input: 
+	(lambda () (call/ec (lambda (return) (let ((simulated_cgi_entry1 (void))) (let ((b363 (dict (0 red) (1 blue) (2 three)))) (let ((b364 (List b363))) (let ((b365 (dict (0 colors.html) (1 numbers.html) (2 numbersandcolors.html) (3 numbersandcolorswithtag.html)))) (let ((b366 (List b365))) (let ((b367 (dict (terms b364) (boolean g$OR) (case g$CASE_SENSITIVE) (files b366)))) (let ((_368 (set! simulated_cgi_entry1 b367))) (let ((_369 (void))) (let ((e27 simulated_cgi_entry1)) (let ((i28 terms)) (let ((b373 ((anf py-list?) e27))) (let ((b372 (if b373 ((anf py-list-ref) e27 i28) (let ((b374 ((anf tuple?) e27))) (if b374 ((anf tuple-ref) e27 i28) (let ((b375 ((anf dict?) e27))) (if b375 ((anf dict-ref) e27 i28) (error cannot index object)))))))) (let ((b371 b372)) (let ((b370 (return b371))) b370)))))))))))))))))
+
+ g$mock_mal_strlst: 
+	(lambda () (call/ec (lambda (return) (let ((b380 (dict (0 e) (1 <) (2 s) (3 c) (4 r) (5 i) (6 p) (7 t) (8 >)))) (let ((b381 (List b380))) (let ((b379 (return b381))) b379))))))
+
+ simulated_cgi_entry2: 
+	 inst 
+		 fields and taints are: 
+			 "terms" 
+				"__type__" #<set: "untainted"> 
+				"__containerdict__" #<set: "untainted"> 
+				"__class__" #<set: "untainted"> 
+		 fields and values are: 
+			 "terms" 
+				"__type__" #<set: "instPyList"> 
+				"__containerdict__" #<set: #<OLoc>> 
+				"__class__" #<set: List> 
+
+ g$gen_malicious_input: 
+	(lambda () (call/ec (lambda (return) (let ((simulated_cgi_entry2 (void))) (let ((b385 (g$mock_mal_strlst))) (let ((b386 (dict (terms b385)))) (let ((_387 (set! simulated_cgi_entry2 b386))) (let ((_388 (void))) (let ((e29 simulated_cgi_entry2)) (let ((i30 terms)) (let ((b392 ((anf py-list?) e29))) (let ((b391 (if b392 ((anf py-list-ref) e29 i30) (let ((b393 ((anf tuple?) e29))) (if b393 ((anf tuple-ref) e29 i30) (let ((b394 ((anf dict?) e29))) (if b394 ((anf dict-ref) e29 i30) (error cannot index object)))))))) (let ((b390 b391)) (let ((b389 (return b390))) b389))))))))))))))
+
+ g$srch1: 
+	 inst 
+		 fields and taints are: 
+			 "resp" 
+				"req" #<set: "untainted"> 
+				"body" #<set: "untainted" "tainted"> 
+				"__type__" #<set: "untainted"> 
+				"result" #<set: "untainted"> 
+				"__class__" #<set: "untainted"> 
+			 "__type__" #<set: "untainted"> 
+ 			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "resp" 
+				"req" #<set: #<OLoc>> 
+				"body" #<set: "" "<li <a href=\"test/colors.html?search=true&term=redbluethree\">\nColors</a>\n" "<li <a href=\"test/colors.html?search=true&term=redbluethree\">\nColors</a>\n<li <a href=\"test/numbers.html?search=true&term=redbluethree\">\nNumbers</a>\n" "<li <a href=\"test/colors.html?search=true&term=redbluethree\">\nColors</a>\n<li <a href=\"test/numbers.html?search=true&term=redbluethree\">\nNumbers</a>\n<li <a href=\"test/numbersandcolors.html?search=true&term=redbluethree\">\nNumbers and Colors</a>\n" "<li <a href=\"test/colors.html?search=true&term=redbluethree\">\nColors</a>\n<li <a href=\"test/numbers.html?search=true&term=redbluethree\">\nNumbers</a>\n<li <a href=\"test/numbersandcolors.html?search=true&term=redbluethree\">\nNumbers and Colors</a>\n<li <a href=\"test/numbersandcolorswithtag.html?search=true&term=redbluethree\">\nNumbers and Colors With Tag</a>\n</ol>\n</div>\n" "<li <a href=\"test/colors.html?search=true&term=redbluethree\">\nColors</a>\n<li <a href=\"test/numbers.html?search=true&term=redbluethree\">\nNumbers</a>\n<li <a href=\"test/numbersandcolors.html?search=true&term=redbluethree\">\nNumbers and Colors</a>\n<li <a href=\"test/numbersandcolorswithtag.html?search=true&term=redbluethree\">\nNumbers and Colors With Tag</a>\n"> 
+				"__type__" #<set: "instResponse"> 
+				"result" #<set: #<OLoc> #<OLoc>> 
+				"__class__" #<set: g$Response> 
+			 "__type__" #<set: "instSearch"> 
+ 			 "__class__" #<set: g$Search> 
+ 
+ g$srch2: 
+	 inst 
+		 fields and taints are: 
+			 "resp" 
+				"req" #<set: "untainted"> 
+				"body" #<set: "untainted"> 
+				"__type__" #<set: "untainted"> 
+				"result" #<set: "untainted"> 
+				"__class__" #<set: "untainted"> 
+			 "__type__" #<set: "untainted"> 
+ 			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "resp" 
+				"req" #<set: #<OLoc>> 
+				"body" #<set: ""> 
+				"__type__" #<set: "instResponse"> 
+				"result" #<set: #<OLoc>> 
+				"__class__" #<set: g$Response> 
+			 "__type__" #<set: "instSearch"> 
+ 			 "__class__" #<set: g$Search> 
+ 

@@ -1,0 +1,15 @@
+(program
+ (= (lst) (list "A" "A" "C" "D"))
+ (expr (indexed print (called lst)))
+ (expr (indexed print (called (indexed lst (dot count) (called "A")))))
+ (expr (indexed lst (dot insert) (called 0 "a")))
+ (expr (indexed print (called lst)))
+ (expr (indexed lst (dot insert) (called 5 "E")))
+ (expr (indexed print (called lst)))
+ (expr (indexed lst (dot insert) (called 3 "b")))
+ (expr (indexed print (called lst)))
+ (expr (indexed print (called (indexed lst (dot count) (called "A")))))
+ (expr (indexed print (called (indexed lst (dot count) (called "F")))))
+ (expr (indexed print (called (indexed lst (dot index) (called "A")))))
+ (expr (indexed print (called (indexed lst (dot index) (called "F"))))))
+

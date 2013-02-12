@@ -1,0 +1,252 @@
+Number of States = 715
+
+set: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict19) (call/ec (lambda (return) (let (($localo20 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo20 __init__))) (let ((_35 (b34 tmp-dict19))) (let ((b36 (return $localo20))) b36))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$vec . #(struct:BAddr g$vec ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+continue: 
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+object: 
+	#<Cls>
+	#(struct:closure (lambda () (void)) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (object . #(struct:BAddr object ())) (List . #(struct:BAddr List ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$vec . #(struct:BAddr g$vec ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+tmp-dict16: 
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 36>))
+	 object: 
+		#hash((0 . #<set: " banana">) (1 . #<set: "  loganberry ">) (2 . #<set: "passion fruit  ">))
+	 object: 
+		#hash((0 . #<set: " banana">) (1 . #<set: "  loganberry ">) (2 . #<set: "passion fruit  ">))
+	 object: 
+		#hash((0 . #<set: #<OLoc>>) (1 . #<set: #<OLoc>>) (2 . #<set: #<OLoc>>))
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>))
+	 object: 
+		#hash((0 . #<set: 4>) (1 . #<set: 16>))
+	 object: 
+		#hash((0 . #<set: #<OLoc>>) (1 . #<set: #<OLoc>>) (2 . #<set: #<OLoc>>))
+	 object: 
+		#hash((0 . #<set: 12>) (1 . #<set: 18>))
+	 object: 
+		#hash()
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 12>) (2 . #<set: 18>))
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>) (2 . #<set: 6>))
+$localo17: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+List: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict16) (call/ec (lambda (return) (let (($localo17 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo17 __init__))) (let ((_29 (b28 tmp-dict16))) (let ((b30 (return $localo17))) b30))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (List . #(struct:BAddr List ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$vec . #(struct:BAddr g$vec ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+tmp-dict22: 
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>))
+	 object: 
+		#hash((0 . #<set: 4>) (1 . #<set: 16>))
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 36>))
+$localo23: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: tuple>))
+tuple: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict22) (call/ec (lambda (return) (let (($localo23 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo23 __init__))) (let ((_41 (b40 tmp-dict22))) (let ((b42 (return $localo23))) b42))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$vec . #(struct:BAddr g$vec ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+gbl-dict: 
+	 object: 
+		#hash()
+self24: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+tmpdict25: 
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 36>))
+	 object: 
+		#hash((0 . #<set: " banana">) (1 . #<set: "  loganberry ">) (2 . #<set: "passion fruit  ">))
+	 object: 
+		#hash((0 . #<set: " banana">) (1 . #<set: "  loganberry ">) (2 . #<set: "passion fruit  ">))
+	 object: 
+		#hash((0 . #<set: #<OLoc>>) (1 . #<set: #<OLoc>>) (2 . #<set: #<OLoc>>))
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>))
+	 object: 
+		#hash((0 . #<set: 4>) (1 . #<set: 16>))
+	 object: 
+		#hash((0 . #<set: #<OLoc>>) (1 . #<set: #<OLoc>>) (2 . #<set: #<OLoc>>))
+	 object: 
+		#hash((0 . #<set: 12>) (1 . #<set: 18>))
+	 object: 
+		#hash()
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 12>) (2 . #<set: 18>))
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>) (2 . #<set: 6>))
+self28: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: tuple>))
+tmp-dict29: 
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>))
+	 object: 
+		#hash((0 . #<set: 4>) (1 . #<set: 16>))
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 36>))
+t17: 
+	#f
+t18: 
+	#f
+g$vec: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+res: 
+	 object: 
+		#hash((0 . #<set: " banana">) (1 . #<set: "  loganberry ">) (2 . #<set: "passion fruit  ">))
+	 object: 
+		#hash((0 . #<set: #<OLoc>>) (1 . #<set: #<OLoc>>) (2 . #<set: #<OLoc>>))
+	 object: 
+		#hash((0 . #<set: #<OLoc>>) (1 . #<set: #<OLoc>>) (2 . #<set: #<OLoc>>))
+	 object: 
+		#hash((0 . #<set: 12>) (1 . #<set: 18>))
+	 object: 
+		#hash()
+	 object: 
+		#hash((0 . #<set: 6>) (1 . #<set: 12>) (2 . #<set: 18>))
+$i: 
+	3
+	1
+	2
+	0
+x: 
+	6
+	4
+	2
+$seq19: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$loop20: 
+	#(struct:closure (lambda (x) (call/ec (lambda (continue) (let ((b87 ((anf *) 3 x))) (let ((_88 ((anf dict-set!) res $i b87))) (let ((_89 (void))) (let ((b91 ((anf +) $i 1))) (let ((_92 (set! $i b91))) (let ((b90 (void))) b90))))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b79 . #(struct:BAddr b79 ())) (b80 . #(struct:BAddr b80 ())) (_81 . #(struct:BAddr _81 ())) (g$vec . #(struct:BAddr g$vec ())) (_82 . #(struct:BAddr _82 ())) (res . #(struct:BAddr res ())) ($i . #(struct:BAddr $i ())) (x . #(struct:BAddr x ())) (b86 . #(struct:BAddr b86 ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+$seq21: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$loop22: 
+	#(struct:closure (lambda (x) (call/ec (lambda (continue) (let ((b102 ((anf expt) x 2))) (let ((b103 (dict (0 x) (1 b102)))) (let ((b104 (List b103))) (let ((_105 ((anf dict-set!) res $i b104))) (let ((_106 (void))) (let ((b108 ((anf +) $i 1))) (let ((_109 (set! $i b108))) (let ((b107 (void))) b107))))))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b79 . #(struct:BAddr b79 ())) (b80 . #(struct:BAddr b80 ())) (_81 . #(struct:BAddr _81 ())) (g$vec . #(struct:BAddr g$vec ())) (_82 . #(struct:BAddr _82 ())) (res . #(struct:BAddr res ())) ($i . #(struct:BAddr $i ())) (x . #(struct:BAddr x ())) (_94 . #(struct:BAddr _94 ())) (b95 . #(struct:BAddr b95 ())) (b96 . #(struct:BAddr b96 ())) (_97 . #(struct:BAddr _97 ())) (b101 . #(struct:BAddr b101 ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+g$freshfruit: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+weapon: 
+	passion fruit  
+	 banana
+	  loganberry 
+$seq23: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$loop24: 
+	#(struct:closure (lambda (weapon) (call/ec (lambda (continue) (let ((_123 ((anf dict-set!) res $i weapon))) (let ((_124 (void))) (let ((b126 ((anf +) $i 1))) (let ((_127 (set! $i b126))) (let ((b125 (void))) b125)))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b79 . #(struct:BAddr b79 ())) (b80 . #(struct:BAddr b80 ())) (_81 . #(struct:BAddr _81 ())) (g$vec . #(struct:BAddr g$vec ())) (_82 . #(struct:BAddr _82 ())) (res . #(struct:BAddr res ())) ($i . #(struct:BAddr $i ())) (x . #(struct:BAddr x ())) (_94 . #(struct:BAddr _94 ())) (b95 . #(struct:BAddr b95 ())) (b96 . #(struct:BAddr b96 ())) (_97 . #(struct:BAddr _97 ())) (_111 . #(struct:BAddr _111 ())) (b112 . #(struct:BAddr b112 ())) (b113 . #(struct:BAddr b113 ())) (_114 . #(struct:BAddr _114 ())) (b115 . #(struct:BAddr b115 ())) (b116 . #(struct:BAddr b116 ())) (_117 . #(struct:BAddr _117 ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) (_118 . #(struct:BAddr _118 ())) (weapon . #(struct:BAddr weapon ())) (b122 . #(struct:BAddr b122 ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+$seq25: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$loop26: 
+	#(struct:closure (lambda (x) (call/ec (lambda (continue) (let ((b137 ((anf >) x 3))) (if b137 (let ((b138 ((anf *) 3 x))) (let ((_139 ((anf dict-set!) res $i b138))) (let ((_140 (void))) (let ((b142 ((anf +) $i 1))) (let ((_143 (set! $i b142))) (let ((b141 (void))) b141)))))) (void)))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b79 . #(struct:BAddr b79 ())) (b80 . #(struct:BAddr b80 ())) (_81 . #(struct:BAddr _81 ())) (g$vec . #(struct:BAddr g$vec ())) (_82 . #(struct:BAddr _82 ())) (res . #(struct:BAddr res ())) ($i . #(struct:BAddr $i ())) (x . #(struct:BAddr x ())) (_94 . #(struct:BAddr _94 ())) (b95 . #(struct:BAddr b95 ())) (b96 . #(struct:BAddr b96 ())) (_97 . #(struct:BAddr _97 ())) (_111 . #(struct:BAddr _111 ())) (b112 . #(struct:BAddr b112 ())) (b113 . #(struct:BAddr b113 ())) (_114 . #(struct:BAddr _114 ())) (b115 . #(struct:BAddr b115 ())) (b116 . #(struct:BAddr b116 ())) (_117 . #(struct:BAddr _117 ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) (_118 . #(struct:BAddr _118 ())) (weapon . #(struct:BAddr weapon ())) (_129 . #(struct:BAddr _129 ())) (b130 . #(struct:BAddr b130 ())) (b131 . #(struct:BAddr b131 ())) (_132 . #(struct:BAddr _132 ())) (b136 . #(struct:BAddr b136 ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+$seq27: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$loop28: 
+	#(struct:closure (lambda (x) (call/ec (lambda (continue) (let ((b153 ((anf <) x 2))) (if b153 (let ((b154 ((anf *) 3 x))) (let ((_155 ((anf dict-set!) res $i b154))) (let ((_156 (void))) (let ((b158 ((anf +) $i 1))) (let ((_159 (set! $i b158))) (let ((b157 (void))) b157)))))) (void)))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b79 . #(struct:BAddr b79 ())) (b80 . #(struct:BAddr b80 ())) (_81 . #(struct:BAddr _81 ())) (g$vec . #(struct:BAddr g$vec ())) (_82 . #(struct:BAddr _82 ())) (res . #(struct:BAddr res ())) ($i . #(struct:BAddr $i ())) (x . #(struct:BAddr x ())) (_94 . #(struct:BAddr _94 ())) (b95 . #(struct:BAddr b95 ())) (b96 . #(struct:BAddr b96 ())) (_97 . #(struct:BAddr _97 ())) (_111 . #(struct:BAddr _111 ())) (b112 . #(struct:BAddr b112 ())) (b113 . #(struct:BAddr b113 ())) (_114 . #(struct:BAddr _114 ())) (b115 . #(struct:BAddr b115 ())) (b116 . #(struct:BAddr b116 ())) (_117 . #(struct:BAddr _117 ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) (_118 . #(struct:BAddr _118 ())) (weapon . #(struct:BAddr weapon ())) (_129 . #(struct:BAddr _129 ())) (b130 . #(struct:BAddr b130 ())) (b131 . #(struct:BAddr b131 ())) (_132 . #(struct:BAddr _132 ())) (_145 . #(struct:BAddr _145 ())) (b146 . #(struct:BAddr b146 ())) (b147 . #(struct:BAddr b147 ())) (_148 . #(struct:BAddr _148 ())) (b152 . #(struct:BAddr b152 ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+$seq29: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #<OLoc>>) ("__class__" . #<set: List>))
+$loop30: 
+	#(struct:closure (lambda (x) (call/ec (lambda (continue) (let ((b170 ((anf expt) x 2))) (let ((b171 (dict (0 x) (1 b170)))) (let ((b172 (tuple b171))) (let ((_173 ((anf dict-set!) res $i b172))) (let ((_174 (void))) (let ((b176 ((anf +) $i 1))) (let ((_177 (set! $i b176))) (let ((b175 (void))) b175))))))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b79 . #(struct:BAddr b79 ())) (b80 . #(struct:BAddr b80 ())) (_81 . #(struct:BAddr _81 ())) (g$vec . #(struct:BAddr g$vec ())) (_82 . #(struct:BAddr _82 ())) (res . #(struct:BAddr res ())) ($i . #(struct:BAddr $i ())) (x . #(struct:BAddr x ())) (_94 . #(struct:BAddr _94 ())) (b95 . #(struct:BAddr b95 ())) (b96 . #(struct:BAddr b96 ())) (_97 . #(struct:BAddr _97 ())) (_111 . #(struct:BAddr _111 ())) (b112 . #(struct:BAddr b112 ())) (b113 . #(struct:BAddr b113 ())) (_114 . #(struct:BAddr _114 ())) (b115 . #(struct:BAddr b115 ())) (b116 . #(struct:BAddr b116 ())) (_117 . #(struct:BAddr _117 ())) (g$freshfruit . #(struct:BAddr g$freshfruit ())) (_118 . #(struct:BAddr _118 ())) (weapon . #(struct:BAddr weapon ())) (_129 . #(struct:BAddr _129 ())) (b130 . #(struct:BAddr b130 ())) (b131 . #(struct:BAddr b131 ())) (_132 . #(struct:BAddr _132 ())) (_145 . #(struct:BAddr _145 ())) (b146 . #(struct:BAddr b146 ())) (b147 . #(struct:BAddr b147 ())) (_148 . #(struct:BAddr _148 ())) (_161 . #(struct:BAddr _161 ())) (b162 . #(struct:BAddr b162 ())) (b163 . #(struct:BAddr b163 ())) (_164 . #(struct:BAddr _164 ())) (b169 . #(struct:BAddr b169 ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+$current-handler: 
+return: 
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>

@@ -1,0 +1,59 @@
+k:
+	proc
+
+f:
+	proc
+
+g$foo:
+	proc
+
+k14:
+	proc
+
+cc:
+	proc
+
+x:
+	dict
+
+return:
+	proc
+
+k15:
+	proc
+
+k16:
+	proc
+
+rv22:
+	dict
+
+e15:
+	dict
+	tuple
+	py-list
+
+k17:
+	proc
+
+i14:
+	string
+
+k18:
+	proc
+
+rv19:
+	boolean
+
+rv20:
+	boolean
+
+rv21:
+	boolean
+
+rv23:
+	string
+
+g$b:
+	string
+

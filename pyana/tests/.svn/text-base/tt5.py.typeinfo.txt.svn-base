@@ -1,0 +1,56 @@
+Number of States = 151
+
+set: 
+	proc
+	class
+List: 
+	proc
+	class
+$localo24: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 42) (1 1701)) (c11 c10))>) ("__class__" . #<set: tuple>))
+tuple: 
+	proc
+	class
+tmp-dict23: 
+	 object: 
+		#hash((0 . #<set: 42>) (1 . #<set: 1701>))
+t11: 
+	bool
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 42) (1 1701)) (c11 c10))>) ("__class__" . #<set: tuple>))
+tmp-dict30: 
+	 object: 
+		#hash((0 . #<set: 42>) (1 . #<set: 1701>))
+t12: 
+	bool
+self29: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 42) (1 1701)) (c11 c10))>) ("__class__" . #<set: tuple>))
+g$y: 
+	num
+g$a: 
+	num
+g$x: 
+	num
+object: 
+	class
+	proc
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e12: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 42) (1 1701)) (c11 c10))>) ("__class__" . #<set: tuple>))
+i13: 
+	num
+e14: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 42) (1 1701)) (c11 c10))>) ("__class__" . #<set: tuple>))
+i15: 
+	num
+return: 
+	kontP
+	kontP

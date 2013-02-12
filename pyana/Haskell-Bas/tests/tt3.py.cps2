@@ -1,0 +1,70 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$f (void))
+ (define g$y (void))
+ (define g$x (void))
+ (set-then!
+  g$f
+  (lambda (a b k0)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k1)
+       ((lambda (k2) (py-list*-k a b (lambda (rv3) (return rv3 k2)))) k1))
+     k0))
+  (g$f
+   1
+   "hi"
+   (lambda (rv17)
+     ((lambda (e15 k12)
+        ((lambda (i14 k13)
+           ((cps py-list?)
+            e15
+            (lambda (rv14)
+              (if rv14
+                ((cps py-list-ref) e15 i14 k13)
+                ((cps tuple?)
+                 e15
+                 (lambda (rv15)
+                   (if rv15
+                     ((cps tuple-ref) e15 i14 k13)
+                     ((cps dict?)
+                      e15
+                      (lambda (rv16)
+                        (if rv16
+                          ((cps dict-ref) e15 i14 k13)
+                          (error "cannot index object" k13)))))))))))
+         0
+         k12))
+      rv17
+      (lambda (rv4)
+        (set-then!
+         g$x
+         rv4
+         (g$f
+          2
+          "there"
+          (lambda (rv11)
+            ((lambda (e17 k6)
+               ((lambda (i16 k7)
+                  ((cps py-list?)
+                   e17
+                   (lambda (rv8)
+                     (if rv8
+                       ((cps py-list-ref) e17 i16 k7)
+                       ((cps tuple?)
+                        e17
+                        (lambda (rv9)
+                          (if rv9
+                            ((cps tuple-ref) e17 i16 k7)
+                            ((cps dict?)
+                             e17
+                             (lambda (rv10)
+                               (if rv10
+                                 ((cps dict-ref) e17 i16 k7)
+                                 (error "cannot index object" k7)))))))))))
+                1
+                k6))
+             rv11
+             (lambda (rv5) (set-then! g$y rv5 ($halt (void))))))))))))))

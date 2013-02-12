@@ -1,0 +1,6 @@
+(program
+ (= (w) o)
+ (= (y) o)
+ (= ((indexed w (dot a))) (tuple 1 "hi" 5))
+ (= (z) (indexed y (dot a) (subscript 1))))
+

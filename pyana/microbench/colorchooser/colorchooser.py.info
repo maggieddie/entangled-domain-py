@@ -1,0 +1,94 @@
+# States Explored = 348
+
+cpu time: 289 real time: 289 gc time: 0
+
+!!! Vulnerabilities #: 0 
+ --------
+
+ set: 
+	#<Cls>
+	(lambda (tmp-dict38) (call/ec (lambda (return) (let (($localo39 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo39 __init__))) (let ((_35 (b34 tmp-dict38))) (let ((b36 (return $localo39))) b36)))))))
+
+ b: 
+	200
+
+ len: 
+	(lambda (seq30) (call/ec (lambda (return) (let ((cnt31 0)) (let ((t11 ((anf py-list?) seq30))) (let ((b1 (if t11 t11 (let ((t12 ((anf set?) seq30))) (let ((b2 (if t12 t12 ((anf tuple?) seq30)))) b2))))) (let ((b0 (if b1 (let ((container32 ((anf dict-ref) seq30 __containerdict__))) (let ((_10 (call/ec (lambda (break) (let ((b6 (lambda ($seq13 $loop14) (let ((_4 ((anf for-container) $seq13 $loop14))) (let ((b5 (void))) (let ((b3 b5)) b3)))))) (let ((b9 (lambda (entry33) (call/ec (lambda (continue) (let ((b7 ((anf +) 1 cnt31))) (let ((_8 (set! cnt31 b7))) (void)))))))) (b6 container32 b9))))))) (let ((b11 (return cnt31))) b11))) (let ((b19 (call/ec (lambda (break) (let ((b15 (lambda ($seq15 $loop16) (let ((_13 ((anf for-container) $seq15 $loop16))) (let ((b14 (void))) (let ((b12 b14)) b12)))))) (let ((b18 (lambda (entry33) (call/ec (lambda (continue) (let ((b16 ((anf +) cnt31 1))) (let ((_17 (set! cnt31 b16))) (void)))))))) (b15 seq30 b18))))))) (let ((b20 (return cnt31))) (let ((b21 (else b19 b20))) (cond b21))))))) b0)))))))
+
+ object: 
+	#<Cls>
+	(lambda () (void))
+
+ List: 
+	#<Cls>
+	(lambda (tmp-dict35) (call/ec (lambda (return) (let (($localo36 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo36 __init__))) (let ((_29 (b28 tmp-dict35))) (let ((b30 (return $localo36))) b30)))))))
+
+ tuple: 
+	#<Cls>
+	(lambda (tmp-dict41) (call/ec (lambda (return) (let (($localo42 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo42 __init__))) (let ((_41 (b40 tmp-dict41))) (let ((b42 (return $localo42))) b42)))))))
+
+ gbl-dict: 
+	 inst 
+		 fields and taints are: 
+		 fields and values are: 
+
+ g$form: 
+	 inst 
+		 fields and taints are: 
+			 "red" #<set: "untainted"> 
+ 			 "blue" #<set: "untainted"> 
+ 			 "green" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "red" #<set: 100> 
+ 			 "blue" #<set: 200> 
+ 			 "green" #<set: 20> 
+ 
+ g$mock_helper: 
+	 inst 
+		 fields and taints are: 
+			 20 #<set: "untainted"> 
+ 			 100 #<set: "untainted"> 
+ 			 200 #<set: "untainted"> 
+ 		 fields and values are: 
+			 20 #<set: "20"> 
+ 			 100 #<set: "100"> 
+ 			 200 #<set: "200"> 
+ 
+ r: 
+	100
+
+ g: 
+	20
+
+ g$Colorchooser: 
+	#<Cls>
+	(lambda (r g b) (call/ec (lambda (return) (let (($localo11 (dict (__class__ g$Colorchooser) (__type__ instColorchooser)))) (let ((b87 (get-field $localo11 __init__))) (let ((_88 (b87 r g b))) (let ((b89 (return $localo11))) b89)))))))
+
+ g$red: 
+	100
+
+ g$green: 
+	20
+
+ g$blue: 
+	200
+
+ g$colorchooser: 
+	 inst 
+		 fields and taints are: 
+			 "b" #<set: "untainted"> 
+ 			 "g" #<set: "untainted"> 
+ 			 "r" #<set: "untainted"> 
+ 			 "__type__" #<set: "untainted"> 
+ 			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "b" #<set: 200> 
+ 			 "g" #<set: 20> 
+ 			 "r" #<set: 100> 
+ 			 "__type__" #<set: "instColorchooser"> 
+ 			 "__class__" #<set: g$Colorchooser> 
+ # of terms: 16 
+# of singleton set of terms: 11 
+% of singleton set in all terms: 11/16 
+# of inst: 4 
+: 

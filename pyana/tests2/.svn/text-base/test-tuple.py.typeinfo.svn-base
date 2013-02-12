@@ -1,0 +1,806 @@
+........  in let  ........
+"..........  in let binding lambda : (lambda () (void))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda () (void)) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in set! : (set! object b0)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in let binding lambda : (lambda (tmp-dict23) (call/ec (lambda (return) (let (($localo24 (dict (__class__ List) (__type__ instPyList)))) (let ((b3 (get-field $localo24 __init__))) (let ((_4 (b3 tmp-dict23))) (let ((b5 (return $localo24))) b5)))))))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda (tmp-dict23) (call/ec (lambda (return) (let (($localo24 (dict (__class__ List) (__type__ instPyList)))) (let ((b3 (get-field $localo24 __init__))) (let ((_4 (b3 tmp-dict23))) (let ((b5 (return $localo24))) b5))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in set! : (set! List b6)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in let binding lambda : (lambda (tmp-dict26) (call/ec (lambda (return) (let (($localo27 (dict (__class__ set) (__type__ instSet)))) (let ((b9 (get-field $localo27 __init__))) (let ((_10 (b9 tmp-dict26))) (let ((b11 (return $localo27))) b11)))))))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda (tmp-dict26) (call/ec (lambda (return) (let (($localo27 (dict (__class__ set) (__type__ instSet)))) (let ((b9 (get-field $localo27 __init__))) (let ((_10 (b9 tmp-dict26))) (let ((b11 (return $localo27))) b11))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in set! : (set! set b12)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in let binding lambda : (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17)))))))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in set! : (set! tuple b18)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in dict : (dict)"
+........ not a call, we don't get the time for non-call expression! ........
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict) (#<void>))>"
+........  in let  ........
+"..........  in set! : (set! gbl-dict b21)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in list of class precedences : (list object)"
+"..........  d's value to apply is: : #<set: (object)>"
+........  in let  ........
+"..........  in let binding lambda : (lambda v void)"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda v void) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in dict : (dict (__base__ (list)) (__mro__ b24) (__init__ b25))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__base__ (list)) (__mro__ b24) (__init__ b25)) (c11 #<void>))>"
+........  in let  ........
+"..........  in : ((anf dict-set!) gbl-dict object b26)"
+".......... Yes, it is a oloc in the gbl-set! : #<set: #(struct:OLoc (dict (__base__ (list)) (__mro__ b24) (__init__ b25)) (c11 #<void>))>"
+........ Yes, it is the only location allocated  ........
+"..........  cls closure found in the addr times: : 1"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in list of class precedences : (list object)"
+"..........  d's value to apply is: : #<set: (object)>"
+........  in let  ........
+"..........  in list of class precedences : (list List object)"
+"..........  d's value to apply is: : #<set: (List object)>"
+........  in let  ........
+"..........  in let binding lambda : (lambda (self31 tmpdict32) (call/ec (lambda (return) (let ((b31 ((anf py-list?) tmpdict32))) (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32))))))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda (self31 tmpdict32) (call/ec (lambda (return) (let ((b31 ((anf py-list?) tmpdict32))) (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32)))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in dict : (dict (__base__ b29) (__mro__ b30) (__init__ b33))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__base__ b29) (__mro__ b30) (__init__ b33)) (c12 c11))>"
+........  in let  ........
+"..........  in : ((anf dict-set!) gbl-dict List b34)"
+".......... Yes, it is a oloc in the gbl-set! : #<set: #(struct:OLoc (dict (__base__ b29) (__mro__ b30) (__init__ b33)) (c12 c11))>"
+........ Yes, it is the only location allocated  ........
+"..........  cls closure found in the addr times: : 1"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in list of class precedences : (list object)"
+"..........  d's value to apply is: : #<set: (object)>"
+........  in let  ........
+"..........  in list of class precedences : (list set object)"
+"..........  d's value to apply is: : #<set: (set object)>"
+........  in let  ........
+"..........  in let binding lambda : (lambda (self33 tmpdict34) (call/ec (lambda (return) (let ((b39 ((anf py-list?) tmpdict34))) (if b39 (let ((b40 ((anf dict-ref) tmpdict34 __containerdict__))) (set-field! self33 __containerdict__ b40)) (set-field! self33 __containerdict__ tmpdict34))))))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda (self33 tmpdict34) (call/ec (lambda (return) (let ((b39 ((anf py-list?) tmpdict34))) (if b39 (let ((b40 ((anf dict-ref) tmpdict34 __containerdict__))) (set-field! self33 __containerdict__ b40)) (set-field! self33 __containerdict__ tmpdict34)))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in dict : (dict (__base__ b37) (__mro__ b38) (__init__ b41))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__base__ b37) (__mro__ b38) (__init__ b41)) (c13 c12))>"
+........  in let  ........
+"..........  in : ((anf dict-set!) gbl-dict set b42)"
+".......... Yes, it is a oloc in the gbl-set! : #<set: #(struct:OLoc (dict (__base__ b37) (__mro__ b38) (__init__ b41)) (c13 c12))>"
+........ Yes, it is the only location allocated  ........
+"..........  cls closure found in the addr times: : 1"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in list of class precedences : (list object)"
+"..........  d's value to apply is: : #<set: (object)>"
+........  in let  ........
+"..........  in list of class precedences : (list tuple object)"
+"..........  d's value to apply is: : #<set: (tuple object)>"
+........  in let  ........
+"..........  in let binding lambda : (lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36)))))))"
+"..........  d's value to apply is: : #<set: #(struct:closure (lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))>"
+........  in let  ........
+"..........  in dict : (dict (__base__ b45) (__mro__ b46) (__init__ b50))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__base__ b45) (__mro__ b46) (__init__ b50)) (c14 c13))>"
+........  in let  ........
+"..........  in : ((anf dict-set!) gbl-dict tuple b51)"
+........ Yes, we are setting the tuple dict ........
+".......... Yes, it is a oloc in the gbl-set! : #<set: #(struct:OLoc (dict (__base__ b45) (__mro__ b46) (__init__ b50)) (c14 c13))>"
+........ Yes, it is the only location allocated  ........
+"..........  cls closure found in the addr times: : 1"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in dict : (dict (0 12345) (1 54321) (2 hello!))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 hello!)) (c15 c14))>"
+........  in let  ........
+"..........  in function app : (tuple b54)"
+........ in app: f is evaluted to be cls closure ........
+"..........  app matched normal lambda : (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17)))))))"
+"..........  in call/ec : (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))"
+........  in let  ........
+"..........  in dict : (dict (__class__ tuple) (__type__ instTuple))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+........  in let  ........
+"..........  in get-field : (get-field $localo30 __init__)"
+".......... d-f: : #<set: __init__>"
+".......... d-b: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+".......... get-field's based is an normal location, which is an instance location : (dict (__class__ tuple) (__type__ instTuple))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>))) ........
+........ #<set:> ........
+"..........  instance field result not found for : $localo30"
+........ will search up the instance's class mro-lst.... ........
+".......... the inst-om is: : (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>)))"
+".......... obj-lookup: : #<set: tuple>"
+".......... cls: tuple"
+".......... cls-cls: #(struct:Cls #(struct:closure (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (return . #<BAddr>))) #(struct:OLoc (dict (__base__ b45) (__mro__ b46) (__init__ b50)) (c14 c13)))"
+".......... mro-lst get is: : (tuple object)"
+"..........  instance get methods: #(struct:closure (lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+........ turn the normal lambda to partial applied lambda ........
+"..........  d's value to apply is: : #<set: #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))>"
+".......... list of states?: #t"
+........  in let  ........
+"..........  in function app : (b15 tmp-dict29)"
+"..........  app matched curried lambda : #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+".......... obj-loc: : #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))"
+"..........  in call/ec : (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 12345) (1 54321) (2 hello!)) (c15 c14))"
+........ (#hash((#<set: 0> . #<set: 12345>) (#<set: 1> . #<set: 54321>) (#<set: 2> . #<set: hello!>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>) (2 . #<set: #<set: 2>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48)))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 12345) (1 54321) (2 hello!)) (c15 c14))"
+........ (#hash((#<set: 0> . #<set: 12345>) (#<set: 1> . #<set: 54321>) (#<set: 2> . #<set: hello!>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>) (2 . #<set: #<set: 2>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t12 t12 ((anf set?) tmp-dict36))"
+"..........  in unary operation: : ((anf set?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 12345) (1 54321) (2 hello!)) (c15 c14))"
+........ (#hash((#<set: 0> . #<set: 12345>) (#<set: 1> . #<set: 54321>) (#<set: 2> . #<set: hello!>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>) (2 . #<set: #<set: 2>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  in if : (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))"
+"..........  in set-field! : (set-field! self35 __containerdict__ tmp-dict36)"
+........ in pull-loc: oloc  ........
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in function app : (return $localo30)"
+"..........  app matched in continuation : #<kontP>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+........  in let  ........
+"..........  in set! : (set! g$t b55)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: 0>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) e11)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 hello!)) (c15 c14))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if b60 ((anf py-list-ref) e11 i12) (let ((b61 ((anf tuple?) e11))) (if b61 ((anf tuple-ref) e11 i12) (let ((b62 ((anf dict?) e11))) (if b62 ((anf dict-ref) e11 i12) (error cannot index object))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) e11)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 hello!)) (c15 c14))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #t>"
+"..........  in if : (if b61 ((anf tuple-ref) e11 i12) (let ((b62 ((anf dict?) e11))) (if b62 ((anf dict-ref) e11 i12) (error cannot index object))))"
+"..........  in biop : ((anf tuple-ref) e11 i12)"
+"..........  in container biop : tuple-ref"
+"..........  the val set from __items__ : #<set: 12345>"
+"..........  the val set from what referring : #<set:>"
+"..........  d's value to apply is: : #<set: 12345>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: 12345>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-print) b58)"
+"..........  d's value to apply is: : #<set: (void)>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-print) g$t)"
+"..........  d's value to apply is: : #<set: (void)>"
+........  in let  ........
+"..........  in dict : (dict (0 1) (1 2) (2 3) (3 4) (4 5))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))>"
+........  in let  ........
+"..........  in function app : (tuple b65)"
+........ in app: f is evaluted to be cls closure ........
+"..........  app matched normal lambda : (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17)))))))"
+"..........  in call/ec : (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))"
+........  in let  ........
+"..........  in dict : (dict (__class__ tuple) (__type__ instTuple))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>"
+........  in let  ........
+"..........  in get-field : (get-field $localo30 __init__)"
+".......... d-f: : #<set: __init__>"
+".......... d-b: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>"
+".......... get-field's based is an normal location, which is an instance location : (dict (__class__ tuple) (__type__ instTuple))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>))) ........
+........ #<set:> ........
+"..........  instance field result not found for : $localo30"
+........ will search up the instance's class mro-lst.... ........
+".......... the inst-om is: : (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>)))"
+".......... obj-lookup: : #<set: tuple>"
+".......... cls: tuple"
+".......... cls-cls: #(struct:Cls #(struct:closure (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (return . #<BAddr>))) #(struct:OLoc (dict (__base__ b45) (__mro__ b46) (__init__ b50)) (c14 c13)))"
+".......... mro-lst get is: : (tuple object)"
+"..........  instance get methods: #(struct:closure (lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+........ turn the normal lambda to partial applied lambda ........
+"..........  d's value to apply is: : #<set: #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))>"
+".......... list of states?: #t"
+........  in let  ........
+"..........  in function app : (b15 tmp-dict29)"
+"..........  app matched curried lambda : #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+".......... obj-loc: : #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))"
+"..........  in call/ec : (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))"
+........ (#hash((#<set: 0> . #<set: 1>) (#<set: 1> . #<set: 2>) (#<set: 2> . #<set: 3>) (#<set: 3> . #<set: 4>) (#<set: 4> . #<set: 5>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>) (2 . #<set: #<set: 2>>) (3 . #<set: #<set: 3>>) (4 . #<set: #<set: 4>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48)))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))"
+........ (#hash((#<set: 0> . #<set: 1>) (#<set: 1> . #<set: 2>) (#<set: 2> . #<set: 3>) (#<set: 3> . #<set: 4>) (#<set: 4> . #<set: 5>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>) (2 . #<set: #<set: 2>>) (3 . #<set: #<set: 3>>) (4 . #<set: #<set: 4>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t12 t12 ((anf set?) tmp-dict36))"
+"..........  in unary operation: : ((anf set?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))"
+........ (#hash((#<set: 0> . #<set: 1>) (#<set: 1> . #<set: 2>) (#<set: 2> . #<set: 3>) (#<set: 3> . #<set: 4>) (#<set: 4> . #<set: 5>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>) (2 . #<set: #<set: 2>>) (3 . #<set: #<set: 3>>) (4 . #<set: #<set: 4>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  in if : (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))"
+"..........  in set-field! : (set-field! self35 __containerdict__ tmp-dict36)"
+........ in pull-loc: oloc  ........
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in function app : (return $localo30)"
+"..........  app matched in continuation : #<kontP>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>"
+........  in let  ........
+"..........  in dict : (dict (0 g$t) (1 b66))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>"
+........  in let  ........
+"..........  in function app : (tuple b67)"
+........ in app: f is evaluted to be cls closure ........
+"..........  app matched normal lambda : (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17)))))))"
+"..........  in call/ec : (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))"
+........  in let  ........
+"..........  in dict : (dict (__class__ tuple) (__type__ instTuple))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))>"
+........  in let  ........
+"..........  in get-field : (get-field $localo30 __init__)"
+".......... d-f: : #<set: __init__>"
+".......... d-b: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))>"
+".......... get-field's based is an normal location, which is an instance location : (dict (__class__ tuple) (__type__ instTuple))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>))) ........
+........ #<set:> ........
+"..........  instance field result not found for : $localo30"
+........ will search up the instance's class mro-lst.... ........
+".......... the inst-om is: : (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>)))"
+".......... obj-lookup: : #<set: tuple>"
+".......... cls: tuple"
+".......... cls-cls: #(struct:Cls #(struct:closure (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (return . #<BAddr>))) #(struct:OLoc (dict (__base__ b45) (__mro__ b46) (__init__ b50)) (c14 c13)))"
+".......... mro-lst get is: : (tuple object)"
+"..........  instance get methods: #(struct:closure (lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+........ turn the normal lambda to partial applied lambda ........
+"..........  d's value to apply is: : #<set: #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))>"
+".......... list of states?: #t"
+........  in let  ........
+"..........  in function app : (b15 tmp-dict29)"
+"..........  app matched curried lambda : #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+".......... obj-loc: : #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))"
+"..........  in call/ec : (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))"
+........ (#hash((#<set: 0> . #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>) (#<set: 1> . #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48)))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))"
+........ (#hash((#<set: 0> . #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>) (#<set: 1> . #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t12 t12 ((anf set?) tmp-dict36))"
+"..........  in unary operation: : ((anf set?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))"
+........ (#hash((#<set: 0> . #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>) (#<set: 1> . #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  in if : (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))"
+"..........  in set-field! : (set-field! self35 __containerdict__ tmp-dict36)"
+........ in pull-loc: oloc  ........
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in function app : (return $localo30)"
+"..........  app matched in continuation : #<kontP>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))>"
+........  in let  ........
+"..........  in set! : (set! g$u b68)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: 0>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) e13)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if b73 ((anf py-list-ref) e13 i14) (let ((b74 ((anf tuple?) e13))) (if b74 ((anf tuple-ref) e13 i14) (let ((b75 ((anf dict?) e13))) (if b75 ((anf dict-ref) e13 i14) (error cannot index object))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) e13)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #t>"
+"..........  in if : (if b74 ((anf tuple-ref) e13 i14) (let ((b75 ((anf dict?) e13))) (if b75 ((anf dict-ref) e13 i14) (error cannot index object))))"
+"..........  in biop : ((anf tuple-ref) e13 i14)"
+"..........  in container biop : tuple-ref"
+"..........  the val set from __items__ : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+"..........  the val set from what referring : #<set:>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c18 c17))>"
+........  in let  ........
+"..........  in set! : (set! g$x b71)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: 1>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) e15)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if b80 ((anf py-list-ref) e15 i16) (let ((b81 ((anf tuple?) e15))) (if b81 ((anf tuple-ref) e15 i16) (let ((b82 ((anf dict?) e15))) (if b82 ((anf dict-ref) e15 i16) (error cannot index object))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) e15)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c27 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #t>"
+"..........  in if : (if b81 ((anf tuple-ref) e15 i16) (let ((b82 ((anf dict?) e15))) (if b82 ((anf dict-ref) e15 i16) (error cannot index object))))"
+"..........  in biop : ((anf tuple-ref) e15 i16)"
+"..........  in container biop : tuple-ref"
+"..........  the val set from __items__ : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>"
+"..........  the val set from what referring : #<set:>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c24 c17))>"
+........  in let  ........
+"..........  in set! : (set! g$y b78)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-print) g$x)"
+"..........  d's value to apply is: : #<set: (void)>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-print) g$y)"
+"..........  d's value to apply is: : #<set: (void)>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-print) g$u)"
+"..........  d's value to apply is: : #<set: (void)>"
+........  in let  ........
+"..........  in dict : (dict (0 100) (1 200))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (0 100) (1 200)) (c28 c21))>"
+........  in let  ........
+"..........  in function app : (List b88)"
+........ in app: f is evaluted to be cls closure ........
+"..........  app matched normal lambda : (lambda (tmp-dict23) (call/ec (lambda (return) (let (($localo24 (dict (__class__ List) (__type__ instPyList)))) (let ((b3 (get-field $localo24 __init__))) (let ((_4 (b3 tmp-dict23))) (let ((b5 (return $localo24))) b5)))))))"
+"..........  in call/ec : (call/ec (lambda (return) (let (($localo24 (dict (__class__ List) (__type__ instPyList)))) (let ((b3 (get-field $localo24 __init__))) (let ((_4 (b3 tmp-dict23))) (let ((b5 (return $localo24))) b5))))))"
+........  in let  ........
+"..........  in dict : (dict (__class__ List) (__type__ instPyList))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>"
+........  in let  ........
+"..........  in get-field : (get-field $localo24 __init__)"
+".......... d-f: : #<set: __init__>"
+".......... d-b: : #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>"
+".......... get-field's based is an normal location, which is an instance location : (dict (__class__ List) (__type__ instPyList))"
+........ (#hash((#<set: __class__> . #<set: List>) (#<set: __type__> . #<set: instPyList>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>))) ........
+........ #<set:> ........
+"..........  instance field result not found for : $localo24"
+........ will search up the instance's class mro-lst.... ........
+".......... the inst-om is: : (#hash((#<set: __class__> . #<set: List>) (#<set: __type__> . #<set: instPyList>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>)))"
+".......... obj-lookup: : #<set: List>"
+".......... cls: List"
+".......... cls-cls: #(struct:Cls #(struct:closure (lambda (tmp-dict23) (call/ec (lambda (return) (let (($localo24 (dict (__class__ List) (__type__ instPyList)))) (let ((b3 (get-field $localo24 __init__))) (let ((_4 (b3 tmp-dict23))) (let ((b5 (return $localo24))) b5))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (return . #<BAddr>))) #(struct:OLoc (dict (__base__ b29) (__mro__ b30) (__init__ b33)) (c12 c11)))"
+".......... mro-lst get is: : (List object)"
+"..........  instance get methods: #(struct:closure (lambda (self31 tmpdict32) (call/ec (lambda (return) (let ((b31 ((anf py-list?) tmpdict32))) (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32)))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (return . #<BAddr>)))"
+........ turn the normal lambda to partial applied lambda ........
+"..........  d's value to apply is: : #<set: #(struct:closure ((lambda (self31 tmpdict32) (call/ec (lambda (return) (let ((b31 ((anf py-list?) tmpdict32))) (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32)))))) #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (return . #<BAddr>)))>"
+".......... list of states?: #t"
+........  in let  ........
+"..........  in function app : (b3 tmp-dict23)"
+"..........  app matched curried lambda : #(struct:closure ((lambda (self31 tmpdict32) (call/ec (lambda (return) (let ((b31 ((anf py-list?) tmpdict32))) (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32)))))) #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (return . #<BAddr>)))"
+".......... obj-loc: : #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))"
+"..........  in call/ec : (call/ec (lambda (return) (let ((b31 ((anf py-list?) tmpdict32))) (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32)))))"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) tmpdict32)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 100) (1 200)) (c28 c21))"
+........ (#hash((#<set: 0> . #<set: 100>) (#<set: 1> . #<set: 200>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  in if : (if b31 (let ((b32 ((anf dict-ref) tmpdict32 __containerdict__))) (set-field! self31 __containerdict__ b32)) (set-field! self31 __containerdict__ tmpdict32))"
+"..........  in set-field! : (set-field! self31 __containerdict__ tmpdict32)"
+........ in pull-loc: oloc  ........
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in function app : (return $localo24)"
+"..........  app matched in continuation : #<kontP>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>"
+........  in let  ........
+"..........  in dict : (dict (0 b89) (1 hi))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))>"
+........  in let  ........
+"..........  in function app : (tuple b90)"
+........ in app: f is evaluted to be cls closure ........
+"..........  app matched normal lambda : (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17)))))))"
+"..........  in call/ec : (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))"
+........  in let  ........
+"..........  in dict : (dict (__class__ tuple) (__type__ instTuple))"
+"..........  the bottom value for obj-map, probably the first time allocation? : (#hash() #hash())"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))>"
+........  in let  ........
+"..........  in get-field : (get-field $localo30 __init__)"
+".......... d-f: : #<set: __init__>"
+".......... d-b: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))>"
+".......... get-field's based is an normal location, which is an instance location : (dict (__class__ tuple) (__type__ instTuple))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>))) ........
+........ #<set:> ........
+"..........  instance field result not found for : $localo30"
+........ will search up the instance's class mro-lst.... ........
+".......... the inst-om is: : (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>)) #hash((__type__ . #<set: #<set: __type__>>) (__class__ . #<set: #<set: __class__>>)))"
+".......... obj-lookup: : #<set: tuple>"
+".......... cls: tuple"
+".......... cls-cls: #(struct:Cls #(struct:closure (lambda (tmp-dict29) (call/ec (lambda (return) (let (($localo30 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b15 (get-field $localo30 __init__))) (let ((_16 (b15 tmp-dict29))) (let ((b17 (return $localo30))) b17))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (return . #<BAddr>))) #(struct:OLoc (dict (__base__ b45) (__mro__ b46) (__init__ b50)) (c14 c13)))"
+".......... mro-lst get is: : (tuple object)"
+"..........  instance get methods: #(struct:closure (lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+........ turn the normal lambda to partial applied lambda ........
+"..........  d's value to apply is: : #<set: #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))>"
+".......... list of states?: #t"
+........  in let  ........
+"..........  in function app : (b15 tmp-dict29)"
+"..........  app matched curried lambda : #(struct:closure ((lambda (self35 tmp-dict36) (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))) #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))) #hasheq((set . #<BAddr>) (List . #<BAddr>) (tuple . #<BAddr>) (g$x . #<BAddr>) (g$z . #<BAddr>) (g$a . #<BAddr>) (g$u . #<BAddr>) (g$y . #<BAddr>) (g$t . #<BAddr>) (g$b . #<BAddr>) (object . #<BAddr>) (gbl-dict . #<BAddr>) ($current-handler . #<BAddr>) (continue . #<BAddr>) (break . #<BAddr>) (b0 . #<BAddr>) (_1 . #<BAddr>) (_2 . #<BAddr>) (b6 . #<BAddr>) (_7 . #<BAddr>) (_8 . #<BAddr>) (b12 . #<BAddr>) (_13 . #<BAddr>) (_14 . #<BAddr>) (b18 . #<BAddr>) (_19 . #<BAddr>) (_20 . #<BAddr>) (b21 . #<BAddr>) (_22 . #<BAddr>) (_23 . #<BAddr>) (b24 . #<BAddr>) (b25 . #<BAddr>) (b26 . #<BAddr>) (_27 . #<BAddr>) (_28 . #<BAddr>) (b29 . #<BAddr>) (b30 . #<BAddr>) (b33 . #<BAddr>) (b34 . #<BAddr>) (_35 . #<BAddr>) (_36 . #<BAddr>) (b37 . #<BAddr>) (b38 . #<BAddr>) (b41 . #<BAddr>) (b42 . #<BAddr>) (_43 . #<BAddr>) (_44 . #<BAddr>) (b45 . #<BAddr>) (b46 . #<BAddr>) (return . #<BAddr>)))"
+".......... obj-loc: : #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))"
+"..........  in call/ec : (call/ec (lambda (return) (let ((t11 ((anf py-list?) tmp-dict36))) (let ((b47 (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48))))) (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))"
+........ (#hash((#<set: 0> . #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>) (#<set: 1> . #<set: hi>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t11 t11 (let ((t12 ((anf tuple?) tmp-dict36))) (let ((b48 (if t12 t12 ((anf set?) tmp-dict36)))) b48)))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))"
+........ (#hash((#<set: 0> . #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>) (#<set: 1> . #<set: hi>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if t12 t12 ((anf set?) tmp-dict36))"
+"..........  in unary operation: : ((anf set?) tmp-dict36)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))"
+........ (#hash((#<set: 0> . #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>) (#<set: 1> . #<set: hi>)) #hash((0 . #<set: #<set: 0>>) (1 . #<set: #<set: 1>>))) ........
+........ Warning: Not an singleton set but an empty set ........
+".......... the type str is : #<void>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  d's value to apply is: : #<set: #f>"
+"..........  in if : (if b47 (let ((b49 ((anf dict-ref) tmp-dict36 __containerdict__))) (set-field! self35 __containerdict__ b49)) (set-field! self35 __containerdict__ tmp-dict36))"
+"..........  in set-field! : (set-field! self35 __containerdict__ tmp-dict36)"
+........ in pull-loc: oloc  ........
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in function app : (return $localo30)"
+"..........  app matched in continuation : #<kontP>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: 0>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) e18)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if b93 ((anf py-list-ref) e18 i19) (let ((b94 ((anf tuple?) e18))) (if b94 ((anf tuple-ref) e18 i19) (let ((b95 ((anf dict?) e18))) (if b95 ((anf dict-ref) e18 i19) (error cannot index object))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) e18)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #t>"
+"..........  in if : (if b94 ((anf tuple-ref) e18 i19) (let ((b95 ((anf dict?) e18))) (if b95 ((anf dict-ref) e18 i19) (error cannot index object))))"
+"..........  in biop : ((anf tuple-ref) e18 i19)"
+"..........  in container biop : tuple-ref"
+"..........  the val set from __items__ : #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>"
+"..........  the val set from what referring : #<set:>"
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ List) (__type__ instPyList)) (c31 c30))>"
+........  in let  ........
+"..........  in set! : (set! g$a b91)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: 1>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-list?) e20)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #f>"
+........  in let  ........
+"..........  in if : (if b101 ((anf py-list-ref) e20 i21) (let ((b102 ((anf tuple?) e20))) (if b102 ((anf tuple-ref) e20 i21) (let ((b103 ((anf dict?) e20))) (if b103 ((anf dict-ref) e20 i21) (error cannot index object))))))"
+........  in let  ........
+"..........  in unary operation: : ((anf tuple?) e20)"
+........ get-container-type gets the base the OLOC struct! ........
+".......... base: #(struct:OLoc (dict (__class__ tuple) (__type__ instTuple)) (c37 c17))"
+........ (#hash((#<set: __class__> . #<set: tuple>) (#<set: __type__> . #<set: instTuple>) (#<set: __containerdict__> . #<set: #(struct:OLoc (dict (0 b89) (1 hi)) (c35 c34))>)) #hash((__type__ . #<set: #<set: __type__>>) (__containerdict__ . #<set: #<set: __containerdict__>>) (__class__ . #<set: #<set: __class__>>))) ........
+".......... the type str is : instTuple"
+"..........  d's value to apply is: : #<set: #t>"
+"..........  in if : (if b102 ((anf tuple-ref) e20 i21) (let ((b103 ((anf dict?) e20))) (if b103 ((anf dict-ref) e20 i21) (error cannot index object))))"
+"..........  in biop : ((anf tuple-ref) e20 i21)"
+"..........  in container biop : tuple-ref"
+"..........  the val set from __items__ : #<set: hi>"
+"..........  the val set from what referring : #<set:>"
+"..........  d's value to apply is: : #<set: hi>"
+........  in let  ........
+"..........  d's value to apply is: : #<set: hi>"
+........  in let  ........
+"..........  in set! : (set! g$b b99)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in set! : (set! g$z g$a)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in void: (void)"
+"..........  d's value to apply is: : #<set:>"
+........  in let  ........
+"..........  in unary operation: : ((anf py-print) g$z)"
+"..........  d's value to apply is: : #<set: (void)>"
+"..........  d's value to apply is: : #<set: (void)>"
+Number of States = 311
+
+set: 
+	class
+	proc
+$localo24: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 100) (1 200)) (c28 c21))>) ("__class__" . #<set: List>))
+List: 
+	class
+	proc
+tmp-dict23: 
+	 object: 
+		#hash((0 . #<set: 100>) (1 . #<set: 200>))
+$localo30: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b89) (1 "hi")) (c35 c34))>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 "hello!")) (c15 c14))>) ("__class__" . #<set: tuple>))
+tuple: 
+	class
+	proc
+tmp-dict29: 
+	 object: 
+		#hash((0 . #<set: 12345>) (1 . #<set: 54321>) (2 . #<set: "hello!">))
+	 object: 
+		#hash((0 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c18 c17))>) (1 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c24 c17))>))
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: 2>) (2 . #<set: 3>) (3 . #<set: 4>) (4 . #<set: 5>))
+	 object: 
+		#hash((0 . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c31 c30))>) (1 . #<set: "hi">))
+tmpdict32: 
+	 object: 
+		#hash((0 . #<set: 100>) (1 . #<set: 200>))
+self31: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 100) (1 200)) (c28 c21))>) ("__class__" . #<set: List>))
+t11: 
+	bool
+tmp-dict36: 
+	 object: 
+		#hash((0 . #<set: 12345>) (1 . #<set: 54321>) (2 . #<set: "hello!">))
+	 object: 
+		#hash((0 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c18 c17))>) (1 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c24 c17))>))
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: 2>) (2 . #<set: 3>) (3 . #<set: 4>) (4 . #<set: 5>))
+	 object: 
+		#hash((0 . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c31 c30))>) (1 . #<set: "hi">))
+t12: 
+	bool
+self35: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b89) (1 "hi")) (c35 c34))>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))>) ("__class__" . #<set: tuple>))
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 "hello!")) (c15 c14))>) ("__class__" . #<set: tuple>))
+g$x: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 "hello!")) (c15 c14))>) ("__class__" . #<set: tuple>))
+g$z: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 100) (1 200)) (c28 c21))>) ("__class__" . #<set: List>))
+g$a: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 100) (1 200)) (c28 c21))>) ("__class__" . #<set: List>))
+g$u: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>) ("__class__" . #<set: tuple>))
+g$y: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 2) (2 3) (3 4) (4 5)) (c22 c21))>) ("__class__" . #<set: tuple>))
+g$t: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 "hello!")) (c15 c14))>) ("__class__" . #<set: tuple>))
+g$b: 
+	string
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e11: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 12345) (1 54321) (2 "hello!")) (c15 c14))>) ("__class__" . #<set: tuple>))
+i12: 
+	num
+e13: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>) ("__class__" . #<set: tuple>))
+i14: 
+	num
+e15: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 g$t) (1 b66)) (c25 c21))>) ("__class__" . #<set: tuple>))
+i16: 
+	num
+t17: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b89) (1 "hi")) (c35 c34))>) ("__class__" . #<set: tuple>))
+e18: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b89) (1 "hi")) (c35 c34))>) ("__class__" . #<set: tuple>))
+i19: 
+	num
+e20: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b89) (1 "hi")) (c35 c34))>) ("__class__" . #<set: tuple>))
+i21: 
+	num
+return: 
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP

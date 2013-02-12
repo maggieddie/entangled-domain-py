@@ -1,0 +1,149 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define g$lst (void))
+ (begin
+   (set! len
+     (lambda (seq11)
+       (call/ec
+        (lambda (return)
+          (let ((cnt12 0))
+            (begin
+              (if (let ((t11 (py-list? seq11)))
+                    (begin
+                      (if t11
+                        t11
+                        (let ((t12 (set? seq11)))
+                          (begin (if t12 t12 (tuple? seq11)))))))
+                (let ((container13 (dict-ref seq11 "__containerdict__")))
+                  (begin
+                    (call/ec
+                     (lambda (break)
+                       ((lambda ($seq13 $loop14)
+                          (begin
+                            (begin (for-container $seq13 $loop14) (void))))
+                        container13
+                        (lambda (entry14)
+                          (call/ec
+                           (lambda (continue) (set! cnt12 (+ 1 cnt12))))))))
+                    (return cnt12)))
+                (cond
+                 (else
+                  (call/ec
+                   (lambda (break)
+                     ((lambda ($seq15 $loop16)
+                        (begin (begin (for-container $seq15 $loop16) (void))))
+                      seq11
+                      (lambda (entry14)
+                        (call/ec
+                         (lambda (continue) (set! cnt12 (+ cnt12 1))))))))
+                  (return cnt12))))))))))
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict16)
+       (call/ec
+        (lambda (return)
+          (let (($localo17
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo17 "__init__") tmp-dict16)
+              (return $localo17)))))))
+   (set! set
+     (lambda (tmp-dict19)
+       (call/ec
+        (lambda (return)
+          (let (($localo20 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo20 "__init__") tmp-dict19)
+              (return $localo20)))))))
+   (set! tuple
+     (lambda (tmp-dict22)
+       (call/ec
+        (lambda (return)
+          (let (($localo23
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo23 "__init__") tmp-dict22)
+              (return $localo23)))))))
+   (set! gbl-dict (dict))
+   (dict-set!
+    gbl-dict
+    object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (dict-set!
+    gbl-dict
+    List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self24 tmpdict25)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict25)
+             (set-field!
+              self24
+              "__containerdict__"
+              (dict-ref tmpdict25 "__containerdict__"))
+             (set-field! self24 "__containerdict__" tmpdict25))))))))
+   (dict-set!
+    gbl-dict
+    set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self26 tmpdict27)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict27)
+             (set-field!
+              self26
+              "__containerdict__"
+              (dict-ref tmpdict27 "__containerdict__"))
+             (set-field! self26 "__containerdict__" tmpdict27))))))))
+   (dict-set!
+    gbl-dict
+    tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self28 tmp-dict29)
+        (call/ec
+         (lambda (return)
+           (if (let ((t17 (py-list? tmp-dict29)))
+                 (begin
+                   (if t17
+                     t17
+                     (let ((t18 (tuple? tmp-dict29)))
+                       (begin (if t18 t18 (set? tmp-dict29)))))))
+             (set-field!
+              self28
+              "__containerdict__"
+              (dict-ref tmp-dict29 "__containerdict__"))
+             (set-field! self28 "__containerdict__" tmp-dict29))))))))
+   (set! g$lst (List (dict (0 "A") (1 "A") (2 "C") (3 "D"))))
+   (py-print g$lst)
+   (py-print ((get-field g$lst "count") "A"))
+   ((get-field g$lst "insert") 0 "a")
+   (py-print g$lst)
+   ((get-field g$lst "insert") 5 "E")
+   (py-print g$lst)
+   ((get-field g$lst "insert") 3 "b")
+   (py-print g$lst)
+   (py-print ((get-field g$lst "count") "A"))
+   (py-print ((get-field g$lst "count") "F"))
+   (py-print ((get-field g$lst "index") "A"))
+   (py-print ((get-field g$lst "index") "F"))))

@@ -1,0 +1,5 @@
+(program
+ (def (foo a b) (suite (return (tuple a b))))
+ (def (bar) (suite (return (indexed foo (called "string" 6) (subscript 0)))))
+ (= (a) (indexed bar (called))))
+

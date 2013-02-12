@@ -1,0 +1,54 @@
+(program
+ (def
+  (rest lstr)
+  (suite
+   (= (res) (list))
+   (= (total_len) (indexed len (called lstr)))
+   (cond
+    ((comparison total_len ("==" 0)) (suite (return lstr)))
+    ((comparison total_len ("==" 1)) (suite (return (list))))
+    (else
+     (suite
+      (= (i) 1)
+      (while
+       (comparison i ("<" total_len))
+       (suite
+        (expr (indexed res (dot append) (called (indexed lstr (subscript i)))))
+        (= (i) (arith i ("+" 1)))))
+      (return res))))))
+ (def
+  (client lstc mask_list)
+  (suite
+   (def
+    (g j y)
+    (suite
+     (=
+      ((indexed lstc (subscript j)))
+      (bitwise-and y (indexed mask_list (subscript j))))))
+   (cond
+    ((comparison
+      (indexed len (called lstc))
+      ("==" (indexed len (called mask_list))))
+     (suite (expr (indexed iter (called 0 mask_list g))) (return lstc)))
+    (else (suite (return (list)))))))
+ (def
+  (iter index lsti func)
+  (suite
+   (cond
+    ((comparison (indexed len (called lsti)) ("==" 0)) (suite (return (list))))
+    (else
+     (suite
+      (expr (indexed func (called index (indexed lsti (subscript 0)))))
+      (expr
+       (indexed
+        iter
+        (called (arith index ("+" 1)) (indexed rest (called lsti)) func))))))))
+ (= (lst) (list 1 2 3 4))
+ (= (msl) (list 0 0 0 0))
+ (= (lst2) (list 10 20 30 40))
+ (= (msl2) (list 1 2 3 4))
+ (= (result1) (indexed client (called lst msl)))
+ (= (result2) (indexed client (called lst2 msl2)))
+ (expr (indexed print (called result1)))
+ (expr (indexed print (called result2))))
+

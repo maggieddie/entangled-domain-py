@@ -1,0 +1,38 @@
+(program
+ (class (A)
+   (suite
+    (def
+     (__init__ self)
+     (suite
+      (expr (indexed print (called "A init")))
+      (= (mro_a) (indexed self (dot __class__) (dot __mro__)))
+      (expr (indexed print (called mro_a)))))))
+ (class (B A)
+   (suite
+    (def
+     (__init__ self)
+     (suite
+      (expr (indexed print (called "B init")))
+      (= (mro_b) (indexed self (dot __class__) (dot __mro__)))
+      (expr (indexed print (called mro_b)))
+      (expr (indexed super (called B self) (dot __init__) (called)))))))
+ (class (C A)
+   (suite
+    (def
+     (__init__ self)
+     (suite
+      (expr (indexed print (called "C init")))
+      (= (mro_c) (indexed self (dot __class__) (dot __mro__)))
+      (expr (indexed print (called mro_c)))
+      (expr (indexed super (called C self) (dot __init__) (called)))))))
+ (class (D B C)
+   (suite
+    (def
+     (__init__ self)
+     (suite
+      (expr (indexed print (called "D init")))
+      (= (mro_d) (indexed self (dot __class__) (dot __mro__)))
+      (expr (indexed print (called mro_d)))
+      (expr (indexed super (called D self) (dot __init__) (called)))))))
+ (= (x) (indexed D (called))))
+

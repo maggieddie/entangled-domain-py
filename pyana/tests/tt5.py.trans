@@ -1,0 +1,120 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define x (void))
+ (define a (void))
+ (define y (void))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict17)
+    (call/ec
+     (lambda (return)
+       (let (($localo18
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo18 "__init__") tmp-dict17)
+         (return $localo18))))))
+ (set-global!
+  set
+  (lambda (tmp-dict20)
+    (call/ec
+     (lambda (return)
+       (let (($localo21
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo21 "__init__") tmp-dict20)
+         (return $localo21))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict23)
+    (call/ec
+     (lambda (return)
+       (let (($localo24
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo24 "__init__") tmp-dict23)
+         (return $localo24))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self25 tmpdict26)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict26)
+           (set-field!
+            self25
+            "__containerdict__"
+            (dict-ref tmpdict26 "__containerdict__"))
+           (set-field! self25 "__containerdict__" tmpdict26))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self27 tmpdict28)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict28)
+           (set-field!
+            self27
+            "__containerdict__"
+            (dict-ref tmpdict28 "__containerdict__"))
+           (set-field! self27 "__containerdict__" tmpdict28))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self29 tmp-dict30)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict30) (tuple? tmp-dict30) (set? tmp-dict30))
+           (set-field!
+            self29
+            "__containerdict__"
+            (dict-ref tmp-dict30 "__containerdict__"))
+           (set-field! self29 "__containerdict__" tmp-dict30))))))))
+ (set-global! a 10)
+ (let ((t11 ((get-global tuple) (dict (0 42) (1 1701)))))
+   (set-global!
+    x
+    (let ((e12 t11))
+      (let ((i13 0))
+        (cond
+         ((py-list? e12) (py-list-ref e12 i13))
+         ((tuple? e12) (tuple-ref e12 i13))
+         ((dict? e12) (dict-ref e12 i13))
+         (else (error "cannot index object"))))))
+   (set-global!
+    y
+    (let ((e14 t11))
+      (let ((i15 1))
+        (cond
+         ((py-list? e14) (py-list-ref e14 i15))
+         ((tuple? e14) (tuple-ref e14 i15))
+         ((dict? e14) (dict-ref e14 i15))
+         (else (error "cannot index object")))))))
+ (py-print (get-global a))
+ (py-print (get-global x))
+ (py-print (get-global y)))

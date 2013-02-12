@@ -1,0 +1,37 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$x (void))
+ (define g$z (void))
+ (define g$y (void))
+ (set-then!
+  g$x
+  g$o
+  (set-field!
+   g$x
+   a
+   1
+   (lambda (rv0)
+     (set-field!
+      g$x
+      b
+      false
+      (lambda (rv1)
+        (set-field!
+         g$o
+         b
+         "hi"
+         (lambda (rv2)
+           (get-field
+            g$x
+            b
+            (lambda (rv3)
+              (set-then!
+               g$y
+               rv3
+               (get-field
+                g$o
+                b
+                (lambda (rv4) (set-then! g$z rv4 ($halt (void))))))))))))))))

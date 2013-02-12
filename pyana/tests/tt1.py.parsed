@@ -1,0 +1,2 @@
+(program (= (x y) (tuple "string" 3)))
+

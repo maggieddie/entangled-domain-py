@@ -1,0 +1,127 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define g$x (void))
+ (define g$y (void))
+ (begin
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict17)
+       (call/ec
+        (lambda (return)
+          (let (($localo18
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo18 "__init__") tmp-dict17)
+              (return $localo18)))))))
+   (set! set
+     (lambda (tmp-dict20)
+       (call/ec
+        (lambda (return)
+          (let (($localo21 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo21 "__init__") tmp-dict20)
+              (return $localo21)))))))
+   (set! tuple
+     (lambda (tmp-dict23)
+       (call/ec
+        (lambda (return)
+          (let (($localo24
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo24 "__init__") tmp-dict23)
+              (return $localo24)))))))
+   (set! gbl-dict (dict))
+   (dict-set!
+    gbl-dict
+    object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (dict-set!
+    gbl-dict
+    List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self25 tmpdict26)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict26)
+             (set-field!
+              self25
+              "__containerdict__"
+              (dict-ref tmpdict26 "__containerdict__"))
+             (set-field! self25 "__containerdict__" tmpdict26))))))))
+   (dict-set!
+    gbl-dict
+    set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self27 tmpdict28)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict28)
+             (set-field!
+              self27
+              "__containerdict__"
+              (dict-ref tmpdict28 "__containerdict__"))
+             (set-field! self27 "__containerdict__" tmpdict28))))))))
+   (dict-set!
+    gbl-dict
+    tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self29 tmp-dict30)
+        (call/ec
+         (lambda (return)
+           (if (let ((t11 (py-list? tmp-dict30)))
+                 (begin
+                   (if t11
+                     t11
+                     (let ((t12 (tuple? tmp-dict30)))
+                       (begin (if t12 t12 (set? tmp-dict30)))))))
+             (set-field!
+              self29
+              "__containerdict__"
+              (dict-ref tmp-dict30 "__containerdict__"))
+             (set-field! self29 "__containerdict__" tmp-dict30))))))))
+   (let ((t11 (tuple (dict (0 "string") (1 3)))))
+     (begin
+       (set! g$x
+         (let ((e12 t11))
+           (begin
+             (let ((i13 0))
+               (begin
+                 (if (py-list? e12)
+                   (py-list-ref e12 i13)
+                   (if (tuple? e12)
+                     (tuple-ref e12 i13)
+                     (if (dict? e12)
+                       (dict-ref e12 i13)
+                       (error "cannot index object")))))))))
+       (set! g$y
+         (let ((e14 t11))
+           (begin
+             (let ((i15 1))
+               (begin
+                 (if (py-list? e14)
+                   (py-list-ref e14 i15)
+                   (if (tuple? e14)
+                     (tuple-ref e14 i15)
+                     (if (dict? e14)
+                       (dict-ref e14 i15)
+                       (error "cannot index object")))))))))))))

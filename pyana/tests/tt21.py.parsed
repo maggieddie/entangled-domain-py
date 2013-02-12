@@ -1,0 +1,5 @@
+(program
+ (= (y) 2)
+ (= (y2) (list "Hi" 2 3))
+ (for x y2 (suite (expr (indexed print (called x))) (= (y) (term x ("*" y))))))
+

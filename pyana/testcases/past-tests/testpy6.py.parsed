@@ -1,0 +1,20 @@
+(program
+ (class (Foo)
+   (suite
+    (def
+     (bar self)
+     (suite (expr (indexed print (called "I'am doing Foo.bar()")))))
+    (= (x) 10)))
+ (class (Bar Foo)
+   (suite
+    (def
+     (bar self)
+     (suite
+      (expr (indexed print (called "I am doing Bar.bar()")))
+      (expr (indexed Foo (dot bar) (called self)))))
+    (= (y) 9)))
+ (= (g) (indexed Bar (called)))
+ (expr (indexed Bar (dot bar) (called g)))
+ (expr (indexed print (called (indexed g (dot y)))))
+ (expr (indexed print (called (indexed g (dot x))))))
+

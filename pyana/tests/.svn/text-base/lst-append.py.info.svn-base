@@ -1,0 +1,80 @@
+# States Explored = 253
+
+cpu time: 301 real time: 301 gc time: 0
+
+!!! Vulnerabilities #: 0 
+ --------
+
+ set: 
+	#<Cls>
+	(lambda (tmp-dict20) (call/ec (lambda (return) (let (($localo21 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo21 __init__))) (let ((_35 (b34 tmp-dict20))) (let ((b36 (return $localo21))) b36)))))))
+
+ entry15: 
+	2000
+
+ len: 
+	(lambda (seq12) (call/ec (lambda (return) (let ((cnt13 0)) (let ((t11 ((anf py-list?) seq12))) (let ((b1 (if t11 t11 (let ((t12 ((anf set?) seq12))) (let ((b2 (if t12 t12 ((anf tuple?) seq12)))) b2))))) (let ((b0 (if b1 (let ((container14 ((anf dict-ref) seq12 __containerdict__))) (let ((_10 (call/ec (lambda (break) (let ((b6 (lambda ($seq13 $loop14) (let ((_4 ((anf for-container) $seq13 $loop14))) (let ((b5 (void))) (let ((b3 b5)) b3)))))) (let ((b9 (lambda (entry15) (call/ec (lambda (continue) (let ((b7 ((anf +) 1 cnt13))) (let ((_8 (set! cnt13 b7))) (void)))))))) (b6 container14 b9))))))) (let ((b11 (return cnt13))) b11))) (let ((b19 (call/ec (lambda (break) (let ((b15 (lambda ($seq15 $loop16) (let ((_13 ((anf for-container) $seq15 $loop16))) (let ((b14 (void))) (let ((b12 b14)) b12)))))) (let ((b18 (lambda (entry15) (call/ec (lambda (continue) (let ((b16 ((anf +) cnt13 1))) (let ((_17 (set! cnt13 b16))) (void)))))))) (b15 seq12 b18))))))) (let ((b20 (return cnt13))) (let ((b21 (else b19 b20))) (cond b21))))))) b0)))))))
+
+ object: 
+	#<Cls>
+	(lambda () (void))
+
+ List: 
+	#<Cls>
+	(lambda (tmp-dict17) (call/ec (lambda (return) (let (($localo18 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo18 __init__))) (let ((_29 (b28 tmp-dict17))) (let ((b30 (return $localo18))) b30)))))))
+
+ tuple: 
+	#<Cls>
+	(lambda (tmp-dict23) (call/ec (lambda (return) (let (($localo24 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo24 __init__))) (let ((_41 (b40 tmp-dict23))) (let ((b42 (return $localo24))) b42)))))))
+
+ gbl-dict: 
+	 inst 
+		 fields and taints are: 
+		 fields and values are: 
+
+ elem28: 
+	1000
+	2000
+
+ max29: 
+	1
+	0
+
+ g$l: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: 20> 
+				1 #<set: 10> 
+			 "__class__" #<set: List> 
+ 
+ g$l2: 
+	 inst 
+		 fields and taints are: 
+			 "__type__" #<set: "untainted"> 
+ 			 "details:" 
+				0 #<set: "untainted"> 
+				1 #<set: "untainted"> 
+			 "__class__" #<set: "untainted"> 
+ 		 fields and values are: 
+			 "__type__" #<set: "instPyList"> 
+ 			 "details:" 
+				0 #<set: 2000> 
+				1 #<set: 1000> 
+			 "__class__" #<set: List> 
+ 
+ g$e: 
+	10
+	20
+# of terms: 12 
+# of singleton set of terms: 5 
+% of singleton set in all terms: 5/12 
+# of inst: 3 
+: 

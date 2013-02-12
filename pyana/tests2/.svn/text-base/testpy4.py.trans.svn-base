@@ -1,0 +1,210 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define A (void))
+ (define B (void))
+ (define b (void))
+ (define var2 (void))
+ (define C (void))
+ (define var1 (void))
+ (set-global!
+  len
+  (lambda (seq14)
+    (call/ec
+     (lambda (return)
+       (let ((cnt15 0))
+         (cond
+          ((or (py-list? seq14) (set? seq14) (tuple? seq14))
+           (let ((container16 (dict-ref seq14 "__containerdict__")))
+             (for-each entry17 container16 (set! cnt15 (+ 1 cnt15)))
+             (return cnt15)))
+          (else
+           (for-each entry17 seq14 (set! cnt15 (+ cnt15 1)))
+           (return cnt15))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict19)
+    (call/ec
+     (lambda (return)
+       (let (($localo20
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo20 "__init__") tmp-dict19)
+         (return $localo20))))))
+ (set-global!
+  set
+  (lambda (tmp-dict22)
+    (call/ec
+     (lambda (return)
+       (let (($localo23
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo23 "__init__") tmp-dict22)
+         (return $localo23))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict25)
+    (call/ec
+     (lambda (return)
+       (let (($localo26
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo26 "__init__") tmp-dict25)
+         (return $localo26))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self27 tmpdict28)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict28)
+           (set-field!
+            self27
+            "__containerdict__"
+            (dict-ref tmpdict28 "__containerdict__"))
+           (set-field! self27 "__containerdict__" tmpdict28))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self29 tmpdict30)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict30)
+           (set-field!
+            self29
+            "__containerdict__"
+            (dict-ref tmpdict30 "__containerdict__"))
+           (set-field! self29 "__containerdict__" tmpdict30))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self31 tmp-dict32)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict32) (tuple? tmp-dict32) (set? tmp-dict32))
+           (set-field!
+            self31
+            "__containerdict__"
+            (dict-ref tmp-dict32 "__containerdict__"))
+           (set-field! self31 "__containerdict__" tmp-dict32))))))))
+ ((lambda ()
+    (begin
+      (set-global!
+       A
+       (lambda ()
+         (call/ec
+          (lambda (return)
+            (let (($localo11
+                   (dict ("__class__" (get-global A)) ("__type__" "instA"))))
+              ((get-field $localo11 "__init__"))
+              (return $localo11))))))
+      (dict-set!
+       gbl-dict
+       (get-global A)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global A))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (py-print (get-field (get-field self "__class__") "__mro__"))
+                (set-field! self "str" "in A's init"))))))
+        ("getStr"
+         (lambda (self)
+           (call/ec
+            (lambda (return) (let () (return (get-field self "str")))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global A))
+       "__mro__"
+       (list (get-global A) object)))))
+ ((lambda ()
+    (begin
+      (set-global!
+       C
+       (lambda ()
+         (call/ec
+          (lambda (return)
+            (let (($localo12
+                   (dict ("__class__" (get-global C)) ("__type__" "instC"))))
+              ((get-field $localo12 "__init__"))
+              (return $localo12))))))
+      (dict-set!
+       gbl-dict
+       (get-global C)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global C))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (py-print (get-field (get-field self "__class__") "__mro__"))
+                (set-field! self "str" "in C's init"))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global C))
+       "__mro__"
+       (list (get-global C) object)))))
+ ((lambda ()
+    (begin
+      (set-global!
+       B
+       (lambda ()
+         (call/ec
+          (lambda (return)
+            (let ((bb (void)))
+              (let (($localo13
+                     (dict ("__class__" (get-global B)) ("__type__" "instB"))))
+                ((get-field $localo13 "__init__"))
+                (return $localo13)))))))
+      (dict-set!
+       gbl-dict
+       (get-global B)
+       (dict
+        ("__base__" (list (get-global C) (get-global A) object))
+        ("__class__" (get-global B))
+        ("__type__" "class")
+        ("bb"
+         (lambda (self)
+           (call/ec
+            (lambda (return) (let () (set-field! self "strNum" 10000))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global B))
+       "__mro__"
+       (list (get-global B) (get-global C) (get-global A) object)))))
+ (set-global! b ((get-global B)))
+ (set-global! var1 ((get-field (get-global b) "getStr")))
+ (py-print (get-global var1))
+ ((get-field (get-global b) "bb"))
+ (set-global! var2 (get-field (get-global b) "strNum"))
+ (py-print (get-global var2)))

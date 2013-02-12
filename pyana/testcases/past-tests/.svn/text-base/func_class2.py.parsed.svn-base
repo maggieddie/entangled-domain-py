@@ -1,0 +1,9 @@
+(program
+ (def
+  (test_fun a b)
+  (suite
+   (def (fun_inside aa bb) (suite (return (arith aa ("+" bb)))))
+   (return (indexed fun_inside (called a b)))))
+ (= (res2) (indexed test_fun (called 100 200)))
+ (expr (indexed print (called res2))))
+

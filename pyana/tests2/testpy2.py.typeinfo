@@ -1,0 +1,59 @@
+Number of States = 238
+
+set: 
+	class
+	proc
+List: 
+	proc
+	class
+tuple: 
+	class
+	proc
+setx: 
+$localo11: 
+	 object: 
+		#hash(("x" . #<set: 5 500>) ("__type__" . #<set: "instFoo">) ("__class__" . #<set: g$Foo>))
+	 object: 
+		#hash(("y" . #<set: 9>) ("__type__" . #<set: "instFoo">) ("__class__" . #<set: g$Foo>))
+g$Foo: 
+	proc
+	class
+self: 
+	 object: 
+		#hash(("x" . #<set: 5 500>) ("__type__" . #<set: "instFoo">) ("__class__" . #<set: g$Foo>))
+x: 
+	num
+	num
+g$f: 
+	 object: 
+		#hash(("x" . #<set: 5 500>) ("__type__" . #<set: "instFoo">) ("__class__" . #<set: g$Foo>))
+g$g: 
+	 object: 
+		#hash(("y" . #<set: 9>) ("__type__" . #<set: "instFoo">) ("__class__" . #<set: g$Foo>))
+g$var6: 
+	num
+g$var1: 
+	num
+g$var3: 
+	num
+g$var5: 
+	num
+g$var2: 
+	num
+g$var4: 
+	num
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+return: 
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP

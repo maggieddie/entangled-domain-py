@@ -1,0 +1,6 @@
+(program
+ (= (l) (list 20 10))
+ (= (l2) (list))
+ (for e l (suite (expr (indexed l2 (dot append) (called (term e ("*" 100)))))))
+ (expr (indexed print (called l2))))
+

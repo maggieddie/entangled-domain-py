@@ -1,0 +1,8 @@
+(program
+ (= (x) o)
+ (= ((indexed x (dot a))) 1)
+ (= ((indexed x (dot b))) False)
+ (= ((indexed o (dot b))) "hi")
+ (= (y) (indexed x (dot b)))
+ (= (z) (indexed o (dot b))))
+

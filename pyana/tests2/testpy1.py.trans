@@ -1,0 +1,172 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define var4 (void))
+ (define Foo (void))
+ (define var5 (void))
+ (define g (void))
+ (define var1 (void))
+ (define var6 (void))
+ (define var3 (void))
+ (define var2 (void))
+ (define f (void))
+ (set-global!
+  len
+  (lambda (seq12)
+    (call/ec
+     (lambda (return)
+       (let ((cnt13 0))
+         (cond
+          ((or (py-list? seq12) (set? seq12) (tuple? seq12))
+           (let ((container14 (dict-ref seq12 "__containerdict__")))
+             (for-each entry15 container14 (set! cnt13 (+ 1 cnt13)))
+             (return cnt13)))
+          (else
+           (for-each entry15 seq12 (set! cnt13 (+ cnt13 1)))
+           (return cnt13))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict17)
+    (call/ec
+     (lambda (return)
+       (let (($localo18
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo18 "__init__") tmp-dict17)
+         (return $localo18))))))
+ (set-global!
+  set
+  (lambda (tmp-dict20)
+    (call/ec
+     (lambda (return)
+       (let (($localo21
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo21 "__init__") tmp-dict20)
+         (return $localo21))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict23)
+    (call/ec
+     (lambda (return)
+       (let (($localo24
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo24 "__init__") tmp-dict23)
+         (return $localo24))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self25 tmpdict26)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict26)
+           (set-field!
+            self25
+            "__containerdict__"
+            (dict-ref tmpdict26 "__containerdict__"))
+           (set-field! self25 "__containerdict__" tmpdict26))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self27 tmpdict28)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict28)
+           (set-field!
+            self27
+            "__containerdict__"
+            (dict-ref tmpdict28 "__containerdict__"))
+           (set-field! self27 "__containerdict__" tmpdict28))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self29 tmp-dict30)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict30) (tuple? tmp-dict30) (set? tmp-dict30))
+           (set-field!
+            self29
+            "__containerdict__"
+            (dict-ref tmp-dict30 "__containerdict__"))
+           (set-field! self29 "__containerdict__" tmp-dict30))))))))
+ ((lambda ()
+    (begin
+      (set-global!
+       Foo
+       (lambda ()
+         (call/ec
+          (lambda (return)
+            (let ((bar (void)) (setx (void)))
+              (let (($localo11
+                     (dict
+                      ("__class__" (get-global Foo))
+                      ("__type__" "instFoo"))))
+                ((get-field $localo11 "__init__"))
+                (return $localo11)))))))
+      (dict-set!
+       gbl-dict
+       (get-global Foo)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global Foo))
+        ("__type__" "class")
+        ("setx"
+         (lambda (self x)
+           (call/ec (lambda (return) (let () (set-field! self "x" x))))))
+        ("bar"
+         (lambda (self)
+           (call/ec
+            (lambda (return) (let () (return (get-field self "x")))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global Foo))
+       "__mro__"
+       (list (get-global Foo) object)))))
+ (set-global! f ((get-global Foo)))
+ ((get-field (get-global f) "setx") 5)
+ (set-global! var1 ((get-field (get-global f) "bar")))
+ (py-print (get-global var1))
+ ((get-field (get-global Foo) "setx") (get-global f) 500)
+ (set-global! var2 ((get-field (get-global Foo) "bar") (get-global f)))
+ (py-print (get-global var2))
+ (set-field! (get-global Foo) "y" 10)
+ (set-global! g ((get-global Foo)))
+ (set-global! var3 (get-field (get-global g) "y"))
+ (py-print (get-global var3))
+ (set-field! (get-global g) "y" 9)
+ (py-print "after setting g.y to 9")
+ (set-global! var4 (get-field (get-global g) "y"))
+ (py-print (get-global var4))
+ (py-print "f.y should be the same to the Foo.y")
+ (py-print "f.y = ")
+ (set-global! var5 (get-field (get-global f) "y"))
+ (py-print (get-global var5))
+ (py-print "Foo.y = ")
+ (set-global! var6 (get-field (get-global Foo) "y"))
+ (py-print (get-global var6)))

@@ -1,0 +1,64 @@
+Number of States = 166
+
+set: 
+	proc
+	class
+$localo19: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "1") (1 "2") (2 "3")) (c20 c19))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash((1 . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c22 c15))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 0) (1 1) (2 2) (3 3)) (c13 c12))>) ("__class__" . #<set: List>))
+List: 
+	proc
+	class
+tmp-dict18: 
+	 object: 
+		#hash((0 . #<set: 0>) (1 . #<set: 1 #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c22 c15))>) (2 . #<set: 2>) (3 . #<set: 3>))
+	 object: 
+		#hash((0 . #<set: "1">) (1 . #<set: "2">) (2 . #<set: "3">))
+tuple: 
+	class
+	proc
+tmpdict27: 
+	 object: 
+		#hash((0 . #<set: 0>) (1 . #<set: 1 #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c22 c15))>) (2 . #<set: 2>) (3 . #<set: 3>))
+	 object: 
+		#hash((0 . #<set: "1">) (1 . #<set: "2">) (2 . #<set: "3">))
+self26: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "1") (1 "2") (2 "3")) (c20 c19))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash((1 . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c22 c15))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 0) (1 1) (2 2) (3 3)) (c13 c12))>) ("__class__" . #<set: List>))
+g$a: 
+	 object: 
+		#hash((1 . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c22 c15))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 0) (1 1) (2 2) (3 3)) (c13 c12))>) ("__class__" . #<set: List>))
+g$y: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "1") (1 "2") (2 "3")) (c20 c19))>) ("__class__" . #<set: List>))
+g$b: 
+	string
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+i12: 
+	num
+e13: 
+	 object: 
+		#hash((1 . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c22 c15))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 0) (1 1) (2 2) (3 3)) (c13 c12))>) ("__class__" . #<set: List>))
+i14: 
+	num
+e15: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "1") (1 "2") (2 "3")) (c20 c19))>) ("__class__" . #<set: List>))
+i16: 
+	num
+return: 
+	kontP
+	kontP
+	kontP
+	kontP

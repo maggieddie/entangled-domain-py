@@ -1,0 +1,71 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a (void))
+ (define g$x (void))
+ (define g$y (void))
+ (set-then!
+  g$a
+  10
+  (tuple-k
+   42
+   1701
+   (lambda (rv16)
+     ((lambda (t14 k3)
+        ((lambda (e16 k11)
+           ((lambda (i15 k12)
+              ((cps py-list?)
+               e16
+               (lambda (rv13)
+                 (if rv13
+                   ((cps py-list-ref) e16 i15 k12)
+                   ((cps tuple?)
+                    e16
+                    (lambda (rv14)
+                      (if rv14
+                        ((cps tuple-ref) e16 i15 k12)
+                        ((cps dict?)
+                         e16
+                         (lambda (rv15)
+                           (if rv15
+                             ((cps dict-ref) e16 i15 k12)
+                             (error "cannot index object" k12)))))))))))
+            0
+            k11))
+         t14
+         (lambda (rv4)
+           (set-then!
+            g$x
+            rv4
+            ((lambda (e18 k6)
+               ((lambda (i17 k7)
+                  ((cps py-list?)
+                   e18
+                   (lambda (rv8)
+                     (if rv8
+                       ((cps py-list-ref) e18 i17 k7)
+                       ((cps tuple?)
+                        e18
+                        (lambda (rv9)
+                          (if rv9
+                            ((cps tuple-ref) e18 i17 k7)
+                            ((cps dict?)
+                             e18
+                             (lambda (rv10)
+                               (if rv10
+                                 ((cps dict-ref) e18 i17 k7)
+                                 (error "cannot index object" k7)))))))))))
+                1
+                k6))
+             t14
+             (lambda (rv5) (set-then! g$y rv5 (k3 (void)))))))))
+      rv16
+      (lambda (rv0)
+        ((cps py-print)
+         g$a
+         (lambda (rv1)
+           ((cps py-print)
+            g$x
+            (lambda (rv2) ((cps py-print) g$y $halt)))))))))))

@@ -1,0 +1,14 @@
+(program
+ (= (t) (tuple 12345 54321 "hello!"))
+ (expr (indexed print (called (indexed t (subscript 0)))))
+ (expr (indexed print (called t)))
+ (= (u) (tuple t (tuple 1 2 3 4 5)))
+ (= (x) (indexed u (subscript 0)))
+ (= (y) (indexed u (subscript 1)))
+ (expr (indexed print (called x)))
+ (expr (indexed print (called y)))
+ (expr (indexed print (called u)))
+ (= (a b) (tuple (list 100 200) "hi"))
+ (= (z) a)
+ (expr (indexed print (called z))))
+

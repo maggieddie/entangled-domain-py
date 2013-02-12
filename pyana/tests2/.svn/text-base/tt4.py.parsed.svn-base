@@ -1,0 +1,5 @@
+(program
+ (def (f a b) (suite (return (tuple a b))))
+ (= (c) (indexed f (called 1 "hello")))
+ (expr (indexed print (called c))))
+

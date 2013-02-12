@@ -1,0 +1,212 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define g$action (void))
+ (define g$converters (void))
+ (define g$dsttemp (void))
+ (define g$cgi (void))
+ (define g$srctemp (void))
+ (define g$temp_c2f (void))
+ (define g$temp_f2c (void))
+ (define g$str_my (void))
+ (begin
+   (set! len
+     (lambda (seq15)
+       (call/ec
+        (lambda (return)
+          (let ((cnt16 0))
+            (begin
+              (if (let ((t11 (py-list? seq15)))
+                    (begin
+                      (if t11
+                        t11
+                        (let ((t12 (set? seq15)))
+                          (begin (if t12 t12 (tuple? seq15)))))))
+                (let ((container17 (dict-ref seq15 "__containerdict__")))
+                  (begin
+                    (call/ec
+                     (lambda (break)
+                       ((lambda ($seq13 $loop14)
+                          (begin
+                            (begin (for-container $seq13 $loop14) (void))))
+                        container17
+                        (lambda (entry18)
+                          (call/ec
+                           (lambda (continue) (set! cnt16 (+ 1 cnt16))))))))
+                    (return cnt16)))
+                (cond
+                 (else
+                  (call/ec
+                   (lambda (break)
+                     ((lambda ($seq15 $loop16)
+                        (begin (begin (for-container $seq15 $loop16) (void))))
+                      seq15
+                      (lambda (entry18)
+                        (call/ec
+                         (lambda (continue) (set! cnt16 (+ cnt16 1))))))))
+                  (return cnt16))))))))))
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict20)
+       (call/ec
+        (lambda (return)
+          (let (($localo21
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo21 "__init__") tmp-dict20)
+              (return $localo21)))))))
+   (set! set
+     (lambda (tmp-dict23)
+       (call/ec
+        (lambda (return)
+          (let (($localo24 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo24 "__init__") tmp-dict23)
+              (return $localo24)))))))
+   (set! tuple
+     (lambda (tmp-dict26)
+       (call/ec
+        (lambda (return)
+          (let (($localo27
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo27 "__init__") tmp-dict26)
+              (return $localo27)))))))
+   (set! gbl-dict (dict))
+   (dict-set!
+    gbl-dict
+    object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (dict-set!
+    gbl-dict
+    List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self28 tmpdict29)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict29)
+             (set-field!
+              self28
+              "__containerdict__"
+              (dict-ref tmpdict29 "__containerdict__"))
+             (set-field! self28 "__containerdict__" tmpdict29))))))
+     ("append"
+      (lambda (self30 elem31)
+        (let ((max32 (len self30)))
+          (begin
+            (dict-set!
+             (dict-ref self30 "__containerdict__")
+             max32
+             elem31)))))))
+   (dict-set!
+    gbl-dict
+    set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self33 tmpdict34)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict34)
+             (set-field!
+              self33
+              "__containerdict__"
+              (dict-ref tmpdict34 "__containerdict__"))
+             (set-field! self33 "__containerdict__" tmpdict34))))))))
+   (dict-set!
+    gbl-dict
+    tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self35 tmp-dict36)
+        (call/ec
+         (lambda (return)
+           (if (let ((t17 (py-list? tmp-dict36)))
+                 (begin
+                   (if t17
+                     t17
+                     (let ((t18 (tuple? tmp-dict36)))
+                       (begin (if t18 t18 (set? tmp-dict36)))))))
+             (set-field!
+              self35
+              "__containerdict__"
+              (dict-ref tmp-dict36 "__containerdict__"))
+             (set-field! self35 "__containerdict__" tmp-dict36))))))))
+   (set! g$temp_f2c
+     (lambda (f)
+       (call/ec
+        (lambda (return)
+          (let ((tc (void)))
+            (begin (set! tc (- f 32)) (return (/ (* tc 5) 9))))))))
+   (set! g$temp_c2f
+     (lambda (c)
+       (call/ec
+        (lambda (return)
+          (let ((tf (void)))
+            (begin (set! tf (* (/ c 5) 9)) (return (+ tf 32))))))))
+   (set! g$converters (dict ("tempf2c" g$temp_f2c) ("tempc2f" g$temp_c2f)))
+   (set! g$srctemp 0)
+   (set! g$dsttemp 0)
+   (set! g$action "tempf2c")
+   (set! g$cgi (dict ("terms" "tempc2fc")))
+   (set! g$action
+     (let ((e11 g$cgi))
+       (begin
+         (let ((i12 "terms"))
+           (begin
+             (if (py-list? e11)
+               (py-list-ref e11 i12)
+               (if (tuple? e11)
+                 (tuple-ref e11 i12)
+                 (if (dict? e11)
+                   (dict-ref e11 i12)
+                   (error "cannot index object")))))))))
+   (set! g$dsttemp
+     ((let ((e13 g$converters))
+        (begin
+          (let ((i14 g$action))
+            (begin
+              (if (py-list? e13)
+                (py-list-ref e13 i14)
+                (if (tuple? e13)
+                  (tuple-ref e13 i14)
+                  (if (dict? e13)
+                    (dict-ref e13 i14)
+                    (error "cannot index object"))))))))
+      g$srctemp))
+   (set! g$str_my
+     (lambda (any_int)
+       (call/ec
+        (lambda (return)
+          (begin (return (* (- any_int (- any_int 1)) "get-taint")))))))
+   (py-print
+    (+
+     (+
+      (+
+       (+
+        (+
+         (+
+          "Content-type: text/html\r\n\r\n\n<html>\n<head>\n  <title>Web Converter</title>\n</head>\n<body>\n  <h1>Convert temprature:</h1>\n  <form action=\"pyconv.py\" methond=GET>\n    <p>\n    <select name=\"action\">\n      <option value=\"tempf2c\">F to C</option>\n      <option value=\"tempc2f\">C to F</option>\n    </select>\n"
+          g$action)
+         "\n    Temprature:\n    <input type=\"text\" name=\"srctemp\" value=")
+        (g$str_my g$srctemp))
+       " size=10> is ")
+      (g$str_my g$dsttemp))
+     "\n    </p>\n    <input type=\"submit\" value=\"Convert\">\n  </form>\n</body>\n</html>"))))

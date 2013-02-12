@@ -1,0 +1,7 @@
+(program
+ (def (foo) (suite (return (dict ("a" 1) ("b" "special") ("c" 3)))))
+ (def (bar) (suite (return (tuple (indexed foo (called)) 1))))
+ (= (b) (indexed bar (called)))
+ (= (b1) (indexed b (subscript 1)))
+ (= (b2) (indexed b (subscript 0) (subscript "b"))))
+

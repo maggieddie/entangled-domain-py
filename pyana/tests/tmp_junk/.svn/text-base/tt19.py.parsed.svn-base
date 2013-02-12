@@ -1,0 +1,13 @@
+(program
+ (= (w) o)
+ (= (y) o)
+ (= ((indexed w (dot a))) 2)
+ (= (z) (indexed y (dot a)))
+ (def (foo obj) (suite (= ((indexed obj (dot b))) "Hi") (return obj)))
+ (= (qx) (indexed foo (called w)))
+ (= (res) (indexed w (dot b)))
+ (= (p) (indexed qx (dot b)))
+ (= (res2) (indexed o (dot b)))
+ (= (resy) (indexed y (dot b)))
+ (= (res_historyA) (indexed w (dot a))))
+

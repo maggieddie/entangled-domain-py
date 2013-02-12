@@ -1,0 +1,14 @@
+(program
+ (class (CC)
+   (suite
+    (def
+     (__init__ self x y)
+     (suite (= ((indexed self (dot x))) x) (= ((indexed self (dot y))) y)))
+    (def
+     (add self)
+     (suite
+      (return (arith (indexed self (dot x)) ("+" (indexed self (dot y)))))))))
+ (= (obj) (indexed CC (called 1 2)))
+ (= (res) (indexed obj (dot add) (called)))
+ (expr (indexed print (called res))))
+

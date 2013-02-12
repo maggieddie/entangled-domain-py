@@ -1,0 +1,167 @@
+k:
+	proc
+
+f:
+	proc
+
+g$f:
+	proc
+
+k14:
+	proc
+
+cc:
+	proc
+
+x:
+	int
+
+return:
+	proc
+
+k15:
+	proc
+
+k16:
+	proc
+
+g$g:
+	proc
+
+k18:
+	proc
+
+k19:
+	proc
+
+k20:
+	proc
+
+g$a:
+	py-list
+
+e15:
+	dict
+	tuple
+	py-list
+
+k28:
+	proc
+
+rv33:
+	int
+
+i14:
+	int
+
+k29:
+	proc
+
+rv30:
+	boolean
+
+rv31:
+	boolean
+
+rv32:
+	boolean
+
+rv34:
+	py-list
+
+e17:
+	dict
+	py-list
+	tuple
+
+k22:
+	proc
+
+rv27:
+	int
+
+i16:
+	int
+
+k23:
+	proc
+
+rv24:
+	boolean
+
+rv25:
+	boolean
+
+rv26:
+	boolean
+
+rv35:
+	int
+
+g$b:
+	int
+
+e19:
+	dict
+	py-list
+	tuple
+
+k42:
+	proc
+
+rv47:
+	int
+
+i18:
+	int
+
+k43:
+	proc
+
+rv44:
+	boolean
+
+rv45:
+	boolean
+
+rv46:
+	boolean
+
+rv48:
+	py-list
+
+e21:
+	dict
+	py-list
+	tuple
+
+k36:
+	proc
+
+rv41:
+	int
+
+i20:
+	int
+
+k37:
+	proc
+
+rv38:
+	boolean
+
+rv39:
+	boolean
+
+rv40:
+	boolean
+
+rv49:
+	int
+
+rv50:
+	int
+
+g$c:
+	int
+

@@ -1,0 +1,201 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define res (void))
+ (define y (void))
+ (define res_historyA (void))
+ (define p (void))
+ (define z (void))
+ (define res2 (void))
+ (define qx (void))
+ (define foo (void))
+ (define w (void))
+ (define resy (void))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict)
+    (call/ec
+     (lambda (return)
+       (let (($localo
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo "__init__") tmp-dict)
+         (return $localo))))))
+ (set-global!
+  set
+  (lambda (tmp-dict)
+    (call/ec
+     (lambda (return)
+       (let (($localo
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo "__init__") tmp-dict)
+         (return $localo))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict)
+    (call/ec
+     (lambda (return)
+       (let (($localo
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo "__init__") tmp-dict)
+         (return $localo))))))
+ (set-global!
+  gbl-dict
+  (dict
+   (object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self tmp-list-dict)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmp-list-dict)
+             (set-field!
+              self
+              "__containerdict__"
+              (dict-ref tmp-list-dict "__containerdict__"))
+             (set-field! self "__containerdict__" tmp-list-dict))))))
+     ("index"
+      (lambda (self elem)
+        (let ((container (dict-ref self "__containerdict__"))
+              (i 0)
+              (found #f)
+              (max (len self)))
+          (while
+           (and (<= 0 i) (< i max))
+           (cond
+            ((equal? (dict-ref container i) elem)
+             (begin (if (not found) (set! found i) (void)) (set! i (+ i 1))))
+            (else (set! i (+ i 1)))))
+          (if (not found)
+            (error (format "no such elem: ~a in list ~a" elem container))
+            found))))
+     ("count"
+      (lambda (self elem)
+        (let ((container (dict-ref self "__containerdict__"))
+              (i 0)
+              (cnt 0)
+              (max (len self)))
+          (while
+           (and (<= 0 i) (< i max))
+           (cond
+            ((equal? (dict-ref container i) elem)
+             (begin (set! cnt (+ cnt 1)) (set! i (+ i 1))))
+            (else (set! i (+ i 1)))))
+          cnt)))
+     ("append"
+      (lambda (self elem)
+        (let ((max (len self)))
+          (dict-set! (dict-ref self "__containerdict__") max elem))))
+     ("insert"
+      (lambda (self index elem)
+        (cond
+         ((= index 0)
+          (let ((i 0) (container (dict-ref self "__containerdict__")))
+            (for-each
+             e
+             self
+             (begin (set! i (+ i 1)) (dict-set! container i e)))
+            (dict-set! container 0 elem)))
+         ((>= index (len self))
+          (let ((tail (len self))
+                (container (dict-ref self "__containerdict__")))
+            (dict-set! container tail elem)))
+         ((and (> index 0) (< index (len self)))
+          (let ((max (len self))
+                (container (dict-ref self "__containerdict__")))
+            (let ((i max))
+              (while
+               (and (>= max i) (> i index))
+               (begin
+                 (dict-set! container i (dict-ref container (- i 1)))
+                 (set! i (- i 1))))
+              (dict-set! container index elem)))))))
+     ("reverse" (void))
+     ("sort" (void))
+     ("pop" (void))
+     ("extend" (void))))
+   (set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self tmp-list-dict)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmp-list-dict)
+             (set-field!
+              self
+              "__containerdict__"
+              (dict-ref tmp-list-dict "__containerdict__"))
+             (set-field! self "__containerdict__" tmp-list-dict))))))))
+   (tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self tmp-dict)
+        (call/ec
+         (lambda (return)
+           (if (or (py-list? tmp-dict) (tuple? tmp-dict) (set? tmp-dict))
+             (set-field!
+              self
+              "__containerdict__"
+              (dict-ref tmp-dict "__containerdict__"))
+             (set-field! self "__containerdict__" tmp-dict))))))
+     ("index"
+      (lambda (self elem)
+        (let ((container (dict-ref self "__containerdict__"))
+              (i 0)
+              (found #f)
+              (max (len self)))
+          (while
+           (and (<= 0 i) (< i max))
+           (cond
+            ((equal? (dict-ref container i) elem)
+             (begin (if (not found) (set! found i) (void)) (set! i (+ i 1))))
+            (else (set! i (+ i 1)))))
+          (if (not found)
+            (error (format "no such elem: ~a in list ~a" elem container))
+            found))))
+     ("count"
+      (lambda (self elem)
+        (let ((container (dict-ref self "__containerdict__"))
+              (i 0)
+              (cnt 0)
+              (max (len self)))
+          (while
+           (and (<= 0 i) (< i max))
+           (cond
+            ((equal? (dict-ref container i) elem)
+             (begin (set! cnt (+ cnt 1)) (set! i (+ i 1))))
+            (else (set! i (+ i 1)))))
+          cnt)))))))
+ (set-global! w (get-global o))
+ (set-global! y (get-global o))
+ (set-field! (get-global w) "a" 2)
+ (set-global! z (get-field (get-global y) "a"))
+ (set-global!
+  foo
+  (lambda (obj)
+    (call/ec
+     (lambda (return) (let () (set-field! obj "b" "Hi") (return obj))))))
+ (set-global! qx ((get-global foo) (get-global w)))
+ (set-global! res (get-field (get-global w) "b"))
+ (set-global! p (get-field (get-global qx) "b"))
+ (set-global! res2 (get-field (get-global o) "b"))
+ (set-global! resy (get-field (get-global y) "b"))
+ (set-global! res_historyA (get-field (get-global w) "a")))

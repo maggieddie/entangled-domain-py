@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1395/projects/pyana/testcases/pyDes-2.0.1
+END
+Changelog.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/pyDes-2.0.1/Changelog.txt
+END
+MANIFEST
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/pyDes-2.0.1/MANIFEST
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/pyDes-2.0.1/setup.py
+END
+PKG-INFO
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/pyDes-2.0.1/PKG-INFO
+END
+test_pydes.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1395/projects/pyana/testcases/pyDes-2.0.1/test_pydes.py
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1372/projects/pyana/testcases/pyDes-2.0.1/README.txt
+END
+pyDes.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1395/projects/pyana/testcases/pyDes-2.0.1/pyDes.py
+END

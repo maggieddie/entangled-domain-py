@@ -1,0 +1,1691 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2
+END
+seq-len.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.trans.rkt
+END
+func_class2.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.anormalnt
+END
+seq-len.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.anormal
+END
+test-tuple.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.anormal.rkt
+END
+test-set-dict-ops.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.desug
+END
+testpy1.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.trans
+END
+test-set-dict.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.desug
+END
+unit-test-taint-part2.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py
+END
+testpy1.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.anormal.rkt
+END
+test-list-dict-ops.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.anormal
+END
+ttt.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.trans
+END
+seq-len.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.lexed
+END
+testpy2.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.typeinfo
+END
+rpystone-1.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.anormalnt
+END
+testpy6.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.desug
+END
+test-set-dict.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.typeinfo
+END
+testpy1.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.parsed
+END
+tt4.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.parsed
+END
+list-compre2.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.parsed
+END
+func_class.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.parsed
+END
+testpy9.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.parsed
+END
+testpy1.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.trans.rkt
+END
+test-set-dict.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.desug.rkt
+END
+break-test.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.desug
+END
+taint-backend-part.py.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part.py.rkt
+END
+func_class2.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.desug
+END
+localvar.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.desug
+END
+part6-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part6-taint.py
+END
+testpy3.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py
+END
+testpy2.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.desug.rkt
+END
+test-set-dict-ops.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.anormal
+END
+tt4.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.desug
+END
+test-tuple.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.trans
+END
+list-comp.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.anormal
+END
+break-test.py.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.rkt
+END
+testpy3.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.trans
+END
+test-list-dict.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.anormal
+END
+testpy2.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.anormal
+END
+testpy6.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.trans.rkt
+END
+testpy5.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.anormalnt
+END
+rpystone-1.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.trans
+END
+rpystone-1.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.anormal.rkt
+END
+localvar.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.typeinfo.txt
+END
+list-comp.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.desug
+END
+test-list-dict-ops.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.typeinfo.txt
+END
+testpy7.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.desug.rkt
+END
+func_class2.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.trans.rkt
+END
+ttt.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.parsed
+END
+seq-len.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.trans
+END
+testpy6.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.parsed
+END
+test-tuple.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.anormal
+END
+list-comp.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.anormal.rkt
+END
+taint-backend-part11.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part11.py.trans
+END
+func_class2.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py
+END
+testpy5.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.anormal
+END
+rpystone-1.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.trans.rkt
+END
+part112-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part112-taint.py
+END
+list-compre2.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.anormal.rkt
+END
+func_class.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.anormal.rkt
+END
+seq-len.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.desug.rkt
+END
+list-compre2.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.anormalnt
+END
+func_class.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.anormalnt
+END
+part8-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part8-taint.py
+END
+testpy1.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.desug
+END
+testpy9.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py
+END
+test-set-dict.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.anormal
+END
+ttt.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.desug
+END
+func_class2.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.anormal.rkt
+END
+localvar.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.anormalnt
+END
+test-tuple.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.anormalnt
+END
+test-set-dict-ops.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.typeinfo.txt
+END
+testpy5.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.trans
+END
+part1-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part1-taint.py
+END
+tt4.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.anormalnt
+END
+testpy4.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py
+END
+testpy1.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.desug.rkt
+END
+taint-backend-part11.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part11.py.parsed
+END
+testpy3.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.parsed
+END
+seq-len.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.anormal.rkt
+END
+test-list-dict-ops.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.anormal.rkt
+END
+list-comp.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.anormalnt
+END
+testpy5.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.trans.rkt
+END
+taint-backend-part.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part.py.anormalnt
+END
+test-list-dict-ops.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.anormalnt
+END
+taint-backend-part11.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part11.py.anormalnt
+END
+testpy4.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.anormalnt
+END
+testpy7.py.anormalnt.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.anormalnt.rkt
+END
+taint-backend-part11.py.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part11.py.rkt
+END
+unit-test-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py
+END
+test-tuple.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.desug
+END
+testpy3.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.desug
+END
+testpy6.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.desug.rkt
+END
+taint_backend.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint_backend.py
+END
+taint_backend.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint_backend.py.lexed
+END
+rpystone-1.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.desug
+END
+unit-test-taint-part2.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py.lexed
+END
+taint_backend.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint_backend.py.parsed
+END
+testpy7.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.trans
+END
+list-compre2.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.trans.rkt
+END
+func_class.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.trans.rkt
+END
+ttt.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.anormalnt
+END
+part3-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part3-taint.py
+END
+func_class2.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.desug.rkt
+END
+list-comp.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py
+END
+test-list-dict.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py
+END
+testpy2.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.lexed
+END
+seq-len.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.desug
+END
+testpy9.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.anormalnt
+END
+break-test.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.parsed
+END
+test-set-dict-ops.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.anormal.rkt
+END
+taint-backend-part11.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part11.py.desug
+END
+test-set-dict-ops.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.anormalnt
+END
+part11-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part11-taint.py
+END
+rpystone-1.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.desug.rkt
+END
+localvar.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.trans.rkt
+END
+func_class2.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.anormal
+END
+test-tuple.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.trans.rkt
+END
+tt4.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.trans.rkt
+END
+testpy1.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.anormal
+END
+unit-test-taint.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.lexed
+END
+testpy5.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py
+END
+func_class2.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.parsed
+END
+testpy5.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.desug
+END
+utils_pytrans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/utils_pytrans.rkt
+END
+test-set-dict.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py
+END
+list-comp.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.trans.rkt
+END
+test-list-dict-ops.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.trans.rkt
+END
+seq-len.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.typeinfo
+END
+testpy4.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.trans.rkt
+END
+unit-test-taint.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.anormalnt
+END
+testpy4.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.anormal
+END
+testpy3.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.anormalnt
+END
+testpy9.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.trans
+END
+testpy9.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.anormal.rkt
+END
+part5-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part5-taint.py
+END
+localvar.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.parsed
+END
+testpy5.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.desug.rkt
+END
+unit-test-taint-part2.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py.trans
+END
+testpy5.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.parsed
+END
+list-compre2.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.typeinfo.txt
+END
+func_class.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.typeinfo.txt
+END
+localvar.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.anormal
+END
+rpystone-1.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.typeinfo.txt
+END
+testpy2.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.trans
+END
+ttt.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.trans.rkt
+END
+break-test.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py
+END
+tt4.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.anormal
+END
+test-list-dict.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.anormalnt
+END
+testpy9.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.trans.rkt
+END
+list-compre2.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.trans
+END
+func_class.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.trans
+END
+testpy7.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.anormal
+END
+taint-backend-part2.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part2.py.parsed
+END
+rpystone-1.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.anormal
+END
+taint-backend-bk.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-bk.py.parsed
+END
+test-set-dict-ops.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.trans.rkt
+END
+test-list-dict.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.typeinfo.txt
+END
+testpy7.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.desug
+END
+list-compre2.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.desug.rkt
+END
+func_class.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.desug.rkt
+END
+test-set-dict.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.lexed
+END
+taint-backend-part1.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part1.py
+END
+localvar.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.anormal.rkt
+END
+break-test.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.typeinfo
+END
+unit-test-taint.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.trans
+END
+tt4.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.anormal.rkt
+END
+testpy7.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.anormal.rkt
+END
+part111-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part111-taint.py
+END
+localvar.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.desug.rkt
+END
+part7-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part7-taint.py
+END
+test-tuple.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.desug.rkt
+END
+testpy6.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py
+END
+tt4.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.desug.rkt
+END
+list-compre2.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py
+END
+func_class.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py
+END
+test-set-dict.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.anormalnt
+END
+tt4.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.typeinfo.txt
+END
+test-list-dict-ops.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.parsed
+END
+unit-test-taint.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.parsed
+END
+testpy2.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.parsed
+END
+rpystone-1.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py.parsed
+END
+taint-backend-part.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part.py.trans
+END
+test-list-dict-ops.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.trans
+END
+test-list-dict.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.trans
+END
+testpy3.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.trans.rkt
+END
+test-list-dict.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.anormal.rkt
+END
+break-test.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.lexed
+END
+testpy4.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.trans
+END
+test-set-dict.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.typeinfo.txt
+END
+localvar.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.lexed
+END
+ttt.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.anormal
+END
+testpy2.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.anormalnt
+END
+testpy6.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.anormal.rkt
+END
+testpy1.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py
+END
+list-comp.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.desug.rkt
+END
+func_class2.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.typeinfo.txt
+END
+test-list-dict-ops.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.desug.rkt
+END
+test-tuple.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.typeinfo.txt
+END
+testpy4.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.desug.rkt
+END
+test-list-dict.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.parsed
+END
+testpy9.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.desug
+END
+break-test.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.anormalnt
+END
+test-list-dict.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.trans.rkt
+END
+ttt.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.anormal.rkt
+END
+testpy5.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.anormal.rkt
+END
+seq-len.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py
+END
+test-set-dict-ops.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.parsed
+END
+unit-test-taint-part2.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py.desug
+END
+test-list-dict-ops.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py
+END
+testpy7.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.anormalnt
+END
+test-set-dict-ops.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.trans
+END
+test-set-dict.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.trans
+END
+testpy2.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.desug
+END
+test-set-dict.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.anormal.rkt
+END
+ttt.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.desug.rkt
+END
+ttt.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py.typeinfo.txt
+END
+testpy9.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.desug.rkt
+END
+list-compre2.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.desug
+END
+func_class.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.desug
+END
+taint-backend-part2.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part2.py
+END
+testpy7.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.parsed
+END
+test-set-dict-ops.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py.desug.rkt
+END
+seq-len.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.anormalnt
+END
+test-tuple.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.typeinfo
+END
+testpy4.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.anormal.rkt
+END
+testpy3.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.anormal
+END
+localvar.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py
+END
+testpy6.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.trans
+END
+part2-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part2-taint.py
+END
+test-set-dict.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.parsed
+END
+tt4.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py
+END
+test-set-dict.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict.py.trans.rkt
+END
+testpy7.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py
+END
+unit-test-taint.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.desug
+END
+rpystone-1.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/rpystone-1.py
+END
+list-comp.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.parsed
+END
+break-test.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/break-test.py.trans
+END
+test-set-dict-ops.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-set-dict-ops.py
+END
+func_class2.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class2.py.trans
+END
+localvar.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/localvar.py.trans
+END
+testpy2.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.trans.rkt
+END
+tt4.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/tt4.py.trans
+END
+testpy3.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.anormal.rkt
+END
+testpy1.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.anormalnt
+END
+unit-test-taint.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.typeinfo
+END
+testpy6.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.anormal
+END
+list-compre2.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-compre2.py.anormal
+END
+func_class.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/func_class.py.anormal
+END
+unit-test-taint.py.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint.py.rkt
+END
+testpy2.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py
+END
+seq-len.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.typeinfo.txt
+END
+taint-backend-part.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/taint-backend-part.py.desug
+END
+test-list-dict-ops.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict-ops.py.desug
+END
+test-list-dict.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.desug
+END
+testpy3.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.desug.rkt
+END
+seq-len.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/seq-len.py.parsed
+END
+testpy4.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.desug
+END
+testpy1.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy1.py.typeinfo.txt
+END
+testpy2.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.typeinfo.txt
+END
+testpy3.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy3.py.typeinfo.txt
+END
+testpy4.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.typeinfo.txt
+END
+testpy5.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy5.py.typeinfo.txt
+END
+testpy6.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.typeinfo.txt
+END
+testpy7.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.typeinfo.txt
+END
+testpy4.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy4.py.parsed
+END
+unit-test-taint-part2.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py.anormalnt
+END
+testpy9.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.typeinfo.txt
+END
+unit-test-taint-part2.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py.typeinfo
+END
+list-comp.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.trans
+END
+testpy2.py.anormal.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy2.py.anormal.rkt
+END
+testpy7.py.trans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy7.py.trans.rkt
+END
+test-tuple.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.lexed
+END
+test-tuple.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py
+END
+part4-taint.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/part4-taint.py
+END
+testpy6.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy6.py.anormalnt
+END
+testpy9.py.anormal
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/testpy9.py.anormal
+END
+ttt.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/ttt.py
+END
+unit-test-taint-part2.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/unit-test-taint-part2.py.parsed
+END
+test-list-dict.py.desug.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-list-dict.py.desug.rkt
+END
+list-comp.py.typeinfo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/list-comp.py.typeinfo.txt
+END
+test-tuple.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1472/projects/pyana/tests2/test-tuple.py.parsed
+END

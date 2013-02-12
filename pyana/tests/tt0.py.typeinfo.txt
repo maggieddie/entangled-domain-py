@@ -1,0 +1,30 @@
+Number of States = 111
+
+set: 
+	class
+	proc
+List: 
+	proc
+	class
+tuple: 
+	proc
+	class
+g$foo: 
+	proc
+g$b: 
+	string
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e11: 
+	 object: 
+		#hash(("c" . #<set: 3>) ("a" . #<set: "hi">) ("b" . #<set: 2>))
+i12: 
+	string
+return: 
+	kontP

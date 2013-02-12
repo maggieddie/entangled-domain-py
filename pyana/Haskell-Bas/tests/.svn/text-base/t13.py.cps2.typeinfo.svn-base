@@ -1,0 +1,1 @@
+fromList [("g$a",fromList [TAbstract "g$o"]),("g$b",fromList [TAbstract "g$o"]),("g$o",fromList [TAbstract "g$o"]),("g$o.x",fromList [Int]),("g$y",fromList [Int]),("rv1",fromList [Int])]

@@ -1,0 +1,21 @@
+(program
+ (def
+  (emit_mesh verts mesh index)
+  (suite
+   (cond
+    ((comparison index (">=" (indexed len (called verts)))) (suite (return)))
+    (else
+     (suite
+      (expr
+       (indexed
+        print
+        (called (indexed verts (subscript (indexed mesh (subscript index)))))))
+      (expr (indexed emit_mesh (called verts mesh (arith index ("+" 1))))))))))
+ (def
+  (perform_tast)
+  (suite
+   (= (lst) (list 10 20 30 40))
+   (= (mesh) (list 0 5 2 1))
+   (expr (indexed emit_mesh (called lst mesh 0)))))
+ (expr (indexed perform_tast (called))))
+

@@ -1,0 +1,5 @@
+(program
+ (def (foo) (suite (return (dict ("a" "hi") ("b" 2) ("c" 3)))))
+ (= (b) (indexed foo (called) (subscript "a")))
+ (expr (indexed print (called b))))
+

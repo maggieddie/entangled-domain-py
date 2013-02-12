@@ -1,0 +1,10 @@
+** fact: recursive programs. The major reference test cases and the simplest one referenced by a lot works
+
+** past-tests: including all basic Python constructs as well as dynamic OO test cases.
+
+** rstone:
+
+** pyDES: encryption and decryption implmented purely in Python
+
+** efficient-binary-tree: compound data strcures and manipulations and algorithms.
+

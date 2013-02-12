@@ -1,0 +1,227 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define result1 (void))
+ (define result2 (void))
+ (define rest (void))
+ (define lst2 (void))
+ (define msl (void))
+ (define iter (void))
+ (define msl2 (void))
+ (define lst (void))
+ (define client (void))
+ (set-global!
+  len
+  (lambda (seq19)
+    (call/ec
+     (lambda (return)
+       (let ((cnt20 0))
+         (cond
+          ((or (py-list? seq19) (set? seq19) (tuple? seq19))
+           (let ((container21 (dict-ref seq19 "__containerdict__")))
+             (for-each entry22 container21 (set! cnt20 (+ 1 cnt20)))
+             (return cnt20)))
+          (else
+           (for-each entry22 seq19 (set! cnt20 (+ cnt20 1)))
+           (return cnt20))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict24)
+    (call/ec
+     (lambda (return)
+       (let (($localo25
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo25 "__init__") tmp-dict24)
+         (return $localo25))))))
+ (set-global!
+  set
+  (lambda (tmp-dict27)
+    (call/ec
+     (lambda (return)
+       (let (($localo28
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo28 "__init__") tmp-dict27)
+         (return $localo28))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict30)
+    (call/ec
+     (lambda (return)
+       (let (($localo31
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo31 "__init__") tmp-dict30)
+         (return $localo31))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self32 tmpdict33)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict33)
+           (set-field!
+            self32
+            "__containerdict__"
+            (dict-ref tmpdict33 "__containerdict__"))
+           (set-field! self32 "__containerdict__" tmpdict33))))))
+   ("append"
+    (lambda (self34 elem35)
+      (let ((max36 (len self34)))
+        (dict-set! (dict-ref self34 "__containerdict__") max36 elem35))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self37 tmpdict38)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict38)
+           (set-field!
+            self37
+            "__containerdict__"
+            (dict-ref tmpdict38 "__containerdict__"))
+           (set-field! self37 "__containerdict__" tmpdict38))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self39 tmp-dict40)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict40) (tuple? tmp-dict40) (set? tmp-dict40))
+           (set-field!
+            self39
+            "__containerdict__"
+            (dict-ref tmp-dict40 "__containerdict__"))
+           (set-field! self39 "__containerdict__" tmp-dict40))))))))
+ (set-global!
+  rest
+  (lambda (lstr)
+    (call/ec
+     (lambda (return)
+       (let ((res (void)) (i (void)) (total_len (void)))
+         (set! res ((get-global List) (dict)))
+         (set! total_len (len lstr))
+         (cond
+          ((equal? total_len 0) (let () (return lstr)))
+          ((equal? total_len 1) (let () (return ((get-global List) (dict)))))
+          (else
+           (let ()
+             (set! i 1)
+             (while
+              (< i total_len)
+              (let ()
+                ((get-field res "append")
+                 (let ((e11 lstr))
+                   (let ((i12 i))
+                     (cond
+                      ((py-list? e11) (py-list-ref e11 i12))
+                      ((tuple? e11) (tuple-ref e11 i12))
+                      ((dict? e11) (dict-ref e11 i12))
+                      (else (error "cannot index object"))))))
+                (set! i (+ i 1))))
+             (return res)))))))))
+ (set-global!
+  client
+  (lambda (lstc mask_list)
+    (call/ec
+     (lambda (return)
+       (let ((g (void)))
+         (set! g
+           (lambda (j y)
+             (call/ec
+              (lambda (return)
+                (let ()
+                  (let ((b15  lstc))
+                    (let ((i16 j))
+                      (cond
+                       ((py-list? b15)
+                        (py-list-set!
+                         b15
+                         i16
+                         (bitwise-and
+                          y
+                          (let ((e13  mask_list))
+                            (let ((i14 j))
+                              (cond
+                               ((py-list? e13) (py-list-ref e13 i14))
+                               ((tuple? e13) (tuple-ref e13 i14))
+                               ((dict? e13) (dict-ref e13 i14))
+                               (else (error "cannot index object"))))))))
+                       ((dict? b15)
+                        (dict-set!
+                         b15
+                         i16
+                         (bitwise-and
+                          y
+                          (let ((e13  mask_list))
+                            (let ((i14 j))
+                              (cond
+                               ((py-list? e13) (py-list-ref e13 i14))
+                               ((tuple? e13) (tuple-ref e13 i14))
+                               ((dict? e13) (dict-ref e13 i14))
+                               (else
+                                (error "cannot index object"))))))))))))))))
+         (cond
+          ((equal? (len lstc) (len mask_list))
+           (let () ((get-global iter) 0 mask_list g) (return lstc)))
+          (else (let () (return ((get-global List) (dict)))))))))))
+ (set-global!
+  iter
+  (lambda (index lsti func)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((equal? (len lsti) 0) (let () (return ((get-global List) (dict)))))
+          (else
+           (let ()
+             (func
+              index
+              (let ((e17 lsti))
+                (let ((i18 0))
+                  (cond
+                   ((py-list? e17) (py-list-ref e17 i18))
+                   ((tuple? e17) (tuple-ref e17 i18))
+                   ((dict? e17) (dict-ref e17 i18))
+                   (else (error "cannot index object"))))))
+             ((get-global iter)
+              (+ index 1)
+              ((get-global rest) lsti)
+              func)))))))))
+ (set-global! lst ((get-global List) (dict (0 1) (1 2) (2 3) (3 4))))
+ (set-global! msl ((get-global List) (dict (0 0) (1 0) (2 0) (3 0))))
+ (set-global! lst2 ((get-global List) (dict (0 10) (1 20) (2 30) (3 40))))
+ (set-global! msl2 ((get-global List) (dict (0 1) (1 2) (2 3) (3 4))))
+ (set-global! result1 ((get-global client) (get-global lst) (get-global msl)))
+ (set-global!
+  result2
+  ((get-global client) (get-global lst2) (get-global msl2)))
+ (py-print (get-global result1))
+ (py-print (get-global result2)))

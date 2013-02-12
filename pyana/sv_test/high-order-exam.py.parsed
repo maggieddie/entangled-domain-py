@@ -1,0 +1,6 @@
+(program
+ (= (lst) (list 1 2 3))
+ (def (func x) (suite (return (indexed lst (subscript x)))))
+ (def (high_func f x) (suite (return (indexed f (called x)))))
+ (expr (indexed print (called (indexed high_func (called func 3))))))
+

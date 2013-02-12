@@ -1,0 +1,59 @@
+Number of States = 364
+
+set: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict22) (call/ec (lambda (return) (let (($localo23 (dict (__class__ set) (__type__ instSet)))) (let ((b34 (get-field $localo23 __init__))) (let ((_35 (b34 tmp-dict22))) (let ((b36 (return $localo23))) b36))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$WebFactorial . #(struct:BAddr g$WebFactorial ())) (g$str_my . #(struct:BAddr g$str_my ())) (g$form . #(struct:BAddr g$form ())) (g$num . #(struct:BAddr g$num ())) (g$fact . #(struct:BAddr g$fact ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+continue: 
+object: 
+	#<Cls>
+	#(struct:closure (lambda () (void)) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (object . #(struct:BAddr object ())) (List . #(struct:BAddr List ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$WebFactorial . #(struct:BAddr g$WebFactorial ())) (g$str_my . #(struct:BAddr g$str_my ())) (g$form . #(struct:BAddr g$form ())) (g$num . #(struct:BAddr g$num ())) (g$fact . #(struct:BAddr g$fact ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+List: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict19) (call/ec (lambda (return) (let (($localo20 (dict (__class__ List) (__type__ instPyList)))) (let ((b28 (get-field $localo20 __init__))) (let ((_29 (b28 tmp-dict19))) (let ((b30 (return $localo20))) b30))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (List . #(struct:BAddr List ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$WebFactorial . #(struct:BAddr g$WebFactorial ())) (g$str_my . #(struct:BAddr g$str_my ())) (g$form . #(struct:BAddr g$form ())) (g$num . #(struct:BAddr g$num ())) (g$fact . #(struct:BAddr g$fact ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+tuple: 
+	#<Cls>
+	#(struct:closure (lambda (tmp-dict25) (call/ec (lambda (return) (let (($localo26 (dict (__class__ tuple) (__type__ instTuple)))) (let ((b40 (get-field $localo26 __init__))) (let ((_41 (b40 tmp-dict25))) (let ((b42 (return $localo26))) b42))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (tuple . #(struct:BAddr tuple ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (g$WebFactorial . #(struct:BAddr g$WebFactorial ())) (g$str_my . #(struct:BAddr g$str_my ())) (g$form . #(struct:BAddr g$form ())) (g$num . #(struct:BAddr g$num ())) (g$fact . #(struct:BAddr g$fact ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+gbl-dict: 
+	 object: 
+		#hash()
+n: 
+	5
+$localo11: 
+	 object: 
+		#hash(("n" . #<set: 0 1 2 3 4 5>) ("res" . #<set: 1 5 20 60 120>) ("__type__" . #<set: "instWebFactorial">) ("__class__" . #<set: g$WebFactorial>))
+g$WebFactorial: 
+	#<Cls>
+	#(struct:closure (lambda (n) (call/ec (lambda (return) (let (($localo11 (dict (__class__ g$WebFactorial) (__type__ instWebFactorial)))) (let ((b79 (get-field $localo11 __init__))) (let ((_80 (b79 n))) (let ((b81 (return $localo11))) b81))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (g$WebFactorial . #(struct:BAddr g$WebFactorial ())) (g$str_my . #(struct:BAddr g$str_my ())) (g$form . #(struct:BAddr g$form ())) (g$num . #(struct:BAddr g$num ())) (g$fact . #(struct:BAddr g$fact ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+self: 
+	 object: 
+		#hash(("n" . #<set: 0 1 2 3 4 5>) ("res" . #<set: 1 5 20 60 120>) ("__type__" . #<set: "instWebFactorial">) ("__class__" . #<set: g$WebFactorial>))
+any_int: 
+	5
+	120
+g$str_my: 
+	#(struct:closure (lambda (any_int) (call/ec (lambda (return) (let ((b116 ((anf -) any_int 1))) (let ((b117 ((anf -) any_int b116))) (let ((b118 ((anf *) b117 get-taint))) (let ((b115 (return b118))) b115))))))) #hasheq((set . #(struct:BAddr set ())) (b22 . #(struct:BAddr b22 ())) (break . #(struct:BAddr break ())) (continue . #(struct:BAddr continue ())) (_23 . #(struct:BAddr _23 ())) (len . #(struct:BAddr len ())) (_24 . #(struct:BAddr _24 ())) (b25 . #(struct:BAddr b25 ())) (_26 . #(struct:BAddr _26 ())) (object . #(struct:BAddr object ())) (_27 . #(struct:BAddr _27 ())) (b31 . #(struct:BAddr b31 ())) (List . #(struct:BAddr List ())) (_32 . #(struct:BAddr _32 ())) (_33 . #(struct:BAddr _33 ())) (b37 . #(struct:BAddr b37 ())) (_38 . #(struct:BAddr _38 ())) (_39 . #(struct:BAddr _39 ())) (b43 . #(struct:BAddr b43 ())) (tuple . #(struct:BAddr tuple ())) (_44 . #(struct:BAddr _44 ())) (_45 . #(struct:BAddr _45 ())) (b46 . #(struct:BAddr b46 ())) (_47 . #(struct:BAddr _47 ())) (gbl-dict . #(struct:BAddr gbl-dict ())) (_48 . #(struct:BAddr _48 ())) (b49 . #(struct:BAddr b49 ())) (b50 . #(struct:BAddr b50 ())) (b51 . #(struct:BAddr b51 ())) (_52 . #(struct:BAddr _52 ())) (_53 . #(struct:BAddr _53 ())) (b54 . #(struct:BAddr b54 ())) (b55 . #(struct:BAddr b55 ())) (b58 . #(struct:BAddr b58 ())) (b59 . #(struct:BAddr b59 ())) (_60 . #(struct:BAddr _60 ())) (_61 . #(struct:BAddr _61 ())) (b62 . #(struct:BAddr b62 ())) (b63 . #(struct:BAddr b63 ())) (b66 . #(struct:BAddr b66 ())) (b67 . #(struct:BAddr b67 ())) (_68 . #(struct:BAddr _68 ())) (_69 . #(struct:BAddr _69 ())) (b70 . #(struct:BAddr b70 ())) (b71 . #(struct:BAddr b71 ())) (b75 . #(struct:BAddr b75 ())) (b76 . #(struct:BAddr b76 ())) (_77 . #(struct:BAddr _77 ())) (_78 . #(struct:BAddr _78 ())) (b113 . #(struct:BAddr b113 ())) (g$WebFactorial . #(struct:BAddr g$WebFactorial ())) (_114 . #(struct:BAddr _114 ())) (g$str_my . #(struct:BAddr g$str_my ())) (g$form . #(struct:BAddr g$form ())) (g$num . #(struct:BAddr g$num ())) (g$fact . #(struct:BAddr g$fact ())) ($current-handler . #(struct:BAddr $current-handler ())) (return . #(struct:BAddr return ()))))
+g$form: 
+	 object: 
+		#hash(("terms" . #<set: 5>))
+e12: 
+	 object: 
+		#hash(("terms" . #<set: 5>))
+i13: 
+	terms
+g$num: 
+	5
+g$fact: 
+	 object: 
+		#hash(("n" . #<set: 0 1 2 3 4 5>) ("res" . #<set: 1 5 20 60 120>) ("__type__" . #<set: "instWebFactorial">) ("__class__" . #<set: g$WebFactorial>))
+$current-handler: 
+return: 
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>
+	#<kontP>

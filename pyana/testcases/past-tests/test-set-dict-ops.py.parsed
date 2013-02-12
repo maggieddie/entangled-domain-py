@@ -1,0 +1,32 @@
+(program
+ (= (set1) (set 1 2 3))
+ (= (lst1) (set 10 20 30))
+ (expr
+  (indexed
+   print
+   (called (set (comprehension (term 100 ("*" x)) (compfor x set1))))))
+ (expr
+  (indexed
+   print
+   (called (set (comprehension (term ("-" 100) ("*" x)) (compfor x lst1))))))
+ (expr (indexed print (called "dict: ")))
+ (expr
+  (indexed
+   print
+   (called (dict (dict_compr (x y) (compfor x set1 (compfor y lst1)))))))
+ (expr (indexed print (called "a set of tuples")))
+ (expr
+  (indexed
+   print
+   (called
+    (set (comprehension (tuple x y) (compfor x set1 (compfor y lst1)))))))
+ (expr (indexed print (called "set of tuples with conditions: ")))
+ (expr
+  (indexed
+   print
+   (called
+    (set
+     (comprehension
+      (tuple x y)
+      (compfor x set1 (compif (comparison x (">=" 2)) (compfor y lst1)))))))))
+

@@ -1,0 +1,69 @@
+g$a:
+	int
+
+t14:
+	tuple
+
+k14:
+	proc
+
+e16:
+	dict
+	tuple
+	py-list
+
+k15:
+	proc
+
+i15:
+	int
+
+k16:
+	proc
+
+rv17:
+	boolean
+
+rv18:
+	boolean
+
+rv19:
+	boolean
+
+rv20:
+	int
+
+g$x:
+	int
+
+e18:
+	dict
+	tuple
+	py-list
+
+k21:
+	proc
+
+i17:
+	int
+
+k22:
+	proc
+
+rv23:
+	boolean
+
+rv24:
+	boolean
+
+rv25:
+	boolean
+
+rv26:
+	int
+
+g$y:
+	int
+
+rv27:
+

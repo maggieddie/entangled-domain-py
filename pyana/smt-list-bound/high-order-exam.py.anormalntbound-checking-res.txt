@@ -1,0 +1,6 @@
+
+
+....proving the following assumption base in expression 
+((anf py-list-ref) e11 i12)
+*********** Theorem Prover is fired .......
+Theorem prover says sat: INVALID array list reference!

@@ -1,0 +1,46 @@
+Number of States = 118
+
+set: 
+	class
+	proc
+a: 
+	num
+List: 
+	class
+	proc
+$localo19: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c14 c13))>) ("__class__" . #<set: tuple>))
+tuple: 
+	proc
+	class
+tmp-dict18: 
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: "hello">))
+t11: 
+	bool
+tmp-dict25: 
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: "hello">))
+t12: 
+	bool
+self24: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c14 c13))>) ("__class__" . #<set: tuple>))
+g$f: 
+	proc
+g$c: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b)) (c14 c13))>) ("__class__" . #<set: tuple>))
+object: 
+	class
+	proc
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+return: 
+	kontP
+	kontP
+	kontP

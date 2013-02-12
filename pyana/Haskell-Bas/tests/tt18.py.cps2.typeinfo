@@ -1,0 +1,1 @@
+fromList [("g$o",fromList [TAbstract "g$o"]),("g$o.a",fromList [Int]),("g$o.b",fromList [Bool,String]),("g$x",fromList [TAbstract "g$o"]),("g$x.a",fromList [Int]),("g$x.b",fromList [Bool]),("g$y",fromList [Bool,String]),("g$z",fromList [Bool,String]),("rv3",fromList [Bool,String]),("rv4",fromList [Bool,String])]

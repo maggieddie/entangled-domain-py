@@ -1,0 +1,71 @@
+Number of States = 190
+
+set: 
+	class
+	proc
+$localo21: 
+	 object: 
+		#hash((0 . #<set: "str">) (1 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c23 c22))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c13 c12))>) ("__class__" . #<set: List>))
+List: 
+	class
+	proc
+tmp-dict20: 
+	 object: 
+		#hash((0 . #<set: 1 "str">) (1 . #<set: 3 #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c23 c22))>) (2 . #<set: 5>))
+$localo27: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 2) (1 4)) (c20 c19))>) ("__class__" . #<set: tuple>))
+tuple: 
+	class
+	proc
+tmp-dict26: 
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>))
+tmpdict29: 
+	 object: 
+		#hash((0 . #<set: 1 "str">) (1 . #<set: 3 #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c23 c22))>) (2 . #<set: 5>))
+self28: 
+	 object: 
+		#hash((0 . #<set: "str">) (1 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c23 c22))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c13 c12))>) ("__class__" . #<set: List>))
+t11: 
+	bool
+tmp-dict33: 
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>))
+t12: 
+	bool
+self32: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 2) (1 4)) (c20 c19))>) ("__class__" . #<set: tuple>))
+g$tl: 
+	num
+g$lst: 
+	 object: 
+		#hash((0 . #<set: "str">) (1 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c23 c22))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c13 c12))>) ("__class__" . #<set: List>))
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+i12: 
+	num
+i14: 
+	num
+e15: 
+	 object: 
+		#hash((0 . #<set: "str">) (1 . #<set: #(struct:OLoc (dict ("__class__" tuple) ("__type__" "instTuple")) (c23 c22))>) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c13 c12))>) ("__class__" . #<set: List>))
+i16: 
+	num
+e17: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 2) (1 4)) (c20 c19))>) ("__class__" . #<set: tuple>))
+i18: 
+	num
+return: 
+	kontP
+	kontP
+	kontP
+	kontP

@@ -1,0 +1,2 @@
+(program (= (a) (list 1)) (= (b) (list 1000)))
+

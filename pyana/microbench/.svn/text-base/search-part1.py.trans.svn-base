@@ -1,0 +1,490 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define srch1 (void))
+ (define OR (void))
+ (define srch2 (void))
+ (define gen_malicious_input (void))
+ (define test_init_input (void))
+ (define Response (void))
+ (define Request (void))
+ (define issubstring (void))
+ (define Search (void))
+ (define lst_to_str (void))
+ (define SCRIPT_PAT (void))
+ (define mock_mal_strlst (void))
+ (define CASE_SENSITIVE (void))
+ (set-global!
+  len
+  (lambda (seq31)
+    (call/ec
+     (lambda (return)
+       (let ((cnt32 0))
+         (cond
+          ((or (py-list? seq31) (set? seq31) (tuple? seq31))
+           (let ((container33 (dict-ref seq31 "__containerdict__")))
+             (for-each entry34 container33 (set! cnt32 (+ 1 cnt32)))
+             (return cnt32)))
+          (else
+           (for-each entry34 seq31 (set! cnt32 (+ cnt32 1)))
+           (return cnt32))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict36)
+    (call/ec
+     (lambda (return)
+       (let (($localo37
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo37 "__init__") tmp-dict36)
+         (return $localo37))))))
+ (set-global!
+  set
+  (lambda (tmp-dict39)
+    (call/ec
+     (lambda (return)
+       (let (($localo40
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo40 "__init__") tmp-dict39)
+         (return $localo40))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict42)
+    (call/ec
+     (lambda (return)
+       (let (($localo43
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo43 "__init__") tmp-dict42)
+         (return $localo43))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self44 tmpdict45)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict45)
+           (set-field!
+            self44
+            "__containerdict__"
+            (dict-ref tmpdict45 "__containerdict__"))
+           (set-field! self44 "__containerdict__" tmpdict45))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self46 tmpdict47)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict47)
+           (set-field!
+            self46
+            "__containerdict__"
+            (dict-ref tmpdict47 "__containerdict__"))
+           (set-field! self46 "__containerdict__" tmpdict47))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self48 tmp-dict49)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict49) (tuple? tmp-dict49) (set? tmp-dict49))
+           (set-field!
+            self48
+            "__containerdict__"
+            (dict-ref tmp-dict49 "__containerdict__"))
+           (set-field! self48 "__containerdict__" tmp-dict49))))))))
+ (set-global! OR "OR")
+ (set-global! CASE_SENSITIVE "Sensitive")
+ (set-global!
+  SCRIPT_PAT
+  ((get-global List)
+   (dict (0 "<") (1 "s") (2 "c") (3 "r") (4 "i") (5 "p") (6 "t") (7 ">"))))
+ (set-global!
+  lst_to_str
+  (lambda (lst)
+    (call/ec
+     (lambda (return)
+       (let ((l (void)) (i (void)) (res_str (void)))
+         (set! l (len lst))
+         (set! i 0)
+         (set! res_str "")
+         (while
+          (< i l)
+          (let ()
+            (set! res_str
+              (+
+               res_str
+               (let ((e11 lst))
+                 (let ((i12 i))
+                   (cond
+                    ((py-list? e11) (py-list-ref e11 i12))
+                    ((tuple? e11) (tuple-ref e11 i12))
+                    ((dict? e11) (dict-ref e11 i12))
+                    (else (error "cannot index object")))))))
+            (set! i (+ i 1))))
+         (return res_str))))))
+ (set-global!
+  issubstring
+  (lambda (s p)
+    (call/ec
+     (lambda (return)
+       (let ((j (void)) (c (void)) (tmpl (void)) (i (void)))
+         (set! i 0)
+         (set! tmpl (len p))
+         (while
+          (<= i (- (len s) tmpl))
+          (let ()
+            (set! j i)
+            (for-each
+             i15
+             p
+             (begin
+               (set! c i15)
+               (let ()
+                 (cond
+                  ((not-equal?
+                    c
+                    (let ((e13 s))
+                      (let ((i14 j))
+                        (cond
+                         ((py-list? e13) (py-list-ref e13 i14))
+                         ((tuple? e13) (tuple-ref e13 i14))
+                         ((dict? e13) (dict-ref e13 i14))
+                         (else (error "cannot index object"))))))
+                   (let () (break)))
+                  (else
+                   (let ()
+                     (set! j (+ j 1))
+                     (cond ((equal? (- j i) tmpl) (let () (return #t))))))))))
+            (set! i (+ i 1))))
+         (return #f))))))
+ ((lambda ()
+    (begin
+      (set-global!
+       Request
+       (lambda (data)
+         (call/ec
+          (lambda (return)
+            (let (($localo16
+                   (dict
+                    ("__class__" (get-global Request))
+                    ("__type__" "instRequest"))))
+              ((get-field $localo16 "__init__") data)
+              (return $localo16))))))
+      (dict-set!
+       gbl-dict
+       (get-global Request)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global Request))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self data)
+           (call/ec (lambda (return) (let () (set-field! self "data" data))))))
+        ("santinize_proc"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ((res (void)))
+                (set! res
+                  ((get-global issubstring)
+                   (get-field self "data")
+                   (get-global SCRIPT_PAT)))
+                (cond
+                 ((equal? res #t)
+                  (let () (set-field! self "data" (- 1))))))))))
+        ("getData"
+         (lambda (self)
+           (call/ec
+            (lambda (return) (let () (return (get-field self "data")))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global Request))
+       "__mro__"
+       (list (get-global Request) object)))))
+ ((lambda ()
+    (begin
+      (set-global!
+       Response
+       (lambda (req)
+         (call/ec
+          (lambda (return)
+            (let (($localo25
+                   (dict
+                    ("__class__" (get-global Response))
+                    ("__type__" "instResponse"))))
+              ((get-field $localo25 "__init__") req)
+              (return $localo25))))))
+      (dict-set!
+       gbl-dict
+       (get-global Response)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global Response))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self req)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (set-field! self "result" ((get-global List) (dict)))
+                (set-field! self "body" "")
+                (set-field! self "req" req))))))
+        ("gen_body"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ((tmp (void)) (indx (void)) (len_res (void)))
+                (set! len_res (len (get-field self "result")))
+                (set! tmp "<div id= \"search_results\">\n<ol>)\n")
+                (cond
+                 ((equal? len_res 0)
+                  (let ()
+                    (set-field!
+                     self
+                     "body"
+                     (+
+                      (+
+                       tmp
+                       "<h3>Your search did not return any results.</h3>")
+                      ((get-global lst_to_str)
+                       ((get-field (get-field self "req") "getData"))))))))
+                (set! indx 0)
+                (while
+                 (< indx len_res)
+                 (let ()
+                   (set-field!
+                    self
+                    "body"
+                    (+
+                     (+
+                      (+
+                       (+
+                        (+
+                         (+
+                          (+ (get-field self "body") "<li <a href=\"test/")
+                          (let ((e19
+                                 (let ((e17 (get-field self "result")))
+                                   (let ((i18 indx))
+                                     (cond
+                                      ((py-list? e17) (py-list-ref e17 i18))
+                                      ((tuple? e17) (tuple-ref e17 i18))
+                                      ((dict? e17) (dict-ref e17 i18))
+                                      (else (error "cannot index object")))))))
+                            (let ((i20 1))
+                              (cond
+                               ((py-list? e19) (py-list-ref e19 i20))
+                               ((tuple? e19) (tuple-ref e19 i20))
+                               ((dict? e19) (dict-ref e19 i20))
+                               (else (error "cannot index object"))))))
+                         "?search=true&term=")
+                        ((get-global lst_to_str)
+                         ((get-field (get-field self "req") "getData"))))
+                       "\">\n")
+                      (let ((e23
+                             (let ((e21 (get-field self "result")))
+                               (let ((i22 indx))
+                                 (cond
+                                  ((py-list? e21) (py-list-ref e21 i22))
+                                  ((tuple? e21) (tuple-ref e21 i22))
+                                  ((dict? e21) (dict-ref e21 i22))
+                                  (else (error "cannot index object")))))))
+                        (let ((i24 0))
+                          (cond
+                           ((py-list? e23) (py-list-ref e23 i24))
+                           ((tuple? e23) (tuple-ref e23 i24))
+                           ((dict? e23) (dict-ref e23 i24))
+                           (else (error "cannot index object"))))))
+                     "</a>\n"))
+                   (set! indx (+ indx 1))))
+                (set-field!
+                 self
+                 "body"
+                 (+ (get-field self "body") "</ol>\n</div>\n")))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global Response))
+       "__mro__"
+       (list (get-global Response) object)))))
+ ((lambda ()
+    (begin
+      (set-global!
+       Search
+       (lambda (input)
+         (call/ec
+          (lambda (return)
+            (let (($localo26
+                   (dict
+                    ("__class__" (get-global Search))
+                    ("__type__" "instSearch"))))
+              ((get-field $localo26 "__init__") input)
+              (return $localo26))))))
+      (dict-set!
+       gbl-dict
+       (get-global Search)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global Search))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self input)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (set-field!
+                 self
+                 "resp"
+                 ((get-global Response) ((get-global Request) input))))))))
+        ("doSearch"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ((l (void)))
+                ((get-field
+                  (get-field (get-field self "resp") "req")
+                  "santinize_proc"))
+                (cond
+                 ((equal?
+                   ((get-field
+                     (get-field (get-field self "resp") "req")
+                     "getData"))
+                   (- 1))
+                  (let () (py-print "no scripting allowed") (return (void)))))
+                (set! l
+                  (len
+                   ((get-field
+                     (get-field (get-field self "resp") "req")
+                     "getData"))))
+                (cond
+                 ((> l 3)
+                  (let ()
+                    (set-field!
+                     (get-field self "resp")
+                     "result"
+                     ((get-global List) (dict)))))
+                 (else
+                  (let ()
+                    (set-field!
+                     (get-field self "resp")
+                     "result"
+                     ((get-global List)
+                      (dict
+                       (0
+                        ((get-global tuple)
+                         (dict (0 "Colors") (1 "colors.html"))))
+                       (1
+                        ((get-global tuple)
+                         (dict (0 "Numbers") (1 "numbers.html"))))
+                       (2
+                        ((get-global tuple)
+                         (dict
+                          (0 "Numbers and Colors")
+                          (1 "numbersandcolors.html"))))
+                       (3
+                        ((get-global tuple)
+                         (dict
+                          (0 "Numbers and Colors With Tag")
+                          (1 "numbersandcolorswithtag.html"))))))))))
+                ((get-field (get-field self "resp") "gen_body")))))))
+        ("render"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (py-print (get-field (get-field self "resp") "body")))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global Search))
+       "__mro__"
+       (list (get-global Search) object)))))
+ (set-global!
+  test_init_input
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((simulated_cgi_entry1 (void)))
+         (set! simulated_cgi_entry1
+           (dict
+            ("terms"
+             ((get-global List) (dict (0 "red") (1 "blue") (2 "three"))))
+            ("boolean" (get-global OR))
+            ("case" (get-global CASE_SENSITIVE))
+            ("files"
+             ((get-global List)
+              (dict
+               (0 "colors.html")
+               (1 "numbers.html")
+               (2 "numbersandcolors.html")
+               (3 "numbersandcolorswithtag.html"))))))
+         (return
+          (let ((e27 simulated_cgi_entry1))
+            (let ((i28 "terms"))
+              (cond
+               ((py-list? e27) (py-list-ref e27 i28))
+               ((tuple? e27) (tuple-ref e27 i28))
+               ((dict? e27) (dict-ref e27 i28))
+               (else (error "cannot index object")))))))))))
+ (set-global!
+  mock_mal_strlst
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ()
+         (return
+          ((get-global List)
+           (dict
+            (0 "e")
+            (1 "<")
+            (2 "s")
+            (3 "c")
+            (4 "r")
+            (5 "i")
+            (6 "p")
+            (7 "t")
+            (8 ">")))))))))
+ (set-global!
+  gen_malicious_input
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((simulated_cgi_entry2 (void)))
+         (set! simulated_cgi_entry2
+           (dict ("terms" ((get-global mock_mal_strlst)))))
+         (return
+          (let ((e29 simulated_cgi_entry2))
+            (let ((i30 "terms"))
+              (cond
+               ((py-list? e29) (py-list-ref e29 i30))
+               ((tuple? e29) (tuple-ref e29 i30))
+               ((dict? e29) (dict-ref e29 i30))
+               (else (error "cannot index object")))))))))))
+ (set-global! srch1 ((get-global Search) ((get-global test_init_input))))
+ ((get-field (get-global srch1) "doSearch"))
+ ((get-field (get-global srch1) "render"))
+ (set-global! srch2 ((get-global Search) ((get-global gen_malicious_input))))
+ ((get-field (get-global srch2) "doSearch"))
+ ((get-field (get-global srch2) "render")))

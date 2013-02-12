@@ -1,0 +1,151 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define perform_tast (void))
+ (define emit_mesh (void))
+ (set-global!
+  len
+  (lambda (seq15)
+    (call/ec
+     (lambda (return)
+       (let ((cnt16 0))
+         (cond
+          ((or (py-list? seq15) (set? seq15) (tuple? seq15))
+           (let ((container17 (dict-ref seq15 "__containerdict__")))
+             (for-each entry18 container17 (set! cnt16 (+ 1 cnt16)))
+             (return cnt16)))
+          (else
+           (for-each entry18 seq15 (set! cnt16 (+ cnt16 1)))
+           (return cnt16))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict20)
+    (call/ec
+     (lambda (return)
+       (let (($localo21
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo21 "__init__") tmp-dict20)
+         (return $localo21))))))
+ (set-global!
+  set
+  (lambda (tmp-dict23)
+    (call/ec
+     (lambda (return)
+       (let (($localo24
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo24 "__init__") tmp-dict23)
+         (return $localo24))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict26)
+    (call/ec
+     (lambda (return)
+       (let (($localo27
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo27 "__init__") tmp-dict26)
+         (return $localo27))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self28 tmpdict29)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict29)
+           (set-field!
+            self28
+            "__containerdict__"
+            (dict-ref tmpdict29 "__containerdict__"))
+           (set-field! self28 "__containerdict__" tmpdict29))))))
+   ("append"
+    (lambda (self30 elem31)
+      (let ((max32 (len self30)))
+        (dict-set! (dict-ref self30 "__containerdict__") max32 elem31))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self33 tmpdict34)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict34)
+           (set-field!
+            self33
+            "__containerdict__"
+            (dict-ref tmpdict34 "__containerdict__"))
+           (set-field! self33 "__containerdict__" tmpdict34))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self35 tmp-dict36)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict36) (tuple? tmp-dict36) (set? tmp-dict36))
+           (set-field!
+            self35
+            "__containerdict__"
+            (dict-ref tmp-dict36 "__containerdict__"))
+           (set-field! self35 "__containerdict__" tmp-dict36))))))))
+ (set-global!
+  emit_mesh
+  (lambda (verts mesh index)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((>= index (len verts)) (let () (return (void))))
+          (else
+           (let ()
+             (py-print
+              (let ((e13 verts))
+                (let ((i14
+                       (let ((e11 mesh))
+                         (let ((i12 index))
+                           (cond
+                            ((py-list? e11) (py-list-ref e11 i12))
+                            ((tuple? e11) (tuple-ref e11 i12))
+                            ((dict? e11) (dict-ref e11 i12))
+                            (else (error "cannot index object")))))))
+                  (cond
+                   ((py-list? e13) (py-list-ref e13 i14))
+                   ((tuple? e13) (tuple-ref e13 i14))
+                   ((dict? e13) (dict-ref e13 i14))
+                   (else (error "cannot index object"))))))
+             ((get-global emit_mesh) verts mesh (+ index 1))))))))))
+ (set-global!
+  perform_tast
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((lst (void)) (mesh (void)))
+         (set! lst ((get-global List) (dict (0 10) (1 20) (2 30) (3 40))))
+         (set! mesh ((get-global List) (dict (0 0) (1 5) (2 2) (3 1))))
+         ((get-global emit_mesh) lst mesh 0))))))
+ ((get-global perform_tast)))

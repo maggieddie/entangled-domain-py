@@ -1,0 +1,51 @@
+Number of States = 202
+
+Types Info --- 
+
+getx:
+
+z:
+	OOdict10
+	500
+
+continue:
+
+g$f:
+	OOdict10
+
+set:
+	class
+
+tuple:
+	class
+
+gbl-dict:
+	dict4
+
+g$foo:
+	class
+
+foof:
+
+x:
+	5
+
+return:
+	exp
+
+object:
+	class
+
+g$Foo:
+	class
+
+setx:
+
+str:
+	"self.x is changed to me"
+
+$current-handler:
+
+List:
+	class
+

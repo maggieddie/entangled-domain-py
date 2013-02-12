@@ -1,0 +1,497 @@
+(file_input      (>-->(seq (rep (or NEWLINE stmt)) ENDMARKER)
+                      [`(() ,_) `(program)]
+                      [`((,something ,rest ...) ,_) `(program ,something ,@rest)]
+                      )
+                 )
+
+;(funcdef         (seq "def" NAME parameters ":" suite))
+;(parameters      (seq "(" (opt paramlist) ")"))
+;(paramlist       (seq (seq NAME (rep (seq "," NAME))) (opt ",")))
+
+(funcdef       ($--> (seq* "def" NAME parameters ":" suite)
+                       `(def (,($ 1) ,@($ 2)) ,($ 4)))) 
+(parameters    (car (seq! "(" `(opt paramlist '()) ")")))
+
+(paramlist     (car (seq! `(seq NAME (rep (car (seq! "," `NAME)))) (opt ","))))
+
+;;;;;;;;;;;;;;;;;;;;;; Newly Added ;;;;;;;;;;;;;;;;;;;;
+;<classdef> ::= (class <NAME> ([ <arglist> ]) : <suite>)
+
+;(classdef        (seq "class" NAME inherit ":" suite)
+;(inherit         (seq "(" (opt arglist) ")")
+
+(classdef         ($--> (seq* "class" NAME inherit ":" suite)
+                        `(class (,($ 1) ,@($ 2)) ,($ 4))))  
+
+(inherit           (car (seq! "(" `(opt arglist '()) ")"))) ; the class can have no "(" ")"! change it later! 
+
+                           
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+(stmt            (or simple_stmt compound_stmt))
+
+; <simple_stmt> ::= <small_stmt> | (begin <small_stmt>+)
+;(simple_stmt     (seq (seq small_stmt (rep (seq ";" small_stmt))) (opt ";") NEWLINE))
+(simple_stmt     (>-->(seq (seq* small_stmt (rep (car (seq! ";" `small_stmt)))) (opt ";") NEWLINE)
+                      [`((,small_stmt ()) ,_ NEWLINE)
+                       `,small_stmt]
+                      [`((,small_stmt ,rest) ,_ NEWLINE)
+                       `(begin ,small_stmt ,@rest)]
+                      [else (display "fail simple_stmt\n")]
+                      )
+                 )
+(small_stmt      (or expr_stmt del_stmt pass_stmt flow_stmt global_stmt nonlocal_stmt assert_stmt))
+
+;(expr_stmt       (or ($-->(seq* testlist augassign testlist)
+;                          (if (equal? 1 (length ($ 2)))                              
+;                              `(,($ 1) ,($ 0) ,@($ 2))
+;                              `(,($ 1) ,($ 0) (tuple ,@($ 2))))
+;                     )
+;                     ($-->(seq! `testlist "=" `testlist)
+;                          (if (equal? 1 (length ($ 1)))  
+;                              `(= ,($ 0) ,@($ 1))
+;                              `(= ,($ 0) (tuple ,@($ 1))))
+;                          )
+;                     ($--> tuple_or_test `(expr ,$$))))
+
+(expr_stmt       (or ($-->(seq* testlist augassign tuple_or_test)
+                         ; (if (list? ($ 2))                          
+                            ;  `(,($ 1) ,($ 0) ,($ 2))
+                              `(,($ 1) ,($ 0) ,($ 2))
+                     )
+                     ($-->(seq! `testlist "=" `tuple_or_test)
+                          ;(if (list? ($ 1))  
+                           ;   `(= ,($ 0) ,($ 1))
+                              `(= ,($ 0) ,($ 1))
+                          )
+                     ($--> tuple_or_test `(expr ,$$))))
+
+
+;(namelist        (seq NAME (rep (seq "," NAME))))
+(namelist        (seq NAME (rep (car (seq! "," `NAME)))))
+
+(augassign       (or "+=" "-=" "*=" "/=" "%=" "&=" "|=" "^=" "<<=" ">>=" "**=" "//="))
+
+;(del_stmt        (seq "del" star_expr))
+(del_stmt         ($--> (seq* "del" star_expr) `(del ,($ 1))))
+                 
+(pass_stmt       ($-->"pass"
+                      `(pass)))
+
+(flow_stmt       (or break_stmt continue_stmt return_stmt raise_stmt))
+
+(break_stmt      ($-->"break"
+                      `(break)))
+
+(continue_stmt   ($-->"continue"
+                      `(continue)))
+
+; <return_stmt> ::= (return <test>*)
+(return_stmt     ($--> (seq* "return" (opt testlist `())) 
+                       `(return ,@($ 1))))
+
+; <raise_stmt> ::= (raise [ <test> [ <test> ] ])
+(raise_stmt      (>--> (seq! "raise" `(opt (seq* test (opt (car (seq! "from" `test)) #f)) #f))
+                      [`(#f) `(raise)]
+                      [`((,test #f)) `(raise ,test)]
+                      [`((,test1 ,test2)) `(raise ,test1 ,test2)]
+                      [else (display "fail to match raise\n")]))
+
+; <global_stmt> ::= (global <NAME>+) 
+;(global_stmt     (seq "global" NAME (rep (seq "," NAME))))
+(global_stmt     (>--> (seq! "global" `NAME `(rep (car (seq! "," `NAME))))
+                       [`(,name ()) `(global ,name)]
+                       [`(,name ,rest) `(global ,name ,@rest)]
+                       [else (display "Failed in global_stmt. \n")]))
+
+; <nonlocal_stmt> ::= (nonlocal <NAME>+)
+;(nonlocal_stmt   (seq "nonlocal" NAME (rep (seq "," NAME))))
+(nonlocal_stmt   (>--> (seq! "nonlocal" `NAME `(rep (car (seq! "," `NAME))))
+                       [`(,name ()) `(nonlocal ,name)]
+                       [`(,name ,rest) `(nonlocal ,name ,@rest)]
+                       [else (display "Failed in nonlocal_stmt. \n")]))
+
+; <assert_stmt> ::= (assert <test> [ <test> ])
+(assert_stmt     (>-->(seq! "assert" `test `(opt (car (seq! "," `test)) #f))
+                      [`(,test #f)
+                       `(assert ,test)]
+                      [`(,test ,rest)
+                       `(assert ,test ,rest)])
+                      )
+
+(compound_stmt   (or if_stmt while_stmt for_stmt try_stmt funcdef classdef))
+
+; <if_stmt> ::= (cond (<test> <suite>)+ [ (else <suite>) ])
+(if_stmt         (>-->(seq! `(>-->(seq! `($-->(seq! "if" `test ":" `suite) `(,@$$)) 
+                                        `(rep ($-->(seq! "elif" `test ":" `suite)
+                                          `(,@$$)
+                                          )))
+                                  [`(,test ()) `(,test)]
+                                  [`(,test ,elif) `(,test ,@elif)]
+                                  [else (begin (display "fail to match if ")
+                                               ;(print $$)
+                                               (newline))])
+                             
+                            `(opt ($-->(seq! "else" ":" `suite) `(else ,@$$)) 
+                                  #f
+                                  )
+                            )
+                      [`(,test #f) `(cond ,@test)]
+                      [`(,test ,else) `(cond ,@test ,else)]
+                      [else (begin (display "fail to match outer if ")
+                                   ;(print $$)
+                                   (newline))]
+                      ))
+
+
+
+; <while_stmt> ::= (while <test> <suite> [ <suite> ])
+(while_stmt      (>--> (seq! "while" `test ":" `suite `(opt (car (seq! "else" ":" `suite)) #f))
+                       [`(,t ,s #f) `(while ,t ,s)]
+                       [`(,t ,s ,rest) `(while ,t ,s ,rest)]
+                       [else (display "FAILED in while_stmt\n")]))
+
+; <for_stmt> ::= (for <NAME> <test> <suite> [ <suite> ])     
+(for_stmt        (>--> (seq! "for" `NAME "in" `test ":" `suite `(opt (car (seq! "else" ":" `suite)) #f))
+                       [`(,n ,t ,s #f) `(for ,n ,t ,s)]
+                       [`(,n ,t ,s ,rest) `(for ,n ,t ,s ,rest)]
+                       [else (display "FAILED in for_stmt\n")]))
+
+
+; <try_stmt>      ::= (try <suite> ((<catch> <suite>)*) <maybe-else> <maybe-finally>)
+   ; <maybe-else>    ::= <suite> | #f
+   ; <maybe-finally> ::= <suite> | #f
+   ; <catch> ::= (except [ <test> [ <NAME> ] ])
+
+;(try_stmt        (seq "try" ":" suite 
+;                      (or (seq (rep+ (seq except_clause ":" suite)) 
+;                               (opt (seq "else" ":" suite)) 
+;                               (opt (seq "finally" ":" suite)))  
+;                          (seq "finally" ":" suite))))
+
+
+(try_stmt        ($--> (seq! "try" ":" `suite 
+                       `(or (seq! `($-->(rep+ 
+                                         ($-->(seq! `except_clause ":" `suite)
+                                              `(,($ 0) ,($ 1)))
+                                        )
+                                        `(,@$$)                                        
+                                   )
+                                  `(opt (car (seq! "else" ":" `suite)) #f) 
+                                  `(opt (car (seq! "finally" ":" `suite)) #f))   
+                           ($-->(seq! "finally" ":" `suite)
+                                `(() #f,@$$)) 
+                        )
+                       )
+                       `(try ,($ 0) ,@($ 1))))
+
+   ; <catch> ::= (except [ <test> [ <NAME> ] ])
+(except_clause   (>-->(seq! "except" `(opt (seq* test (opt (car (seq! "as" `NAME)) #f)) #f))
+                      [`(#f) `(except)]
+                      [`((,test #f)) `(except ,test)]
+                      [`((,test ,name)) `(except ,test ,name)]
+                      [else (begin
+                              (display "Fail to match in except: ")
+                              ;(print $$)
+                              (newline))]))
+
+
+; <suite> ::= <simple_stmt> | (suite <stmt>+)
+;(suite           (or simple_stmt (seq NEWLINE INDENT (rep+ stmt) DEDENT)))
+(suite            (or 
+                       ($--> simple_stmt `,$$) 
+                       ($-->  (car (seq! NEWLINE INDENT `(rep+ stmt) DEDENT))                     
+                       `(suite ,@$$))))
+
+
+(test            (or 
+                       ($-->(seq! `or_test "if" `or_test "else" `test)
+                            `(if ,($ 0) ,($ 1) ,($ 2)))
+                       or_test lambdef)
+                     )
+
+; <lambdef> ::= (lambda (<NAME>*) <test>)
+;(lambdef         (seq "lambda" (opt paramlist) ":" test))
+(lambdef         ($-->(seq* "lambda" (opt paramlist `()) ":" test)
+                      `(lambda ,($ 1) ,($ 3))))
+
+(or_test         (>-->(seq! `and_test `(rep (car (seq! "or" `and_test))))
+                      [`(,and_test ()) 
+                       `,and_test]
+                      [`(,and_test ,rest) `(or ,and_test ,@rest)]
+                      [else (display "fail OR test\n")]
+                      ))
+
+(and_test        (>-->(seq! `not_test `(rep (car (seq! "and" `not_test))))
+                      [`(,not_test ()) 
+                              `,not_test]
+                      [`(,not_test ,rest) `(and ,not_test ,@rest)]
+                      [else (display "fail AND test\n")]
+                      ))
+
+(not_test ($-->(or (seq* "not" not_test) comparison) `,$$))
+
+(comparison      (>-->(seq* star_expr (rep (seq* comp_op star_expr)))
+                      [`(,star_expr ())
+                       `,star_expr]
+                      [`(,star_expr (,a ...))
+                       `(comparison ,star_expr ,@a)]
+                      [else (display "fail comparison\n")]
+                      ))
+
+(comp_op         (or "<" ">" "==" ">=" "<=" "<>" "!=" 
+                     ($-->  "in"  `,"in") 
+                     ($--> (seq "not" "in") `,"not-in")
+                     "is" 
+                     ($--> (seq "is" "not") `,"is-not")))
+
+; <star_expr> ::= <expr> | (star <expr>)
+;(star_expr       (seq (opt "*") expr))
+(star_expr       (>-->(seq* (opt "*" #f) expr)
+                      [`(#f ,expr) 
+                              `,expr]
+                      [`(,_ ,expr)
+                       `(star ,expr)]
+                      [else (display "fail STAR\n")]
+                      ))
+
+(expr            (>-->(seq* xor_expr (rep (car (seq! "|" `xor_expr))))
+                      [`(,xor_expr ())                      
+                              `,xor_expr]
+                      [`(,xor_expr ,rest) `(bitwise-or ,xor_expr ,@rest)]
+                      [else (display "fail EXPR\n")]
+                      ))
+(xor_expr        (>-->(seq* and_expr (rep (car (seq! "^" `and_expr))))
+                      [`(,first_expr ())                      
+                              `,first_expr]
+                      [`(,first_expr ,rest) `(bitwise-xor ,first_expr ,@rest)]
+                      [else (display "fail XOR\n")]
+                      ))
+
+(and_expr        (>-->(seq* shift_expr (rep (car (seq! "&" `shift_expr))))
+                      [`(,first_expr ())                       
+                              `,first_expr]
+                      [`(,first_expr ,rest) `(bitwise-and ,first_expr ,@rest)]
+                      [else (display "fail AND\n")]
+                      ))
+
+(shift_expr      (>-->(seq! `arith_expr `(rep (seq! `(or "<<" ">>") `arith_expr)))
+                      [`(,first_expr ())                      
+                              `,first_expr]
+                      [`(,first_expr (,a ...)) `(shift ,first_expr ,@a)]
+                      [else (display "fail SHIFT\n")]
+                      ))
+                      
+(arith_expr      (>-->(seq! `term `(rep (seq* (or "+" "-") term)))
+                      [`(,first_expr ())
+                              `,first_expr]
+                      [`(,first_expr (,opterm ...)) `(arith ,first_expr ,@opterm )]
+                      [else (display "fail ART\n")]
+                      ))
+
+(term            (>-->(seq! `factor `(rep (seq* (or "*" "/" "%" "//") factor)))
+                      [`(,first_expr ())
+                              `,first_expr]                     
+                      [`(,first_expr (,a ...)) `(term ,first_expr ,@a)]
+                      [else (display "fail TERM\n")]
+                      ))
+ ; <factor_op> ::= "*" | "/" | "%" | "//"
+   ; <factor> ::= <power> | (<unary_op> <factor>)
+;(factor          (or (seq (or "+" "-" "~") factor) power))
+                      
+(factor          (or ($-->(seq* (or "+" "-" "~") factor)
+                          `(,($ 0) ,($ 1)))
+                          power))
+
+(indexed         (>-->(seq* atom (rep trailer))
+                      [`(,atom ())
+                       `,atom]
+                      [`(,atom ,trailer)
+                       `(indexed ,atom ,@trailer)]
+                      [else (display "faile indexed\n")]
+                      ))
+                      
+(power           (>-->(seq* indexed (opt (car (seq! "**" `factor)) #f))
+                      [`(,indexed #f)
+                              `,indexed]
+                      [`(,indexed ,factor)
+                       `(power ,indexed ,factor)]
+                      [else (display "faile power\n")]
+                      ))
+
+
+ ; <atom> ::= <tuple_or_test> | (tuple)
+   ;         |  (list <testlist>)
+   ;         |  <dict>
+   ;         |  <set>
+   ;         |  <NAME>
+   ;         |  <NUMBER>
+   ;         |  <STRING>
+   ;         |  Ellipsis
+   ;         |  None
+   ;         |  True
+   ;         |  False
+
+;(atom (or (car (seq! "(" `(opt tuple_or_test `(tuple)) ")")) 
+;          (>-->(car (seq! "[" `(opt testlist #f) "]"))
+;               [`#f `(list)]
+;               [`,testlist ;(if (list? testlist)
+;                               `(list ,@testlist)
+;                               ;`(list ,testlist))
+;                               ] 
+;               )
+;          (car (seq! "{" `(opt dictorsetmaker `(dict)) "}"))
+;
+;          NAME
+;          NUMBER 
+;          ($-->(rep+ STRING)
+;               `,(list->string (apply append '() (map string->list $$))) 
+;               )
+;          
+;          ($--> "..." `Ellipsis) "None" "True" "False"))
+
+;;; --------------------> if with comprension (dict_comprehension for dict) added!
+(atom            (or (car (seq! "(" `(opt (or tuple_or_test comprehension) `(tuple)) ")"))
+                     
+                     (>--> (car (seq! "[" `(opt (or testlist comprehension) #f) "]"))
+                           [`#f `(list)]
+                           
+                           [;`,comprehension
+                            `(comprehension ,t ,cp_it)
+                            
+                            ;`(list ,comprehension)
+                            `(list (comprehension ,t ,cp_it))
+                            ]
+                           
+                           [`,testlist
+                            
+                            `(list ,@testlist)])
+                     
+                     (>--> (car (seq! "{" `(opt (or dictorsetmaker dict_compre comprehension) `(dict)) "}") )
+                           [`(dict)  `(dict)]
+                           
+                           [`(comprehension ,t ,cp-it)
+                            `(set (comprehension ,t ,cp-it))
+                            ]
+                           [`(dict_compr (,k ,v) ,cp-it)
+                            `(dict (dict_compr (,k ,v) ,cp-it))
+                            ]
+                           [`,dict-maker
+                            `,dict-maker
+                            ]
+                           
+                           )
+                     
+                     
+                     NAME NUMBER 
+                     ($-->(rep+ STRING)
+                          `,(list->string  (apply append '() (map string->list $$))) 
+                          ) 
+                     
+                     ($--> "..." `Ellipsis) "None" "True" "False"))
+                 
+
+
+(trailer        (>-->(or (seq* "(" (opt arglist #f) ")") (seq* "[" tuple_or_test "]") (seq* "." NAME))
+                     [`("(" #f ")")
+                      `(called )]
+                     [`("(" ,arglist ")")
+                      `(called ,@arglist)]
+                     [`("[" ,tuple_or_test "]")
+                      `(subscript ,tuple_or_test)]
+                     [`("." ,NAME)
+                      `(dot ,NAME)]
+                     [else (display "fail trailer\n")]
+                     ))
+;(testlist       (seq (seq test (rep (seq "," test))) (opt ",")))
+(testlist       (>-->(seq! `(seq! `test `(rep (car (seq! "," `test)))) (opt ","))
+                     [`((,test ()))
+                      `(,test)]
+                     [`((,test ,rest))                    
+                      `(,test ,@rest)]
+                     [else (display "no match\n")]
+                     ))
+
+;(tuple_or_test  (seq test (rep (seq "," test)) (opt ",")))
+(tuple_or_test  (>--> (seq* test (rep (car (seq! "," `test))) (opt "," #f))
+                       [`(,test () #f)     `,test]
+                       [`(,test () ,_)     `(tuple ,test)]
+                       [`(,test ,rest ,_)  `(tuple ,test ,@rest)]
+                       ))
+; <dict> ::= (dict (<test> <test>)*) 
+
+(dictorsetmaker (or ($--> (car (seq! `($-->(seq* ($--> (seq! `test ":" `test)
+                                                  `(,$$)) 
+                                                 (rep (seq! "," `test ":" `test)))
+                                          (append ($ 0) ($ 1))
+                                      )
+                                          (opt ",")))
+                          `(dict ,@$$))
+                    ($--> (car (seq! `($--> (seq* ($--> test `(,$$)) 
+                                       (rep (car (seq! "," `test))))
+                                 (append ($ 0) ($ 1)))
+                                 (opt ",")))
+                          `(set ,@$$))
+                 ))
+
+;(arglist        (seq (seq test (rep (seq "," test))) (opt ",")))
+
+(arglist       (>-->(seq! `(seq! `test `(rep (car (seq! "," `test)))) (opt ","))
+                     [`((,test ()))
+                      `(,test)]
+                     [`((,test ,rest))                   
+                      `(,test ,@rest)]
+                     [else (display "no match\n")]
+                     ))
+
+
+
+
+;<comprehension> ::= (comprehension <test> <comp_for>)
+;<comp_for>     ::= (compfor <NAME> <test> [comp_iter])
+;<comp_if      ::= (compif <test> [<comp_iter>])
+;<comp-iter>    ::= <comp_for> | <comp_if>
+
+
+(comp_for      (>--> (seq! "for" `NAME "in" `test `(opt comp_iter #f))
+                    [`(,name ,test #f)
+                     `(compfor ,name ,test)
+                     ]
+                    [`(,name ,test ,comp_iter)
+                     `(compfor ,name ,test ,comp_iter)
+                    ;`( (compfor ,name ,test) ,@comp_iter)
+                     ;(apply '() (append (list `(compfor ,name ,test) (list comp_iter))))
+                     
+                     ]
+                    
+                    [else (display "no match in compfor\n")])
+               ) ;(seq "for" NAME "in" or_test (opt comp_iter)))
+(comp_if       (>--> (seq! "if" `test `(opt comp_iter #f))
+                    [`(,test #f)
+                     `(compif ,test)
+                     ]
+                    [`(,test ,comp_iter)
+                     `(compif ,test ,comp_iter)]
+                    [else (display "no match\n")])
+               
+               ) ; (seq "if" or_test (opt comp_iter)))
+(comp_iter     (or comp_for comp_if))
+
+(comprehension ($--> (seq! `test `comp_for)
+                     
+                     `(comprehension ,($ 0) ,($ 1)))
+               )
+
+;<dict_comprehension>  ::= (dict_comprehension (<test> <test>) comp_for) 
+(dict_compre  ($-->(seq! `test ":" `test `comp_for)
+                           `(dict_compr (,($ 0) ,($ 1)) ,($ 2)))
+                  
+                  )
+
+
+
+               
+               

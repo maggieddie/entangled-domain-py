@@ -1,0 +1,56 @@
+Number of States = 160
+
+set: 
+	proc
+	class
+List: 
+	class
+	proc
+$localo23: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b60) (1 1)) (c19 c18))>) ("__class__" . #<set: tuple>))
+tuple: 
+	proc
+	class
+tmp-dict22: 
+	 object: 
+		#hash((0 . #<set: #(struct:OLoc (dict ("a" 1) ("b" "horray!") ("c" 3)) (c17 c16))>) (1 . #<set: 1>))
+t11: 
+	bool
+tmp-dict29: 
+	 object: 
+		#hash((0 . #<set: #(struct:OLoc (dict ("a" 1) ("b" "horray!") ("c" 3)) (c17 c16))>) (1 . #<set: 1>))
+t12: 
+	bool
+self28: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b60) (1 1)) (c19 c18))>) ("__class__" . #<set: tuple>))
+g$foo: 
+	proc
+g$bar: 
+	proc
+g$a: 
+	string
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e11: 
+	 object: 
+		#hash(("__type__" . #<set: "instTuple">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 b60) (1 1)) (c19 c18))>) ("__class__" . #<set: tuple>))
+i12: 
+	num
+e13: 
+	 object: 
+		#hash(("c" . #<set: 3>) ("a" . #<set: 1>) ("b" . #<set: "horray!">))
+i14: 
+	string
+return: 
+	kontP
+	kontP
+	kontP
+	kontP

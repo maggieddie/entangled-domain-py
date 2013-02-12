@@ -1,0 +1,143 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define ss2 (void))
+ (define ss (void))
+ (define tpl3 (void))
+ (define tpl (void))
+ (define x (void))
+ (define tpl4 (void))
+ (define tpl2 (void))
+ (define sl (void))
+ (set-global!
+  len
+  (lambda (seq12)
+    (call/ec
+     (lambda (return)
+       (let ((cnt13 0))
+         (cond
+          ((or (py-list? seq12) (set? seq12) (tuple? seq12))
+           (let ((container14 (dict-ref seq12 "__containerdict__")))
+             (for-each entry15 container14 (set! cnt13 (+ 1 cnt13)))
+             (return cnt13)))
+          (else
+           (for-each entry15 seq12 (set! cnt13 (+ cnt13 1)))
+           (return cnt13))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict17)
+    (call/ec
+     (lambda (return)
+       (let (($localo18
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo18 "__init__") tmp-dict17)
+         (return $localo18))))))
+ (set-global!
+  set
+  (lambda (tmp-dict20)
+    (call/ec
+     (lambda (return)
+       (let (($localo21
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo21 "__init__") tmp-dict20)
+         (return $localo21))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict23)
+    (call/ec
+     (lambda (return)
+       (let (($localo24
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo24 "__init__") tmp-dict23)
+         (return $localo24))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self25 tmpdict26)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict26)
+           (set-field!
+            self25
+            "__containerdict__"
+            (dict-ref tmpdict26 "__containerdict__"))
+           (set-field! self25 "__containerdict__" tmpdict26))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self27 tmpdict28)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict28)
+           (set-field!
+            self27
+            "__containerdict__"
+            (dict-ref tmpdict28 "__containerdict__"))
+           (set-field! self27 "__containerdict__" tmpdict28))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self29 tmp-dict30)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict30) (tuple? tmp-dict30) (set? tmp-dict30))
+           (set-field!
+            self29
+            "__containerdict__"
+            (dict-ref tmp-dict30 "__containerdict__"))
+           (set-field! self29 "__containerdict__" tmp-dict30))))))))
+ (set-global! ss ((get-global set) (dict (0 "A") (1 "D") (2 "C"))))
+ (py-print (get-global ss))
+ (py-print (len (get-global ss)))
+ (for-each
+  i11
+  (get-global ss)
+  (begin (set-global! x i11) (let () (py-print (get-global x)))))
+ (set-global! sl ((get-global List) (dict (0 "hi") (1 "there"))))
+ (set-global! ss2 ((get-global set) (get-global sl)))
+ (py-print (get-global ss2))
+ (py-print "test-tuple......")
+ (set-global! tpl ((get-global tuple) (dict (0 "Super") (1 "Cool"))))
+ (set-global! tpl2 ((get-global tuple) (get-global sl)))
+ (set-global! tpl3 ((get-global tuple) (get-global tpl2)))
+ (set-global! tpl4 ((get-global tuple) (get-global ss)))
+ (py-print (get-global tpl))
+ (py-print (get-global tpl2))
+ (py-print (get-global tpl3))
+ (py-print (get-global tpl4))
+ (py-print
+  ((get-global tuple)
+   ((get-global tuple)
+    (dict
+     (0 ((get-global List) (dict (0 1) (1 2))))
+     (1 "test")
+     (2 ((get-global set) (dict (0 "nested")))))))))

@@ -1,0 +1,31 @@
+(program
+ (= (vec1) (list 2 4 6))
+ (= (vec2) (list 4 3 ("-" 9)))
+ (expr
+  (indexed
+   print
+   (called
+    (list
+     (comprehension (term x ("*" y)) (compfor x vec1 (compfor y vec2)))))))
+ (expr
+  (indexed
+   print
+   (called
+    (list
+     (comprehension
+      (arith x ("+" y))
+      (compfor
+       x
+       vec1
+       (compfor y vec2 (compif (comparison (arith x ("+" y)) (">" 6)))))))
+    vec2)))
+ (= (mat) (list (list 1 2 3) (list 4 5 6) (list 7 8 9)))
+ (expr
+  (indexed
+   print
+   (called
+    (list
+     (comprehension
+      (list (comprehension (indexed row (subscript i)) (compfor row mat)))
+      (compfor i (list 0 1 2))))))))
+

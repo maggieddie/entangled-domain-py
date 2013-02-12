@@ -1,0 +1,17 @@
+(program
+ (def (b) (suite (return "hi")))
+ (def (c) (suite (return False)))
+ (def (d) (suite (return 2)))
+ (def
+  (a n)
+  (suite
+   (cond
+    ((comparison n ("==" 1))
+     (suite
+      (expr (indexed b (called)))
+      (expr (indexed c (called)))
+      (return "hi")))
+    (else
+     (suite (expr (indexed d (called))) (return (indexed a (called 1))))))))
+ (= (y) (indexed a (called 5))))
+

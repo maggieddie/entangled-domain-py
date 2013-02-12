@@ -1,0 +1,140 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define g$Foo (void))
+ (define g$foo (void))
+ (define g$f (void))
+ (begin
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict13)
+       (call/ec
+        (lambda (return)
+          (let (($localo14
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo14 "__init__") tmp-dict13)
+              (return $localo14)))))))
+   (set! set
+     (lambda (tmp-dict16)
+       (call/ec
+        (lambda (return)
+          (let (($localo17 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo17 "__init__") tmp-dict16)
+              (return $localo17)))))))
+   (set! tuple
+     (lambda (tmp-dict19)
+       (call/ec
+        (lambda (return)
+          (let (($localo20
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo20 "__init__") tmp-dict19)
+              (return $localo20)))))))
+   (set! gbl-dict
+     (dict
+      (object
+       (dict
+        ("__base__" (list))
+        ("__mro__" (list object))
+        ("__init__" (lambda v void))))
+      (List
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list List object))
+        ("__init__"
+         (lambda (self21 tmpdict22)
+           (call/ec
+            (lambda (return)
+              (if (py-list? tmpdict22)
+                (set-field!
+                 self21
+                 "__containerdict__"
+                 (dict-ref tmpdict22 "__containerdict__"))
+                (set-field! self21 "__containerdict__" tmpdict22))))))))
+      (set
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list set object))
+        ("__init__"
+         (lambda (self23 tmpdict24)
+           (call/ec
+            (lambda (return)
+              (if (py-list? tmpdict24)
+                (set-field!
+                 self23
+                 "__containerdict__"
+                 (dict-ref tmpdict24 "__containerdict__"))
+                (set-field! self23 "__containerdict__" tmpdict24))))))))
+      (tuple
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list tuple object))
+        ("__init__"
+         (lambda (self25 tmp-dict26)
+           (call/ec
+            (lambda (return)
+              (if (let ((t11 (py-list? tmp-dict26)))
+                    (begin
+                      (if t11
+                        t11
+                        (let ((t12 (tuple? tmp-dict26)))
+                          (begin (if t12 t12 (set? tmp-dict26)))))))
+                (set-field!
+                 self25
+                 "__containerdict__"
+                 (dict-ref tmp-dict26 "__containerdict__"))
+                (set-field! self25 "__containerdict__" tmp-dict26))))))))))
+   ((lambda ()
+      (begin
+        (set! g$Foo
+          (lambda ()
+            (call/ec
+             (lambda (return)
+               (let ((foof (void)))
+                 (let ((setx (void)))
+                   (let ((getx (void)))
+                     (begin
+                       (let (($localo11
+                              (dict
+                               ("__class__" g$Foo)
+                               ("__type__" "instFoo"))))
+                         (begin
+                           ((get-field $localo11 "__init__"))
+                           (return $localo11)))))))))))
+        (dict-set!
+         gbl-dict
+         g$Foo
+         (dict
+          ("__base__" (list object))
+          ("__class__" g$Foo)
+          ("__type__" "class")
+          ("setx"
+           (lambda (self x)
+             (call/ec (lambda (return) (begin (set-field! self "x" x))))))
+          ("getx"
+           (lambda (self)
+             (call/ec
+              (lambda (return) (begin (return (get-field self "x")))))))
+          ("foof"
+           (lambda (self z)
+             (call/ec (lambda (return) (begin (set-field! self "z" z))))))))
+        (dict-set! (dict-ref gbl-dict g$Foo) "__mro__" (list g$Foo object)))))
+   (set! g$foo
+     (lambda (self str)
+       (call/ec (lambda (return) (begin (set-field! self "x" str))))))
+   (set! g$f (g$Foo))
+   ((get-field g$f "setx") 5)
+   (py-print ((get-field g$f "getx")))
+   ((get-field g$Foo "foof") g$f 500)
+   (set-field! g$f "foo" g$foo)
+   ((get-field g$f "foo") "self.x is changed to me")
+   (py-print ((get-field g$f "getx")))))

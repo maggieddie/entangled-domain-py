@@ -1,0 +1,8 @@
+(program
+ (class (T) (suite (= (a) 2)))
+ (class (A T) (suite (= (b) 5)))
+ (class (B T) (suite (= (a) 100)))
+ (class (C A B) (suite (= (b) 500)))
+ (= (c) (indexed C (called)))
+ (expr (indexed print (called (indexed c (dot a))))))
+

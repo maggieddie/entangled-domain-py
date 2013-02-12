@@ -1,0 +1,631 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define g$str_my (void))
+ (define g$num (void))
+ (define g$WebFib (void))
+ (define g$form (void))
+ (define g$fib (void))
+ (let ((b22
+        (lambda (seq14)
+          (call/ec
+           (lambda (return)
+             (let ((cnt15 0))
+               (let ((t11 ((anf py-list?) seq14)))
+                 (let ((b1
+                        (if t11
+                          t11
+                          (let ((t12 ((anf set?) seq14)))
+                            (let ((b2 (if t12 t12 ((anf tuple?) seq14))))
+                              b2)))))
+                   (let ((b0
+                          (if b1
+                            (let ((container16
+                                   ((anf dict-ref) seq14 "__containerdict__")))
+                              (let ((_10
+                                     (call/ec
+                                      (lambda (break)
+                                        (let ((b6
+                                               (lambda ($seq13 $loop14)
+                                                 (let ((_4
+                                                        ((anf for-container)
+                                                         $seq13
+                                                         $loop14)))
+                                                   (let ((b5 (void)))
+                                                     (let ((b3 b5)) b3))))))
+                                          (let ((b9
+                                                 (lambda (entry17)
+                                                   (call/ec
+                                                    (lambda (continue)
+                                                      (let ((b7
+                                                             ((anf +)
+                                                              1
+                                                              cnt15)))
+                                                        (let ((_8
+                                                               (set! cnt15
+                                                                 b7)))
+                                                          (void))))))))
+                                            (b6 container16 b9)))))))
+                                (let ((b11 (return cnt15))) b11)))
+                            (let ((b19
+                                   (call/ec
+                                    (lambda (break)
+                                      (let ((b15
+                                             (lambda ($seq15 $loop16)
+                                               (let ((_13
+                                                      ((anf for-container)
+                                                       $seq15
+                                                       $loop16)))
+                                                 (let ((b14 (void)))
+                                                   (let ((b12 b14)) b12))))))
+                                        (let ((b18
+                                               (lambda (entry17)
+                                                 (call/ec
+                                                  (lambda (continue)
+                                                    (let ((b16
+                                                           ((anf +) cnt15 1)))
+                                                      (let ((_17
+                                                             (set! cnt15 b16)))
+                                                        (void))))))))
+                                          (b15 seq14 b18)))))))
+                              (let ((b20 (return cnt15)))
+                                (let ((b21 (else b19 b20))) (cond b21)))))))
+                     b0)))))))))
+   (let ((_23 (set! len b22)))
+     (let ((_24 (void)))
+       (let ((b25 (lambda () (void))))
+         (let ((_26 (set! object b25)))
+           (let ((_27 (void)))
+             (let ((b31
+                    (lambda (tmp-dict19)
+                      (call/ec
+                       (lambda (return)
+                         (let (($localo20
+                                (dict
+                                 ("__class__" List)
+                                 ("__type__" "instPyList"))))
+                           (let ((b28 (get-field $localo20 "__init__")))
+                             (let ((_29 (b28 tmp-dict19)))
+                               (let ((b30 (return $localo20))) b30)))))))))
+               (let ((_32 (set! List b31)))
+                 (let ((_33 (void)))
+                   (let ((b37
+                          (lambda (tmp-dict22)
+                            (call/ec
+                             (lambda (return)
+                               (let (($localo23
+                                      (dict
+                                       ("__class__" set)
+                                       ("__type__" "instSet"))))
+                                 (let ((b34 (get-field $localo23 "__init__")))
+                                   (let ((_35 (b34 tmp-dict22)))
+                                     (let ((b36 (return $localo23)))
+                                       b36)))))))))
+                     (let ((_38 (set! set b37)))
+                       (let ((_39 (void)))
+                         (let ((b43
+                                (lambda (tmp-dict25)
+                                  (call/ec
+                                   (lambda (return)
+                                     (let (($localo26
+                                            (dict
+                                             ("__class__" tuple)
+                                             ("__type__" "instTuple"))))
+                                       (let ((b40
+                                              (get-field
+                                               $localo26
+                                               "__init__")))
+                                         (let ((_41 (b40 tmp-dict25)))
+                                           (let ((b42 (return $localo26)))
+                                             b42)))))))))
+                           (let ((_44 (set! tuple b43)))
+                             (let ((_45 (void)))
+                               (let ((b46 (dict)))
+                                 (let ((_47 (set! gbl-dict b46)))
+                                   (let ((_48 (void)))
+                                     (let ((b49 (list object)))
+                                       (let ((b50 (lambda v void)))
+                                         (let ((b51
+                                                (dict
+                                                 ("__base__" (list))
+                                                 ("__mro__" b49)
+                                                 ("__init__" b50))))
+                                           (let ((_52
+                                                  ((anf dict-set!)
+                                                   gbl-dict
+                                                   object
+                                                   b51)))
+                                             (let ((_53 (void)))
+                                               (let ((b54 (list object)))
+                                                 (let ((b55
+                                                        (list List object)))
+                                                   (let ((b58
+                                                          (lambda (self27
+                                                                   tmpdict28)
+                                                            (call/ec
+                                                             (lambda (return)
+                                                               (let ((b56
+                                                                      ((anf
+                                                                        py-list?)
+                                                                       tmpdict28)))
+                                                                 (if b56
+                                                                   (let ((b57
+                                                                          ((anf
+                                                                            dict-ref)
+                                                                           tmpdict28
+                                                                           "__containerdict__")))
+                                                                     (set-field!
+                                                                      self27
+                                                                      "__containerdict__"
+                                                                      b57))
+                                                                   (set-field!
+                                                                    self27
+                                                                    "__containerdict__"
+                                                                    tmpdict28))))))))
+                                                     (let ((b59
+                                                            (dict
+                                                             ("__base__" b54)
+                                                             ("__mro__" b55)
+                                                             ("__init__"
+                                                              b58))))
+                                                       (let ((_60
+                                                              ((anf dict-set!)
+                                                               gbl-dict
+                                                               List
+                                                               b59)))
+                                                         (let ((_61 (void)))
+                                                           (let ((b62
+                                                                  (list
+                                                                   object)))
+                                                             (let ((b63
+                                                                    (list
+                                                                     set
+                                                                     object)))
+                                                               (let ((b66
+                                                                      (lambda (self29
+                                                                               tmpdict30)
+                                                                        (call/ec
+                                                                         (lambda (return)
+                                                                           (let ((b64
+                                                                                  ((anf
+                                                                                    py-list?)
+                                                                                   tmpdict30)))
+                                                                             (if b64
+                                                                               (let ((b65
+                                                                                      ((anf
+                                                                                        dict-ref)
+                                                                                       tmpdict30
+                                                                                       "__containerdict__")))
+                                                                                 (set-field!
+                                                                                  self29
+                                                                                  "__containerdict__"
+                                                                                  b65))
+                                                                               (set-field!
+                                                                                self29
+                                                                                "__containerdict__"
+                                                                                tmpdict30))))))))
+                                                                 (let ((b67
+                                                                        (dict
+                                                                         ("__base__"
+                                                                          b62)
+                                                                         ("__mro__"
+                                                                          b63)
+                                                                         ("__init__"
+                                                                          b66))))
+                                                                   (let ((_68
+                                                                          ((anf
+                                                                            dict-set!)
+                                                                           gbl-dict
+                                                                           set
+                                                                           b67)))
+                                                                     (let ((_69
+                                                                            (void)))
+                                                                       (let ((b70
+                                                                              (list
+                                                                               object)))
+                                                                         (let ((b71
+                                                                                (list
+                                                                                 tuple
+                                                                                 object)))
+                                                                           (let ((b75
+                                                                                  (lambda (self31
+                                                                                           tmp-dict32)
+                                                                                    (call/ec
+                                                                                     (lambda (return)
+                                                                                       (let ((t17
+                                                                                              ((anf
+                                                                                                py-list?)
+                                                                                               tmp-dict32)))
+                                                                                         (let ((b72
+                                                                                                (if t17
+                                                                                                  t17
+                                                                                                  (let ((t18
+                                                                                                         ((anf
+                                                                                                           tuple?)
+                                                                                                          tmp-dict32)))
+                                                                                                    (let ((b73
+                                                                                                           (if t18
+                                                                                                             t18
+                                                                                                             ((anf
+                                                                                                               set?)
+                                                                                                              tmp-dict32))))
+                                                                                                      b73)))))
+                                                                                           (if b72
+                                                                                             (let ((b74
+                                                                                                    ((anf
+                                                                                                      dict-ref)
+                                                                                                     tmp-dict32
+                                                                                                     "__containerdict__")))
+                                                                                               (set-field!
+                                                                                                self31
+                                                                                                "__containerdict__"
+                                                                                                b74))
+                                                                                             (set-field!
+                                                                                              self31
+                                                                                              "__containerdict__"
+                                                                                              tmp-dict32)))))))))
+                                                                             (let ((b76
+                                                                                    (dict
+                                                                                     ("__base__"
+                                                                                      b70)
+                                                                                     ("__mro__"
+                                                                                      b71)
+                                                                                     ("__init__"
+                                                                                      b75))))
+                                                                               (let ((_77
+                                                                                      ((anf
+                                                                                        dict-set!)
+                                                                                       gbl-dict
+                                                                                       tuple
+                                                                                       b76)))
+                                                                                 (let ((_78
+                                                                                        (void)))
+                                                                                   (let ((b126
+                                                                                          (lambda ()
+                                                                                            (let ((b82
+                                                                                                   (lambda (n)
+                                                                                                     (call/ec
+                                                                                                      (lambda (return)
+                                                                                                        (let (($localo11
+                                                                                                               (dict
+                                                                                                                ("__class__"
+                                                                                                                 g$WebFib)
+                                                                                                                ("__type__"
+                                                                                                                 "instWebFib"))))
+                                                                                                          (let ((b79
+                                                                                                                 (get-field
+                                                                                                                  $localo11
+                                                                                                                  "__init__")))
+                                                                                                            (let ((_80
+                                                                                                                   (b79
+                                                                                                                    n)))
+                                                                                                              (let ((b81
+                                                                                                                     (return
+                                                                                                                      $localo11)))
+                                                                                                                b81)))))))))
+                                                                                              (let ((_83
+                                                                                                     (set! g$WebFib
+                                                                                                       b82)))
+                                                                                                (let ((_84
+                                                                                                       (void)))
+                                                                                                  (let ((b85
+                                                                                                         (list
+                                                                                                          object)))
+                                                                                                    (let ((b88
+                                                                                                           (lambda (self
+                                                                                                                    n)
+                                                                                                             (call/ec
+                                                                                                              (lambda (return)
+                                                                                                                (let ((_86
+                                                                                                                       (set-field!
+                                                                                                                        self
+                                                                                                                        "n"
+                                                                                                                        n)))
+                                                                                                                  (let ((b87
+                                                                                                                         (set-field!
+                                                                                                                          self
+                                                                                                                          "res"
+                                                                                                                          0)))
+                                                                                                                    b87)))))))
+                                                                                                      (let ((b90
+                                                                                                             (lambda (self)
+                                                                                                               (call/ec
+                                                                                                                (lambda (return)
+                                                                                                                  (let ((b89
+                                                                                                                         (void)))
+                                                                                                                    b89))))))
+                                                                                                        (let ((b118
+                                                                                                               (lambda (self)
+                                                                                                                 (call/ec
+                                                                                                                  (lambda (return)
+                                                                                                                    (let ((tmp
+                                                                                                                           (void)))
+                                                                                                                      (let ((a
+                                                                                                                             (void)))
+                                                                                                                        (let ((b
+                                                                                                                               (void)))
+                                                                                                                          (let ((i
+                                                                                                                                 (void)))
+                                                                                                                            (let ((_91
+                                                                                                                                   (set! a
+                                                                                                                                     0)))
+                                                                                                                              (let ((_92
+                                                                                                                                     (void)))
+                                                                                                                                (let ((_93
+                                                                                                                                       (set! b
+                                                                                                                                         1)))
+                                                                                                                                  (let ((_94
+                                                                                                                                         (void)))
+                                                                                                                                    (let ((_95
+                                                                                                                                           (set! i
+                                                                                                                                             0)))
+                                                                                                                                      (let ((_96
+                                                                                                                                             (void)))
+                                                                                                                                        (let ((_116
+                                                                                                                                               (call/ec
+                                                                                                                                                (lambda (break)
+                                                                                                                                                  (let ((loop
+                                                                                                                                                         (void)))
+                                                                                                                                                    (let ((b111
+                                                                                                                                                           (lambda ()
+                                                                                                                                                             (let ((b97
+                                                                                                                                                                    (get-field
+                                                                                                                                                                     self
+                                                                                                                                                                     "n")))
+                                                                                                                                                               (let ((b98
+                                                                                                                                                                      ((anf
+                                                                                                                                                                        <)
+                                                                                                                                                                       i
+                                                                                                                                                                       b97)))
+                                                                                                                                                                 (if b98
+                                                                                                                                                                   (let ((_109
+                                                                                                                                                                          (call/ec
+                                                                                                                                                                           (lambda (continue)
+                                                                                                                                                                             (let ((_99
+                                                                                                                                                                                    (set! tmp
+                                                                                                                                                                                      a)))
+                                                                                                                                                                               (let ((_100
+                                                                                                                                                                                      (void)))
+                                                                                                                                                                                 (let ((_101
+                                                                                                                                                                                        (set! a
+                                                                                                                                                                                          b)))
+                                                                                                                                                                                   (let ((_102
+                                                                                                                                                                                          (void)))
+                                                                                                                                                                                     (let ((b103
+                                                                                                                                                                                            ((anf
+                                                                                                                                                                                              +)
+                                                                                                                                                                                             tmp
+                                                                                                                                                                                             b)))
+                                                                                                                                                                                       (let ((_104
+                                                                                                                                                                                              (set! b
+                                                                                                                                                                                                b103)))
+                                                                                                                                                                                         (let ((_105
+                                                                                                                                                                                                (void)))
+                                                                                                                                                                                           (let ((b107
+                                                                                                                                                                                                  ((anf
+                                                                                                                                                                                                    +)
+                                                                                                                                                                                                   i
+                                                                                                                                                                                                   1)))
+                                                                                                                                                                                             (let ((_108
+                                                                                                                                                                                                    (set! i
+                                                                                                                                                                                                      b107)))
+                                                                                                                                                                                               (let ((b106
+                                                                                                                                                                                                      (void)))
+                                                                                                                                                                                                 b106))))))))))))))
+                                                                                                                                                                     (let ((b110
+                                                                                                                                                                            (loop)))
+                                                                                                                                                                       b110))
+                                                                                                                                                                   (void)))))))
+                                                                                                                                                      (let ((_112
+                                                                                                                                                             (set! loop
+                                                                                                                                                               b111)))
+                                                                                                                                                        (let ((_113
+                                                                                                                                                               (void)))
+                                                                                                                                                          (let ((_114
+                                                                                                                                                                 (loop)))
+                                                                                                                                                            (let ((b115
+                                                                                                                                                                   (void)))
+                                                                                                                                                              b115))))))))))
+                                                                                                                                          (let ((b117
+                                                                                                                                                 (set-field!
+                                                                                                                                                  self
+                                                                                                                                                  "res"
+                                                                                                                                                  a)))
+                                                                                                                                            b117)))))))))))))))))
+                                                                                                          (let ((b119
+                                                                                                                 (dict
+                                                                                                                  ("__base__"
+                                                                                                                   b85)
+                                                                                                                  ("__class__"
+                                                                                                                   g$WebFib)
+                                                                                                                  ("__type__"
+                                                                                                                   "class")
+                                                                                                                  ("__init__"
+                                                                                                                   b88)
+                                                                                                                  ("sanitizN"
+                                                                                                                   b90)
+                                                                                                                  ("do_fib"
+                                                                                                                   b118))))
+                                                                                                            (let ((_120
+                                                                                                                   ((anf
+                                                                                                                     dict-set!)
+                                                                                                                    gbl-dict
+                                                                                                                    g$WebFib
+                                                                                                                    b119)))
+                                                                                                              (let ((_121
+                                                                                                                     (void)))
+                                                                                                                (let ((b123
+                                                                                                                       ((anf
+                                                                                                                         dict-ref)
+                                                                                                                        gbl-dict
+                                                                                                                        g$WebFib)))
+                                                                                                                  (let ((b124
+                                                                                                                         (list
+                                                                                                                          g$WebFib
+                                                                                                                          object)))
+                                                                                                                    (let ((_125
+                                                                                                                           ((anf
+                                                                                                                             dict-set!)
+                                                                                                                            b123
+                                                                                                                            "__mro__"
+                                                                                                                            b124)))
+                                                                                                                      (let ((b122
+                                                                                                                             (void)))
+                                                                                                                        b122)))))))))))))))))
+                                                                                     (let ((_127
+                                                                                            (b126)))
+                                                                                       (let ((b132
+                                                                                              (lambda (any_int)
+                                                                                                (call/ec
+                                                                                                 (lambda (return)
+                                                                                                   (let ((b129
+                                                                                                          ((anf
+                                                                                                            -)
+                                                                                                           any_int
+                                                                                                           1)))
+                                                                                                     (let ((b130
+                                                                                                            ((anf
+                                                                                                              -)
+                                                                                                             any_int
+                                                                                                             b129)))
+                                                                                                       (let ((b131
+                                                                                                              ((anf
+                                                                                                                *)
+                                                                                                               b130
+                                                                                                               "get-tainted")))
+                                                                                                         (let ((b128
+                                                                                                                (return
+                                                                                                                 b131)))
+                                                                                                           b128)))))))))
+                                                                                         (let ((_133
+                                                                                                (set! g$str_my
+                                                                                                  b132)))
+                                                                                           (let ((_134
+                                                                                                  (void)))
+                                                                                             (let ((_135
+                                                                                                    ((anf
+                                                                                                      py-print)
+                                                                                                     "Content-type: text/html\r\n\r\n \n<html>\n<head>\n<title>Web Fibonacci</title> \n</head><body>\n<h1>Web Fibonacci Calcultor</h1> \n ")))
+                                                                                               (let ((b136
+                                                                                                      (dict
+                                                                                                       ("terms"
+                                                                                                        10))))
+                                                                                                 (let ((_137
+                                                                                                        (set! g$form
+                                                                                                          b136)))
+                                                                                                   (let ((_138
+                                                                                                          (void)))
+                                                                                                     (let ((e12
+                                                                                                            g$form))
+                                                                                                       (let ((i13
+                                                                                                              "terms"))
+                                                                                                         (let ((b141
+                                                                                                                ((anf
+                                                                                                                  py-list?)
+                                                                                                                 e12)))
+                                                                                                           (let ((b140
+                                                                                                                  (if b141
+                                                                                                                    ((anf
+                                                                                                                      py-list-ref)
+                                                                                                                     e12
+                                                                                                                     i13)
+                                                                                                                    (let ((b142
+                                                                                                                           ((anf
+                                                                                                                             tuple?)
+                                                                                                                            e12)))
+                                                                                                                      (if b142
+                                                                                                                        ((anf
+                                                                                                                          tuple-ref)
+                                                                                                                         e12
+                                                                                                                         i13)
+                                                                                                                        (let ((b143
+                                                                                                                               ((anf
+                                                                                                                                 dict?)
+                                                                                                                                e12)))
+                                                                                                                          (if b143
+                                                                                                                            ((anf
+                                                                                                                              dict-ref)
+                                                                                                                             e12
+                                                                                                                             i13)
+                                                                                                                            (error
+                                                                                                                             "cannot index object"))))))))
+                                                                                                             (let ((b139
+                                                                                                                    b140))
+                                                                                                               (let ((_144
+                                                                                                                      (set! g$num
+                                                                                                                        b139)))
+                                                                                                                 (let ((_145
+                                                                                                                        (void)))
+                                                                                                                   (let ((b146
+                                                                                                                          (g$str_my
+                                                                                                                           g$num)))
+                                                                                                                     (let ((b147
+                                                                                                                            ((anf
+                                                                                                                              +)
+                                                                                                                             "<form action = webfib.py method=GET> <p> <input type=\"text\" name = \"number\" value= "
+                                                                                                                             b146)))
+                                                                                                                       (let ((b148
+                                                                                                                              ((anf
+                                                                                                                                +)
+                                                                                                                               b147
+                                                                                                                               " size=3")))
+                                                                                                                         (let ((_149
+                                                                                                                                ((anf
+                                                                                                                                  py-print)
+                                                                                                                                 b148)))
+                                                                                                                           (let ((b150
+                                                                                                                                  (g$WebFib
+                                                                                                                                   g$num)))
+                                                                                                                             (let ((_151
+                                                                                                                                    (set! g$fib
+                                                                                                                                      b150)))
+                                                                                                                               (let ((_152
+                                                                                                                                      (void)))
+                                                                                                                                 (let ((b153
+                                                                                                                                        (get-field
+                                                                                                                                         g$fib
+                                                                                                                                         "do_fib")))
+                                                                                                                                   (let ((_154
+                                                                                                                                          (b153)))
+                                                                                                                                     (let ((_155
+                                                                                                                                            ((anf
+                                                                                                                                              py-print)
+                                                                                                                                             "<p><input type=\"submit\" value = \"GetResult\"> </form> <p><hr>")))
+                                                                                                                                       (let ((b156
+                                                                                                                                              (get-field
+                                                                                                                                               g$fib
+                                                                                                                                               "res")))
+                                                                                                                                         (let ((b157
+                                                                                                                                                (g$str_my
+                                                                                                                                                 b156)))
+                                                                                                                                           (let ((b158
+                                                                                                                                                  ((anf
+                                                                                                                                                    +)
+                                                                                                                                                   "<p> result is "
+                                                                                                                                                   b157)))
+                                                                                                                                             (let ((b159
+                                                                                                                                                    ((anf
+                                                                                                                                                      +)
+                                                                                                                                                     b158
+                                                                                                                                                     "<br> </body></html>")))
+                                                                                                                                               (let ((_160
+                                                                                                                                                      ((anf
+                                                                                                                                                        py-print)
+                                                                                                                                                       b159)))
+                                                                                                                                                 (let ((b162
+                                                                                                                                                        (get-field
+                                                                                                                                                         g$fib
+                                                                                                                                                         "res")))
+                                                                                                                                                   (let ((b161
+                                                                                                                                                          ((anf
+                                                                                                                                                            py-print)
+                                                                                                                                                           b162)))
+                                                                                                                                                     b161)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))

@@ -1,0 +1,16 @@
+(program
+ (= (lst) (list 10 20 30 40))
+ (= (mash) (list 0 2 1 3))
+ (def
+  (read_arry i)
+  (suite
+   (cond
+    ((comparison i ("<" (indexed len (called lst))))
+     (suite
+      (= (cur_index) (indexed lst (subscript (indexed mash (subscript i)))))
+      (expr (indexed print (called cur_index)))
+      (= (i) (arith i ("+" 1)))
+      (expr (indexed read_arry (called i)))))
+    (else (suite (return))))))
+ (expr (indexed read_arry (called 0))))
+

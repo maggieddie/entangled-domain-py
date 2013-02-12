@@ -1,0 +1,44 @@
+Number of States = 249
+
+Types Info --- 
+
+object:
+	class
+
+g$var1:
+	"in C's init"
+
+g$B:
+	class
+
+tuple:
+	class
+
+return:
+	exp
+
+gbl-dict:
+	dict4
+
+g$A:
+	class
+
+g$var2:
+	10000
+
+set:
+	class
+
+$current-handler:
+
+List:
+	class
+
+g$b:
+	OOdict16
+
+continue:
+
+g$C:
+	class
+

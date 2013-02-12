@@ -1,0 +1,34 @@
+(program
+ (def
+  (temp_f2c f)
+  (suite (= (tc) (arith f ("-" 32))) (return (term tc ("*" 5) ("/" 9)))))
+ (def
+  (temp_c2f c)
+  (suite (= (tf) (term c ("/" 5) ("*" 9))) (return (arith tf ("+" 32)))))
+ (= (converters) (dict ("tempf2c" temp_f2c) ("tempc2f" temp_c2f)))
+ (= (srctemp) 0)
+ (= (dsttemp) 0)
+ (= (action) "tempf2c")
+ (= (cgi) (dict ("terms" "tempc2fc")))
+ (= (action) (indexed cgi (subscript "terms")))
+ (= (dsttemp) (indexed converters (subscript action) (called srctemp)))
+ (def
+  (str_my any_int)
+  (suite
+   (return
+    (term (arith any_int ("-" (arith any_int ("-" 1)))) ("*" "get-taint")))))
+ (expr
+  (indexed
+   print
+   (called
+    (arith
+     "Content-type: text/html\r\n\r\n\n<html>\n<head>\n  <title>Web Converter</title>\n</head>\n<body>\n  <h1>Convert temprature:</h1>\n  <form action=\"pyconv.py\" methond=GET>\n    <p>\n    <select name=\"action\">\n      <option value=\"tempf2c\">F to C</option>\n      <option value=\"tempc2f\">C to F</option>\n    </select>\n"
+     ("+" action)
+     ("+"
+      "\n    Temprature:\n    <input type=\"text\" name=\"srctemp\" value=")
+     ("+" (indexed str_my (called srctemp)))
+     ("+" " size=10> is ")
+     ("+" (indexed str_my (called dsttemp)))
+     ("+"
+      "\n    </p>\n    <input type=\"submit\" value=\"Convert\">\n  </form>\n</body>\n</html>"))))))
+

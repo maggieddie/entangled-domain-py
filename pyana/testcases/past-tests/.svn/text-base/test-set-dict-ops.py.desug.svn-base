@@ -1,0 +1,224 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define g$set1 (void))
+ (define g$lst1 (void))
+ (begin
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict12)
+       (call/ec
+        (lambda (return)
+          (let (($localo13
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo13 "__init__") tmp-dict12)
+              (return $localo13)))))))
+   (set! set
+     (lambda (tmp-dict15)
+       (call/ec
+        (lambda (return)
+          (let (($localo16 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo16 "__init__") tmp-dict15)
+              (return $localo16)))))))
+   (set! tuple
+     (lambda (tmp-dict18)
+       (call/ec
+        (lambda (return)
+          (let (($localo19
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo19 "__init__") tmp-dict18)
+              (return $localo19)))))))
+   (set! gbl-dict
+     (dict
+      (object
+       (dict
+        ("__base__" (list))
+        ("__mro__" (list object))
+        ("__init__" (lambda v void))))
+      (List
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list List object))
+        ("__init__"
+         (lambda (self20 tmpdict21)
+           (call/ec
+            (lambda (return)
+              (if (py-list? tmpdict21)
+                (set-field!
+                 self20
+                 "__containerdict__"
+                 (dict-ref tmpdict21 "__containerdict__"))
+                (set-field! self20 "__containerdict__" tmpdict21))))))))
+      (set
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list set object))
+        ("__init__"
+         (lambda (self22 tmpdict23)
+           (call/ec
+            (lambda (return)
+              (if (py-list? tmpdict23)
+                (set-field!
+                 self22
+                 "__containerdict__"
+                 (dict-ref tmpdict23 "__containerdict__"))
+                (set-field! self22 "__containerdict__" tmpdict23))))))))
+      (tuple
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list tuple object))
+        ("__init__"
+         (lambda (self24 tmp-dict25)
+           (call/ec
+            (lambda (return)
+              (if (let ((t11 (py-list? tmp-dict25)))
+                    (begin
+                      (if t11
+                        t11
+                        (let ((t12 (tuple? tmp-dict25)))
+                          (begin (if t12 t12 (set? tmp-dict25)))))))
+                (set-field!
+                 self24
+                 "__containerdict__"
+                 (dict-ref tmp-dict25 "__containerdict__"))
+                (set-field! self24 "__containerdict__" tmp-dict25))))))))))
+   (set! g$set1 (set (dict (0 1) (1 2) (2 3))))
+   (set! g$lst1 (set (dict (0 10) (1 20) (2 30))))
+   (py-print
+    (set
+     (let ((res (dict)))
+       (let (($i 0))
+         (let ((x (void)))
+           (begin
+             (call/ec
+              (lambda (break)
+                ((lambda ($seq13 $loop14)
+                   (begin (begin (for-container $seq13 $loop14) (void))))
+                 g$set1
+                 (lambda (x)
+                   (call/ec
+                    (lambda (continue)
+                      (begin
+                        (dict-set! res $i (* 100 x))
+                        (set! $i (+ $i 1)))))))))
+             res))))))
+   (py-print
+    (set
+     (let ((res (dict)))
+       (let (($i 0))
+         (let ((x (void)))
+           (begin
+             (call/ec
+              (lambda (break)
+                ((lambda ($seq15 $loop16)
+                   (begin (begin (for-container $seq15 $loop16) (void))))
+                 g$lst1
+                 (lambda (x)
+                   (call/ec
+                    (lambda (continue)
+                      (begin
+                        (dict-set! res $i (* (- 100) x))
+                        (set! $i (+ $i 1)))))))))
+             res))))))
+   (py-print "dict: ")
+   (py-print
+    (let ((res (dict)))
+      (let (($i 0))
+        (let ((y (void)))
+          (let ((x (void)))
+            (begin
+              (call/ec
+               (lambda (break)
+                 ((lambda ($seq17 $loop18)
+                    (begin (begin (for-container $seq17 $loop18) (void))))
+                  g$set1
+                  (lambda (x)
+                    (call/ec
+                     (lambda (continue)
+                       (call/ec
+                        (lambda (break)
+                          ((lambda ($seq19 $loop20)
+                             (begin
+                               (begin (for-container $seq19 $loop20) (void))))
+                           g$lst1
+                           (lambda (y)
+                             (call/ec
+                              (lambda (continue)
+                                (dict-set! res x y)))))))))))))
+              res))))))
+   (py-print "a set of tuples")
+   (py-print
+    (set
+     (let ((res (dict)))
+       (let (($i 0))
+         (let ((y (void)))
+           (let ((x (void)))
+             (begin
+               (call/ec
+                (lambda (break)
+                  ((lambda ($seq21 $loop22)
+                     (begin (begin (for-container $seq21 $loop22) (void))))
+                   g$set1
+                   (lambda (x)
+                     (call/ec
+                      (lambda (continue)
+                        (call/ec
+                         (lambda (break)
+                           ((lambda ($seq23 $loop24)
+                              (begin
+                                (begin (for-container $seq23 $loop24) (void))))
+                            g$lst1
+                            (lambda (y)
+                              (call/ec
+                               (lambda (continue)
+                                 (begin
+                                   (dict-set!
+                                    res
+                                    $i
+                                    (tuple (dict (0 x) (1 y))))
+                                   (set! $i (+ $i 1)))))))))))))))
+               res)))))))
+   (py-print "set of tuples with conditions: ")
+   (py-print
+    (set
+     (let ((res (dict)))
+       (let (($i 0))
+         (let ((y (void)))
+           (let ((x (void)))
+             (begin
+               (call/ec
+                (lambda (break)
+                  ((lambda ($seq25 $loop26)
+                     (begin (begin (for-container $seq25 $loop26) (void))))
+                   g$set1
+                   (lambda (x)
+                     (call/ec
+                      (lambda (continue)
+                        (call/ec
+                         (lambda (break)
+                           ((lambda ($seq27 $loop28)
+                              (begin
+                                (begin (for-container $seq27 $loop28) (void))))
+                            g$lst1
+                            (lambda (y)
+                              (call/ec
+                               (lambda (continue)
+                                 (if (>= x 2)
+                                   (begin
+                                     (dict-set!
+                                      res
+                                      $i
+                                      (tuple (dict (0 x) (1 y))))
+                                     (set! $i (+ $i 1)))
+                                   (void))))))))))))))
+               res)))))))))

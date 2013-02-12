@@ -1,0 +1,10 @@
+(program
+ (= (l) (list "A" "B" "C"))
+ (for
+  e
+  l
+  (suite
+   (cond
+    ((comparison e ("==" "C")) (suite (break)))
+    (else (suite (expr (indexed print (called e)))))))))
+

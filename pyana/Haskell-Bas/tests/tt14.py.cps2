@@ -1,0 +1,54 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a (void))
+ (define g$b (void))
+ (define g$z (void))
+ (define g$y (void))
+ (set-then!
+  g$a
+  g$o
+  (set-then!
+   g$b
+   g$o
+   (py-list*-k
+    1
+    3
+    "hi"
+    (lambda (rv8)
+      (set-field!
+       g$b
+       x
+       rv8
+       (lambda (rv0)
+         (get-field
+          g$o
+          x
+          (lambda (rv1)
+            (set-then!
+             g$y
+             rv1
+             ((lambda (e15 k3)
+                ((lambda (i14 k4)
+                   ((cps py-list?)
+                    e15
+                    (lambda (rv5)
+                      (if rv5
+                        ((cps py-list-ref) e15 i14 k4)
+                        ((cps tuple?)
+                         e15
+                         (lambda (rv6)
+                           (if rv6
+                             ((cps tuple-ref) e15 i14 k4)
+                             ((cps dict?)
+                              e15
+                              (lambda (rv7)
+                                (if rv7
+                                  ((cps dict-ref) e15 i14 k4)
+                                  (error "cannot index object" k4)))))))))))
+                 2
+                 k3))
+              g$y
+              (lambda (rv2) (set-then! g$z rv2 ($halt (void)))))))))))))))

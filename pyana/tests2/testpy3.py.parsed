@@ -1,0 +1,9 @@
+(program
+ (class (A)
+   (suite
+    (def (__init__ self x) (suite (= ((indexed self (dot x))) x)))
+    (def (getx self) (suite (return (indexed self (dot x)))))))
+ (= (a) (indexed A (called "x in A")))
+ (= (va) (indexed a (dot getx) (called)))
+ (expr (indexed print (called va))))
+

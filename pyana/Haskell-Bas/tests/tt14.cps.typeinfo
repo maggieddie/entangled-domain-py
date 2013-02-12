@@ -1,0 +1,50 @@
+g$__name__:
+	string
+
+g$a:
+	Type-of-g$o
+
+g$o:
+	Type-of-g$o
+
+g$b:
+	Type-of-g$o
+
+g$b.x:
+	py-list
+
+g$y:
+	py-list
+
+g$o.x:
+	py-list
+
+e15:
+	dict
+	tuple
+	py-list
+
+k14:
+	proc
+
+i14:
+	int
+
+k15:
+	proc
+
+rv16:
+	boolean
+
+rv17:
+	boolean
+
+rv18:
+	boolean
+
+rv19:
+	string
+
+g$z:
+	string
+

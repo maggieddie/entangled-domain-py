@@ -1,0 +1,53 @@
+Number of States = 140
+
+set: 
+	class
+	proc
+$localo13: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c22 c21))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 2) (1 4) (2 6)) (c13 c12))>) ("__class__" . #<set: List>))
+List: 
+	class
+	proc
+tmp-dict12: 
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>) (2 . #<set: 6>))
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: 3>) (2 . #<set: 5>))
+tuple: 
+	class
+	proc
+tmpdict21: 
+	 object: 
+		#hash((0 . #<set: 2>) (1 . #<set: 4>) (2 . #<set: 6>))
+	 object: 
+		#hash((0 . #<set: 1>) (1 . #<set: 3>) (2 . #<set: 5>))
+self20: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c22 c21))>) ("__class__" . #<set: List>))
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 2) (1 4) (2 6)) (c13 c12))>) ("__class__" . #<set: List>))
+newlst: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 1) (1 3) (2 5)) (c22 c21))>) ("__class__" . #<set: List>))
+g$change_list: 
+	proc
+g$lst1: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 2) (1 4) (2 6)) (c13 c12))>) ("__class__" . #<set: List>))
+object: 
+	class
+	proc
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+return: 
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP

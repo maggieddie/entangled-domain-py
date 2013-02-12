@@ -1,0 +1,102 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$bar3 (void))
+ (define g$new_elem (void))
+ (define g$changedlst (void))
+ (define g$bar1 (void))
+ (define g$bar2 (void))
+ (set-then!
+  g$bar1
+  (lambda (a b k0)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k1)
+       ((lambda (c k2)
+          ((cps +)
+           a
+           b
+           (lambda (rv3)
+             (set-then!
+              c
+              rv3
+              (py-list*-k a b c (lambda (rv4) (return rv4 k2)))))))
+        (void)
+        k1))
+     k0))
+  (set-then!
+   g$bar2
+   (lambda (lst newvalue index k5)
+     ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+      (lambda (return k6)
+        ((lambda (k7)
+           ((lambda (b15 k9)
+              ((lambda (i14 k10)
+                 ((cps tuple?)
+                  b15
+                  (lambda (rv11)
+                    (if rv11
+                      ((cps tuple-set!) b15 i14 newvalue k10)
+                      ((cps py-list?)
+                       b15
+                       (lambda (rv12)
+                         (if rv12
+                           ((cps py-list-set!) b15 i14 newvalue k10)
+                           ((cps dict?)
+                            b15
+                            (lambda (rv13)
+                              (if rv13
+                                ((cps dict-set!) b15 i14 newvalue k10)
+                                (k10 (void))))))))))))
+               index
+               k9))
+            lst
+            (lambda (rv8) (return lst k7))))
+         k6))
+      k5))
+   (set-then!
+    g$bar3
+    (lambda (k14)
+      ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+       (lambda (return k15)
+         ((lambda (lst k16)
+            (g$bar1
+             1
+             2
+             (lambda (rv18)
+               (g$bar2
+                rv18
+                "newvalue"
+                0
+                (lambda (rv17) (set-then! lst rv17 (return lst k16)))))))
+          (void)
+          k15))
+       k14))
+    (g$bar3
+     (lambda (rv19)
+       (set-then!
+        g$changedlst
+        rv19
+        ((lambda (e17 k21)
+           ((lambda (i16 k22)
+              ((cps py-list?)
+               e17
+               (lambda (rv23)
+                 (if rv23
+                   ((cps py-list-ref) e17 i16 k22)
+                   ((cps tuple?)
+                    e17
+                    (lambda (rv24)
+                      (if rv24
+                        ((cps tuple-ref) e17 i16 k22)
+                        ((cps dict?)
+                         e17
+                         (lambda (rv25)
+                           (if rv25
+                             ((cps dict-ref) e17 i16 k22)
+                             (error "cannot index object" k22)))))))))))
+            0
+            k21))
+         g$changedlst
+         (lambda (rv20) (set-then! g$new_elem rv20 ($halt (void))))))))))))

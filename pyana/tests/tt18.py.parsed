@@ -1,0 +1,9 @@
+(program
+ (= (lst) (list 1 3 5))
+ (= ((indexed lst (subscript 0))) "str")
+ (expr (indexed print (called lst)))
+ (= ((indexed lst (subscript 1))) (tuple 2 4))
+ (expr (indexed print (called lst)))
+ (= (tl) (indexed lst (subscript 1) (subscript 1)))
+ (expr (indexed print (called tl))))
+

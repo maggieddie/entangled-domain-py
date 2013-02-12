@@ -1,0 +1,37 @@
+Number of States = 194
+
+Types Info --- 
+
+$current-handler:
+
+g$Bar:
+	class
+
+object:
+	class
+
+g$Foo:
+	class
+
+tuple:
+	class
+
+set:
+	class
+
+gbl-dict:
+	dict4
+
+g$g:
+	OOdict13
+
+return:
+	exp
+
+continue:
+
+List:
+	class
+
+y:
+

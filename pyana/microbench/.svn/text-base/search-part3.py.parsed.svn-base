@@ -1,0 +1,49 @@
+(program
+ (class (Response)
+   (suite
+    (def
+     (__init__ self req)
+     (suite
+      (= ((indexed self (dot result))) (list))
+      (= ((indexed self (dot body))) "")
+      (= ((indexed self (dot req))) req)))
+    (def
+     (gen_body self)
+     (suite
+      (= (len_res) (indexed len (called (indexed self (dot result)))))
+      (= (tmp) "<div id= \"search_results\">\n<ol>)\n")
+      (cond
+       ((comparison len_res ("==" 0))
+        (suite
+         (=
+          ((indexed self (dot body)))
+          (arith
+           tmp
+           ("+" "<h3>Your search did not return any results.</h3>")
+           ("+"
+            (indexed
+             lst_to_str
+             (called (indexed self (dot req) (dot getData) (called))))))))))
+      (= (indx) 0)
+      (while
+       (comparison indx ("<" len_res))
+       (suite
+        (=
+         ((indexed self (dot body)))
+         (arith
+          (indexed self (dot body))
+          ("+" "<li <a href=\"test/")
+          ("+" (indexed self (dot result) (subscript indx) (subscript 1)))
+          ("+" "?search=true&term=")
+          ("+"
+           (indexed
+            lst_to_str
+            (called (indexed self (dot req) (dot getData) (called)))))
+          ("+" "\">\n")
+          ("+" (indexed self (dot result) (subscript indx) (subscript 0)))
+          ("+" "</a>\n")))
+        (= (indx) (arith indx ("+" 1)))))
+      (=
+       ((indexed self (dot body)))
+       (arith (indexed self (dot body)) ("+" "</ol>\n</div>\n"))))))))
+

@@ -1,0 +1,7 @@
+(program
+ (def
+  (change_list lst)
+  (suite (= (newlst) (list 1 3 5)) (= (lst) newlst) (return newlst)))
+ (= (lst1) (list 2 4 6))
+ (expr (indexed print (called (indexed change_list (called lst1))))))
+

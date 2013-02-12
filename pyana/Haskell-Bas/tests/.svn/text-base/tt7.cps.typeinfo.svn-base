@@ -1,0 +1,48 @@
+k:
+	proc
+
+f:
+	proc
+
+g$foo:
+	proc
+
+k14:
+	proc
+
+cc:
+	proc
+
+x:
+	int
+
+return:
+	proc
+
+k15:
+	proc
+
+k16:
+	proc
+
+g$bar:
+	proc
+
+k17:
+	proc
+
+k18:
+	proc
+
+k19:
+	proc
+
+rv20:
+	int
+
+rv21:
+	int
+
+g$a:
+	int
+

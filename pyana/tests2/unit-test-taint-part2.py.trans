@@ -1,0 +1,241 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define ls (void))
+ (define res (void))
+ (set-global!
+  len
+  (lambda (seq11)
+    (call/ec
+     (lambda (return)
+       (let ((cnt12 0))
+         (cond
+          ((or (py-list? seq11) (set? seq11) (tuple? seq11))
+           (let ((container13 (dict-ref seq11 "__containerdict__")))
+             (for-each entry14 container13 (set! cnt12 (+ 1 cnt12)))
+             (return cnt12)))
+          (else
+           (for-each entry14 seq11 (set! cnt12 (+ cnt12 1)))
+           (return cnt12))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict16)
+    (call/ec
+     (lambda (return)
+       (let (($localo17
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo17 "__init__") tmp-dict16)
+         (return $localo17))))))
+ (set-global!
+  set
+  (lambda (tmp-dict19)
+    (call/ec
+     (lambda (return)
+       (let (($localo20
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo20 "__init__") tmp-dict19)
+         (return $localo20))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict22)
+    (call/ec
+     (lambda (return)
+       (let (($localo23
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo23 "__init__") tmp-dict22)
+         (return $localo23))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self24 tmpdict25)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict25)
+           (set-field!
+            self24
+            "__containerdict__"
+            (dict-ref tmpdict25 "__containerdict__"))
+           (set-field! self24 "__containerdict__" tmpdict25))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self26 tmpdict27)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict27)
+           (set-field!
+            self26
+            "__containerdict__"
+            (dict-ref tmpdict27 "__containerdict__"))
+           (set-field! self26 "__containerdict__" tmpdict27))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self28 tmp-dict29)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict29) (tuple? tmp-dict29) (set? tmp-dict29))
+           (set-field!
+            self28
+            "__containerdict__"
+            (dict-ref tmp-dict29 "__containerdict__"))
+           (set-field! self28 "__containerdict__" tmp-dict29))))))))
+ (set-global!
+  ls
+  ((get-global List)
+   (dict
+    (0 "r")
+    (1 "e")
+    (2 "d")
+    (3 " ")
+    (4 "b")
+    (5 "l")
+    (6 "u")
+    (7 "e")
+    (8 " ")
+    (9 "t")
+    (10 "h")
+    (11 "r")
+    (12 "e")
+    (13 "e")
+    (14 " ")
+    (15 "h")
+    (16 "t")
+    (17 "t")
+    (18 "p")
+    (19 ":")
+    (20 "/")
+    (21 "/")
+    (22 "v")
+    (23 "i")
+    (24 "c")
+    (25 "t")
+    (26 "i")
+    (27 "m")
+    (28 ".")
+    (29 "c")
+    (30 "o")
+    (31 "m")
+    (32 "/")
+    (33 "p")
+    (34 "o")
+    (35 "s")
+    (36 "t")
+    (37 ".")
+    (38 "p")
+    (39 "h")
+    (40 "p")
+    (41 "?")
+    (42 "s")
+    (43 "=")
+    (44 "<")
+    (45 "s")
+    (46 "c")
+    (47 "r")
+    (48 "i")
+    (49 "p")
+    (50 "t")
+    (51 ">")
+    (52 "d")
+    (53 "o")
+    (54 "c")
+    (55 "u")
+    (56 "m")
+    (57 "e")
+    (58 "n")
+    (59 "t")
+    (60 ".")
+    (61 "l")
+    (62 "o")
+    (63 "c")
+    (64 "a")
+    (65 "t")
+    (66 "i")
+    (67 "o")
+    (68 "n")
+    (69 "=")
+    (70 "'")
+    (71 "t")
+    (72 "r")
+    (73 "u")
+    (74 "d")
+    (75 "y")
+    (76 "s")
+    (77 "e")
+    (78 "r")
+    (79 "v")
+    (80 "e")
+    (81 "r")
+    (82 ".")
+    (83 "c")
+    (84 "o")
+    (85 "m")
+    (86 "/")
+    (87 "b")
+    (88 "a")
+    (89 "d")
+    (90 ".")
+    (91 "p")
+    (92 "h")
+    (93 "p")
+    (94 "?")
+    (95 "'")
+    (96 " ")
+    (97 "+")
+    (98 " ")
+    (99 "d")
+    (100 "o")
+    (101 "c")
+    (102 "u")
+    (103 "m")
+    (104 "e")
+    (105 "n")
+    (106 "t")
+    (107 ".")
+    (108 "c")
+    (109 "o")
+    (110 "o")
+    (111 "k")
+    (112 "i")
+    (113 "e")
+    (114 "<")
+    (115 "/")
+    (116 "s")
+    (117 "c")
+    (118 "i")
+    (119 "p")
+    (120 "t")
+    (121 ">"))))
+ (set-global!
+  res
+  ((get-global issubstring) (get-global ls) (get-global SCRIPT_PAT)))
+ (py-print (get-global res)))

@@ -1,0 +1,11 @@
+(program
+ (= (l) (list 1 2 3))
+ (def
+  (f lst)
+  (suite
+   (= (num) 0)
+   (for e l (suite (= (num) (arith num ("+" 1)))))
+   (return num)))
+ (= (le) (indexed f (called l)))
+ (expr (indexed print (called le))))
+

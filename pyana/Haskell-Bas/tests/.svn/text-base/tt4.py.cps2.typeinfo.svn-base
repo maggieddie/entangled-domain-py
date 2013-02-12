@@ -1,0 +1,1 @@
+fromList [("a",fromList [Int]),("b",fromList [String]),("cc",fromList [Proc]),("f",fromList [Proc]),("g$c",fromList [PyTuple]),("g$f",fromList [Proc]),("k",fromList [Proc]),("k0",fromList [Proc]),("k1",fromList [Proc]),("k2",fromList [Proc]),("return",fromList [Proc]),("rv3",fromList [PyTuple]),("rv4",fromList [PyTuple]),("x",fromList [PyTuple])]

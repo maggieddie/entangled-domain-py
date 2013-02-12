@@ -1,0 +1,17 @@
+(program
+ (class (Foo)
+   (suite
+    (def (setx self x) (suite (= ((indexed self (dot x))) x)))
+    (def (getx self) (suite (return (indexed self (dot x)))))
+    (def (foof self z) (suite (= ((indexed self (dot z))) z)))))
+ (def (foo self str) (suite (= ((indexed self (dot x))) str)))
+ (= (f) (indexed Foo (called)))
+ (expr (indexed f (dot setx) (called 5)))
+ (= (var1) (indexed f (dot getx) (called)))
+ (expr (indexed print (called var1)))
+ (expr (indexed Foo (dot foof) (called f 500)))
+ (= ((indexed f (dot foo))) foo)
+ (expr (indexed f (dot foo) (called f "self.x is changed to me")))
+ (= (var2) (indexed f (dot getx) (called)))
+ (expr (indexed print (called var2))))
+

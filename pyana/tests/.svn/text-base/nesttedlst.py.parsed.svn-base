@@ -1,0 +1,5 @@
+(program
+ (= (lst) (list (list "a" "b") 2 3))
+ (expr (indexed print (called (indexed lst (subscript 1)))))
+ (expr (indexed print (called (indexed lst (subscript 0))))))
+

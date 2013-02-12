@@ -1,0 +1,92 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define b (void))
+ (define a (void))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict12)
+    (call/ec
+     (lambda (return)
+       (let (($localo13
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo13 "__init__") tmp-dict12)
+         (return $localo13))))))
+ (set-global!
+  set
+  (lambda (tmp-dict15)
+    (call/ec
+     (lambda (return)
+       (let (($localo16
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo16 "__init__") tmp-dict15)
+         (return $localo16))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict18)
+    (call/ec
+     (lambda (return)
+       (let (($localo19
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo19 "__init__") tmp-dict18)
+         (return $localo19))))))
+ (set-global!
+  gbl-dict
+  (dict
+   (object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self20 tmpdict21)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict21)
+             (set-field!
+              self20
+              "__containerdict__"
+              (dict-ref tmpdict21 "__containerdict__"))
+             (set-field! self20 "__containerdict__" tmpdict21))))))))
+   (set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self22 tmpdict23)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict23)
+             (set-field!
+              self22
+              "__containerdict__"
+              (dict-ref tmpdict23 "__containerdict__"))
+             (set-field! self22 "__containerdict__" tmpdict23))))))))
+   (tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self24 tmp-dict25)
+        (call/ec
+         (lambda (return)
+           (if (or (py-list? tmp-dict25) (tuple? tmp-dict25) (set? tmp-dict25))
+             (set-field!
+              self24
+              "__containerdict__"
+              (dict-ref tmp-dict25 "__containerdict__"))
+             (set-field! self24 "__containerdict__" tmp-dict25))))))))))
+ (set-global! a ((get-global List) (dict (0 1))))
+ (set-global! b ((get-global List) (dict (0 1000)))))

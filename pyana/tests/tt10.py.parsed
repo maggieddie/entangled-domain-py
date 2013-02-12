@@ -1,0 +1,13 @@
+(program
+ (def (bar1 a b) (suite (= (c) (arith a ("+" b))) (return (list a b c))))
+ (def
+  (bar2 lst newvalue index)
+  (suite (= ((indexed lst (subscript index))) newvalue) (return lst)))
+ (def
+  (bar3)
+  (suite
+   (= (lst) (indexed bar2 (called (indexed bar1 (called 1 2)) "newvalue" 0)))
+   (return lst)))
+ (= (changedlst) (indexed bar3 (called)))
+ (= (new_elem) (indexed changedlst (subscript 0))))
+

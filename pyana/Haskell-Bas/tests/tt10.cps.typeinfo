@@ -1,0 +1,140 @@
+k:
+	proc
+
+f:
+	proc
+
+a:
+	int
+
+b:
+	int
+
+g$bar1:
+	proc
+
+k14:
+	proc
+
+cc:
+	proc
+
+x:
+	py-list
+
+return:
+	proc
+
+k15:
+	proc
+
+c:
+	int
+
+k16:
+	proc
+
+rv17:
+	int
+
+g$bar2:
+	proc
+
+lst:
+	py-list
+
+newvalue:
+	string
+
+index:
+	int
+
+k18:
+	proc
+
+k19:
+	proc
+
+k20:
+	proc
+
+b15:
+	dict
+	py-list
+	tuple
+
+k21:
+	proc
+
+i14:
+	int
+
+k22:
+	proc
+
+rv23:
+	boolean
+
+rv24:
+	boolean
+
+rv25:
+	boolean
+
+rv26:
+
+g$bar3:
+	proc
+
+k27:
+	proc
+
+k28:
+	proc
+
+k29:
+	proc
+
+rv30:
+	py-list
+
+rv31:
+	py-list
+
+rv32:
+	py-list
+
+g$changedlst:
+	py-list
+
+e17:
+	dict
+	tuple
+	py-list
+
+k33:
+	proc
+
+i16:
+	int
+
+k34:
+	proc
+
+rv35:
+	boolean
+
+rv36:
+	boolean
+
+rv37:
+	boolean
+
+rv38:
+	string
+	int
+
+g$new_elem:
+	string
+	int
+

@@ -1,0 +1,273 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define red (void))
+ (define mock_helper (void))
+ (define colorchooser (void))
+ (define green (void))
+ (define Colorchooser (void))
+ (define form (void))
+ (define blue (void))
+ (set-global!
+  len
+  (lambda (seq30)
+    (call/ec
+     (lambda (return)
+       (let ((cnt31 0))
+         (cond
+          ((or (py-list? seq30) (set? seq30) (tuple? seq30))
+           (let ((container32 (dict-ref seq30 "__containerdict__")))
+             (for-each entry33 container32 (set! cnt31 (+ 1 cnt31)))
+             (return cnt31)))
+          (else
+           (for-each entry33 seq30 (set! cnt31 (+ cnt31 1)))
+           (return cnt31))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict35)
+    (call/ec
+     (lambda (return)
+       (let (($localo36
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo36 "__init__") tmp-dict35)
+         (return $localo36))))))
+ (set-global!
+  set
+  (lambda (tmp-dict38)
+    (call/ec
+     (lambda (return)
+       (let (($localo39
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo39 "__init__") tmp-dict38)
+         (return $localo39))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict41)
+    (call/ec
+     (lambda (return)
+       (let (($localo42
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo42 "__init__") tmp-dict41)
+         (return $localo42))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self43 tmpdict44)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict44)
+           (set-field!
+            self43
+            "__containerdict__"
+            (dict-ref tmpdict44 "__containerdict__"))
+           (set-field! self43 "__containerdict__" tmpdict44))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self45 tmpdict46)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict46)
+           (set-field!
+            self45
+            "__containerdict__"
+            (dict-ref tmpdict46 "__containerdict__"))
+           (set-field! self45 "__containerdict__" tmpdict46))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self47 tmp-dict48)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict48) (tuple? tmp-dict48) (set? tmp-dict48))
+           (set-field!
+            self47
+            "__containerdict__"
+            (dict-ref tmp-dict48 "__containerdict__"))
+           (set-field! self47 "__containerdict__" tmp-dict48))))))))
+ (py-print "Content-type: text/html\r\n")
+ (py-print
+  "<html>\n<head>\n<title>Color Chooser</title>\n</head>\n<body>\n<h1>Color Chooser</h1>")
+ (set-global! form (dict ("red" 100) ("green" 20) ("blue" 200)))
+ (set-global! mock_helper (dict (100 "100") (20 "20") (200 "200")))
+ ((lambda ()
+    (begin
+      (set-global!
+       Colorchooser
+       (lambda (r g b)
+         (call/ec
+          (lambda (return)
+            (let (($localo11
+                   (dict
+                    ("__class__" (get-global Colorchooser))
+                    ("__type__" "instColorchooser"))))
+              ((get-field $localo11 "__init__") r g b)
+              (return $localo11))))))
+      (dict-set!
+       gbl-dict
+       (get-global Colorchooser)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global Colorchooser))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self r g b)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (set-field! self "r" r)
+                (set-field! self "g" g)
+                (set-field! self "b" b))))))
+        ("do_color"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (return
+                 ((get-global tuple)
+                  (dict
+                   (0 (get-field self "r"))
+                   (1 (get-field self "g"))
+                   (2 (get-field self "b"))))))))))
+        ("proc_color"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ()
+                (cond
+                 ((> (get-field self "r") 255)
+                  (let () (set-field! self "r" 255))))
+                (cond
+                 ((> (get-field self "g") 255)
+                  (let () (set-field! self "g" 255))))
+                (cond
+                 ((> (get-field self "b") 255)
+                  (let () (set-field! self "b" 255)))))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global Colorchooser))
+       "__mro__"
+       (list (get-global Colorchooser) object)))))
+ (set-global!
+  red
+  (let ((e12 (get-global form)))
+    (let ((i13 "red"))
+      (cond
+       ((py-list? e12) (py-list-ref e12 i13))
+       ((tuple? e12) (tuple-ref e12 i13))
+       ((dict? e12) (dict-ref e12 i13))
+       (else (error "cannot index object"))))))
+ (set-global!
+  green
+  (let ((e14 (get-global form)))
+    (let ((i15 "green"))
+      (cond
+       ((py-list? e14) (py-list-ref e14 i15))
+       ((tuple? e14) (tuple-ref e14 i15))
+       ((dict? e14) (dict-ref e14 i15))
+       (else (error "cannot index object"))))))
+ (set-global!
+  blue
+  (let ((e16 (get-global form)))
+    (let ((i17 "blue"))
+      (cond
+       ((py-list? e16) (py-list-ref e16 i17))
+       ((tuple? e16) (tuple-ref e16 i17))
+       ((dict? e16) (dict-ref e16 i17))
+       (else (error "cannot index object"))))))
+ (set-global!
+  colorchooser
+  ((get-global Colorchooser)
+   (get-global red)
+   (get-global green)
+   (get-global blue)))
+ (py-print
+  (+
+   (+
+    "<form action=\"colorchooser.py\" method=GET>\n\n<table>\n<tr><td>red<td><input type=\"text\" name=\"red\" value="
+    (let ((e18 (get-global mock_helper)))
+      (let ((i19 (get-field (get-global colorchooser) "r")))
+        (cond
+         ((py-list? e18) (py-list-ref e18 i19))
+         ((tuple? e18) (tuple-ref e18 i19))
+         ((dict? e18) (dict-ref e18 i19))
+         (else (error "cannot index object"))))))
+   "sizee=3>\n<td rowspan=3 width=16><br>"))
+ (py-print
+  (+
+   (+
+    (+
+     "<td rowspan=3 width=96 bgcolor=\"%02X%02X%02X\"><br>"
+     (let ((e20 (get-global mock_helper)))
+       (let ((i21 (get-field (get-global colorchooser) "r")))
+         (cond
+          ((py-list? e20) (py-list-ref e20 i21))
+          ((tuple? e20) (tuple-ref e20 i21))
+          ((dict? e20) (dict-ref e20 i21))
+          (else (error "cannot index object"))))))
+    (let ((e22 (get-global mock_helper)))
+      (let ((i23 (get-field (get-global colorchooser) "g")))
+        (cond
+         ((py-list? e22) (py-list-ref e22 i23))
+         ((tuple? e22) (tuple-ref e22 i23))
+         ((dict? e22) (dict-ref e22 i23))
+         (else (error "cannot index object"))))))
+   (let ((e24 (get-global mock_helper)))
+     (let ((i25 (get-field (get-global colorchooser) "b")))
+       (cond
+        ((py-list? e24) (py-list-ref e24 i25))
+        ((tuple? e24) (tuple-ref e24 i25))
+        ((dict? e24) (dict-ref e24 i25))
+        (else (error "cannot index object")))))))
+ (py-print
+  (+
+   (+
+    "<tr><td>green<td> <input type=\"text\" name=\"green\" value="
+    " size=3>")
+   (let ((e26 (get-global mock_helper)))
+     (let ((i27 (get-field (get-global colorchooser) "g")))
+       (cond
+        ((py-list? e26) (py-list-ref e26 i27))
+        ((tuple? e26) (tuple-ref e26 i27))
+        ((dict? e26) (dict-ref e26 i27))
+        (else (error "cannot index object")))))))
+ (py-print
+  (+
+   (+ "<tr><td>blue<td> <input type=\"text\" name=\"blue\" value=" "size=3>")
+   (let ((e28 (get-global mock_helper)))
+     (let ((i29 (get-field (get-global colorchooser) "b")))
+       (cond
+        ((py-list? e28) (py-list-ref e28 i29))
+        ((tuple? e28) (tuple-ref e28 i29))
+        ((dict? e28) (dict-ref e28 i29))
+        (else (error "cannot index object")))))))
+ (py-print
+  "</table>\n\n<p><input type=\"submit\" value=\"Update\">\n\n</form>\n\n<p><hr>\n\n<p>Maintained by <a href=\"http://www.johnloomis.org\"> John Loomis</a>, \nlast updated <i>29 February 2008 </i></p>\n\n</body>\n</html>"))

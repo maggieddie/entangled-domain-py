@@ -1,0 +1,169 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define issubstring (void))
+ (define SCRIPT_PAT (void))
+ (define ls (void))
+ (define res (void))
+ (set-global!
+  len
+  (lambda (seq14)
+    (call/ec
+     (lambda (return)
+       (let ((cnt15 0))
+         (cond
+          ((or (py-list? seq14) (set? seq14) (tuple? seq14))
+           (let ((container16 (dict-ref seq14 "__containerdict__")))
+             (for-each entry17 container16 (set! cnt15 (+ 1 cnt15)))
+             (return cnt15)))
+          (else
+           (for-each entry17 seq14 (set! cnt15 (+ cnt15 1)))
+           (return cnt15))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict19)
+    (call/ec
+     (lambda (return)
+       (let (($localo20
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo20 "__init__") tmp-dict19)
+         (return $localo20))))))
+ (set-global!
+  set
+  (lambda (tmp-dict22)
+    (call/ec
+     (lambda (return)
+       (let (($localo23
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo23 "__init__") tmp-dict22)
+         (return $localo23))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict25)
+    (call/ec
+     (lambda (return)
+       (let (($localo26
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo26 "__init__") tmp-dict25)
+         (return $localo26))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self27 tmpdict28)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict28)
+           (set-field!
+            self27
+            "__containerdict__"
+            (dict-ref tmpdict28 "__containerdict__"))
+           (set-field! self27 "__containerdict__" tmpdict28))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self29 tmpdict30)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict30)
+           (set-field!
+            self29
+            "__containerdict__"
+            (dict-ref tmpdict30 "__containerdict__"))
+           (set-field! self29 "__containerdict__" tmpdict30))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self31 tmp-dict32)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict32) (tuple? tmp-dict32) (set? tmp-dict32))
+           (set-field!
+            self31
+            "__containerdict__"
+            (dict-ref tmp-dict32 "__containerdict__"))
+           (set-field! self31 "__containerdict__" tmp-dict32))))))))
+ (set-global!
+  SCRIPT_PAT
+  ((get-global List)
+   (dict (0 "<") (1 "s") (2 "r") (3 "i") (4 "p") (5 "t") (6 "/") (7 ">"))))
+ (set-global!
+  issubstring
+  (lambda (s p)
+    (call/ec
+     (lambda (return)
+       (let ((j (void)) (c (void)) (i (void)))
+         (set! i 0)
+         (while
+          (<= i (- (len s) (len p)))
+          (let ()
+            (set! j i)
+            (for-each
+             i13
+             p
+             (begin
+               (set! c i13)
+               (let ()
+                 (cond
+                  ((not-equal?
+                    c
+                    (let ((e11 s))
+                      (let ((i12 j))
+                        (cond
+                         ((py-list? e11) (py-list-ref e11 i12))
+                         ((tuple? e11) (tuple-ref e11 i12))
+                         ((dict? e11) (dict-ref e11 i12))
+                         (else (error "cannot index object"))))))
+                   (let () (break)))
+                  (else
+                   (let ()
+                     (set! j (+ j 1))
+                     (cond
+                      ((equal? (- j i) (len p)) (let () (return #t))))))))))
+            (set! i (+ i 1))))
+         (return #f))))))
+ (set-global!
+  ls
+  ((get-global List)
+   (dict
+    (0 "a")
+    (1 "<")
+    (2 "s")
+    (3 "r")
+    (4 "i")
+    (5 "p")
+    (6 "t")
+    (7 "/")
+    (8 ">"))))
+ (set-global!
+  res
+  ((get-global issubstring) (get-global ls) (get-global SCRIPT_PAT)))
+ (py-print (get-global res)))

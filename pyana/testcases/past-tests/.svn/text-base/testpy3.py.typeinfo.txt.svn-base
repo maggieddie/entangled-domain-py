@@ -1,0 +1,38 @@
+Number of States = 149
+
+Types Info --- 
+
+x:
+	"x in A"
+
+set:
+	class
+
+continue:
+
+g$a:
+	OOdict10
+
+object:
+	class
+
+g$A:
+	class
+
+tuple:
+	class
+
+gbl-dict:
+	dict4
+
+List:
+	class
+
+return:
+	exp
+
+$current-handler:
+
+g$va:
+	"x in A"
+

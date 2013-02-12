@@ -1,0 +1,14 @@
+(program
+ (= (lst) (list "A" "B" "C" "D"))
+ (= (tu) (tuple "SA" "SB" "SD"))
+ (= (di) (dict (1 100) (2 200) (3 300)))
+ (= (ss) (set "S1" "S2"))
+ (= (len_lst) (indexed len (called lst)))
+ (= (len_tu) (indexed len (called tu)))
+ (= (len_di) (indexed len (called di)))
+ (= (len_ss) (indexed len (called ss)))
+ (expr (indexed print (called len_lst)))
+ (expr (indexed print (called len_tu)))
+ (expr (indexed print (called len_di)))
+ (expr (indexed print (called len_ss))))
+

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact
+END
+utils-cesk-taint.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/utils-cesk-taint.rkt
+END
+utils_pytrans.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/utils_pytrans.rkt
+END
+webfact_ana.py.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.rkt
+END
+webfact_ana.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py
+END
+webfact_ana.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.lexed
+END
+utils_cesk.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/utils_cesk.rkt
+END
+utils_cesk3.rkt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/utils_cesk3.rkt
+END
+webfact_ana.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.desug
+END
+webfact_ana.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.trans
+END
+WebFactorial.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/WebFactorial.py
+END
+webfact_ana.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.anormalnt
+END
+webfact_ana.py.info
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.info
+END
+webfact_ana.py.typeinfo
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.typeinfo
+END
+webfact_ana.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ucombinator/!svn/ver/1473/projects/pyana/microbench/webfact/webfact_ana.py.parsed
+END

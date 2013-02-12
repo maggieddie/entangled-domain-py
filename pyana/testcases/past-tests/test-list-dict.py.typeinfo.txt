@@ -1,0 +1,38 @@
+Number of States = 109
+
+Types Info --- 
+
+tmpdict34:
+	dict5
+	dict12
+
+set:
+	class
+
+object:
+	class
+
+g$a:
+
+tmp-dict25:
+	dict5
+	dict12
+
+continue:
+
+tuple:
+	class
+
+return:
+	exp
+
+$current-handler:
+
+g$x:
+
+gbl-dict:
+	dict4
+
+List:
+	class
+

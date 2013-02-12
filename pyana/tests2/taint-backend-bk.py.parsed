@@ -1,0 +1,255 @@
+(program
+ (= (OR) "OR")
+ (= (CASE_SENSITIVE) "Sensitive")
+ (= (SCRIPT_PAT) (list "<" "s" "c" "r" "i" "p" "t" ">"))
+ (def
+  (lst_to_str lst)
+  (suite
+   (= (l) (indexed len (called lst)))
+   (= (i) 0)
+   (= (res_str) "")
+   (while
+    (comparison i ("<" l))
+    (suite
+     (= (res_str) (arith res_str ("+" (indexed lst (subscript i)))))
+     (= (i) (arith i ("+" 1)))))
+   (return res_str)))
+ (def
+  (issubstring s p)
+  (suite
+   (= (i) 0)
+   (while
+    (comparison
+     i
+     ("<=" (arith (indexed len (called s)) ("-" (indexed len (called p))))))
+    (suite
+     (= (j) i)
+     (for
+      c
+      p
+      (suite
+       (cond
+        ((comparison c ("!=" (indexed s (subscript j)))) (suite (break)))
+        (else
+         (suite
+          (= (j) (arith j ("+" 1)))
+          (cond
+           ((comparison (arith j ("-" i)) ("==" (indexed len (called p))))
+            (suite (return True)))))))))
+     (= (i) (arith i ("+" 1)))))
+   (return False)))
+ (def
+  (santinize_proc lst)
+  (suite (return (indexed issubstring (called lst SCRIPT_PAT)))))
+ (def
+  (proc_results terms results)
+  (suite
+   (= (is_valid) (indexed santinize_proc (called terms)))
+   (cond
+    (is_valid
+     (suite
+      (expr (indexed print (called "failed because of script")))
+      (return ("-" 1)))))
+   (expr (indexed print (called "<div id= \"search_results\">\n<ol>)")))
+   (= (l) (indexed len (called results)))
+   (cond
+    ((comparison l ("==" 0))
+     (suite
+      (expr
+       (indexed
+        print
+        (called
+         (arith
+          "<h3>Your search did not return any results.</h3>"
+          ("+" (indexed lst_to_str (called terms))))))))))
+   (= (indx) 0)
+   (while
+    (comparison indx ("<" l))
+    (suite
+     (expr
+      (indexed
+       print
+       (called
+        (arith
+         "<li <a href=\"test/"
+         ("+" (indexed results (subscript indx) (subscript 1)))
+         ("+" "?search=true&term=")
+         ("+" (indexed lst_to_str (called terms)))
+         ("+" "\">")))))
+     (expr
+      (indexed
+       print
+       (called
+        (arith
+         (indexed results (subscript indx) (subscript 0))
+         ("+" "</a>\n")))))
+     (= (indx) (arith indx ("+" 1)))))
+   (expr (indexed print (called "</ol>\n</div>\n")))))
+ (def
+  (test_init_input)
+  (suite
+   (=
+    (simulated_cgi_entry1)
+    (dict
+     ("terms" (list "red" "blue" "three"))
+     ("boolean" OR)
+     ("case" CASE_SENSITIVE)
+     ("files"
+      (list
+       "colors.html"
+       "numbers.html"
+       "numbersandcolors.html"
+       "numbersandcolorswithtag.html"))))
+   (=
+    (res)
+    (list
+     (tuple "Colors" "colors.html")
+     (tuple "Numbers" "numbers.html")
+     (tuple "Numbers and Colors" "numbersandcolors.html")
+     (tuple "Numbers and Colors With Tag" "numbersandcolorswithtag.html")))
+   (return (tuple (indexed simulated_cgi_entry1 (subscript "terms")) res))))
+ (def
+  (default_mal_strlst)
+  (suite
+   (return
+    (list
+     "r"
+     "e"
+     "d"
+     " "
+     "b"
+     "l"
+     "u"
+     "e"
+     " "
+     "t"
+     "h"
+     "r"
+     "e"
+     "e"
+     " "
+     "h"
+     "t"
+     "t"
+     "p"
+     ":"
+     "/"
+     "/"
+     "v"
+     "i"
+     "c"
+     "t"
+     "i"
+     "m"
+     "."
+     "c"
+     "o"
+     "m"
+     "/"
+     "p"
+     "o"
+     "s"
+     "t"
+     "."
+     "p"
+     "h"
+     "p"
+     "?"
+     "s"
+     "="
+     "<"
+     "s"
+     "c"
+     "r"
+     "i"
+     "p"
+     "t"
+     ">"
+     "d"
+     "o"
+     "c"
+     "u"
+     "m"
+     "e"
+     "n"
+     "t"
+     "."
+     "l"
+     "o"
+     "c"
+     "a"
+     "t"
+     "i"
+     "o"
+     "n"
+     "="
+     "'"
+     "t"
+     "r"
+     "u"
+     "d"
+     "y"
+     "s"
+     "e"
+     "r"
+     "v"
+     "e"
+     "r"
+     "."
+     "c"
+     "o"
+     "m"
+     "/"
+     "b"
+     "a"
+     "d"
+     "."
+     "p"
+     "h"
+     "p"
+     "?"
+     "'"
+     " "
+     "+"
+     " "
+     "d"
+     "o"
+     "c"
+     "u"
+     "m"
+     "e"
+     "n"
+     "t"
+     "."
+     "c"
+     "o"
+     "o"
+     "k"
+     "i"
+     "e"
+     "<"
+     "/"
+     "s"
+     "c"
+     "i"
+     "p"
+     "t"
+     ">"))))
+ (def
+  (gen_malicious_input)
+  (suite
+   (=
+    (simulated_cgi_entry2)
+    (dict ("terms" (indexed default_mal_strlst (called)))))
+   (= (res) (list))
+   (return (tuple (indexed simulated_cgi_entry2 (subscript "terms")) res))))
+ (= (test1) (indexed test_init_input (called)))
+ (= (input1) (indexed test1 (subscript 0)))
+ (= (input2) (indexed test1 (subscript 1)))
+ (expr (indexed proc_results (called input1 input2)))
+ (expr (indexed print (called "-------------------------------")))
+ (= (test2) (indexed gen_malicious_input (called)))
+ (= (input3) (indexed test2 (subscript 0)))
+ (= (input4) (indexed test2 (subscript 1)))
+ (expr (indexed proc_results (called input3 input4))))
+

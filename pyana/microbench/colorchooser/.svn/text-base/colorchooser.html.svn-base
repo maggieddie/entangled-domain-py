@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Color Chooser</title>
+</head>
+<body>
+<h1>Color Chooser</h1>
+
+<form action="colorchooser.py" method=GET>
+
+<table>
+<tr><td>red<td><input type="text" name="red" value="255" size=3>
+<td rowspan=3 width=16><br>
+<td rowspan=3 width=96 bgcolor="FF0000"><br>
+<tr><td>green<td> <input type="text" name="green" value="0" size=3>
+<tr><td>blue<td> <input type="text" name="blue" value="0" size=3>
+</table>
+
+<p><input type="submit" value="Update">
+
+</form>
+
+<p><hr>
+
+<p>Maintained by <a href="http://www.johnloomis.org"> John Loomis</a>, 
+last updated <i>29 February 2008 </i></p>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define g$b (void))
+ (define g$a (void))
+ (begin
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict)
+       (call/ec
+        (lambda (return)
+          (let (($localo (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo "__init__") tmp-dict)
+              (return $localo)))))))
+   (set! set
+     (lambda (tmp-dict)
+       (call/ec
+        (lambda (return)
+          (let (($localo (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo "__init__") tmp-dict)
+              (return $localo)))))))
+   (set! tuple
+     (lambda (tmp-dict)
+       (call/ec
+        (lambda (return)
+          (let (($localo (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo "__init__") tmp-dict)
+              (return $localo)))))))
+   (set! gbl-dict
+     (dict
+      (object
+       (dict
+        ("__base__" (list))
+        ("__mro__" (list object))
+        ("__init__" (lambda v void))))
+      (List
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list List object))
+        ("__init__"
+         (lambda (self tmp-list-dict)
+           (call/ec
+            (lambda (return)
+              (if (py-list? tmp-list-dict)
+                (set-field!
+                 self
+                 "__containerdict__"
+                 (dict-ref tmp-list-dict "__containerdict__"))
+                (set-field! self "__containerdict__" tmp-list-dict))))))
+        ("index"
+         (lambda (self elem)
+           (let ((container (dict-ref self "__containerdict__")))
+             (let ((i 0))
+               (let ((found #f))
+                 (let ((max (len self)))
+                   (begin
+                     (call/ec
+                      (lambda (break)
+                        (let ((loop (void)))
+                          (begin
+                            (set! loop
+                              (lambda ()
+                                (if (if (<= 0 i) (< i max) #f)
+                                  (begin
+                                    (call/ec
+                                     (lambda (continue)
+                                       (if (equal? (dict-ref container i) elem)
+                                         (begin
+                                           (if (not found)
+                                             (set! found i)
+                                             (void))
+                                           (set! i (+ i 1)))
+                                         (set! i (+ i 1)))))
+                                    (loop))
+                                  (void))))
+                            (loop)
+                            (void)))))
+                     (if (not found)
+                       (error
+                        (format "no such elem: ~a in list ~a" elem container))
+                       found))))))))
+        ("count"
+         (lambda (self elem)
+           (let ((container (dict-ref self "__containerdict__")))
+             (let ((i 0))
+               (let ((cnt 0))
+                 (let ((max (len self)))
+                   (begin
+                     (call/ec
+                      (lambda (break)
+                        (let ((loop (void)))
+                          (begin
+                            (set! loop
+                              (lambda ()
+                                (if (if (<= 0 i) (< i max) #f)
+                                  (begin
+                                    (call/ec
+                                     (lambda (continue)
+                                       (if (equal? (dict-ref container i) elem)
+                                         (begin
+                                           (set! cnt (+ cnt 1))
+                                           (set! i (+ i 1)))
+                                         (set! i (+ i 1)))))
+                                    (loop))
+                                  (void))))
+                            (loop)
+                            (void)))))
+                     cnt)))))))
+        ("append"
+         (lambda (self elem)
+           (let ((max (len self)))
+             (begin
+               (dict-set! (dict-ref self "__containerdict__") max elem)))))
+        ("insert"
+         (lambda (self index elem)
+           (if (= index 0)
+             (let ((i 0))
+               (let ((container (dict-ref self "__containerdict__")))
+                 (begin
+                   (call/ec
+                    (lambda (break)
+                      ((lambda ($seq11 $loop12)
+                         (begin (begin (for-container $seq11 $loop12) (void))))
+                       self
+                       (lambda (e)
+                         (call/ec
+                          (lambda (continue)
+                            (begin
+                              (set! i (+ i 1))
+                              (dict-set! container i e))))))))
+                   (dict-set! container 0 elem))))
+             (if (>= index (len self))
+               (let ((tail (len self)))
+                 (let ((container (dict-ref self "__containerdict__")))
+                   (begin (dict-set! container tail elem))))
+               (if (if (> index 0) (< index (len self)) #f)
+                 (let ((max (len self)))
+                   (let ((container (dict-ref self "__containerdict__")))
+                     (begin
+                       (let ((i max))
+                         (begin
+                           (call/ec
+                            (lambda (break)
+                              (let ((loop (void)))
+                                (begin
+                                  (set! loop
+                                    (lambda ()
+                                      (if (if (>= max i) (> i index) #f)
+                                        (begin
+                                          (call/ec
+                                           (lambda (continue)
+                                             (begin
+                                               (dict-set!
+                                                container
+                                                i
+                                                (dict-ref container (- i 1)))
+                                               (set! i (- i 1)))))
+                                          (loop))
+                                        (void))))
+                                  (loop)
+                                  (void)))))
+                           (dict-set! container index elem))))))
+                 (void))))))
+        ("reverse" (void))
+        ("sort" (void))
+        ("pop" (void))
+        ("extend" (void))))
+      (set
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list set object))
+        ("__init__"
+         (lambda (self tmp-list-dict)
+           (call/ec
+            (lambda (return)
+              (if (py-list? tmp-list-dict)
+                (set-field!
+                 self
+                 "__containerdict__"
+                 (dict-ref tmp-list-dict "__containerdict__"))
+                (set-field! self "__containerdict__" tmp-list-dict))))))))
+      (tuple
+       (dict
+        ("__base__" (list object))
+        ("__mro__" (list tuple object))
+        ("__init__"
+         (lambda (self tmp-dict)
+           (call/ec
+            (lambda (return)
+              (if (let ((t13 (py-list? tmp-dict)))
+                    (begin
+                      (if t13
+                        t13
+                        (let ((t14 (tuple? tmp-dict)))
+                          (begin (if t14 t14 (set? tmp-dict)))))))
+                (set-field!
+                 self
+                 "__containerdict__"
+                 (dict-ref tmp-dict "__containerdict__"))
+                (set-field! self "__containerdict__" tmp-dict))))))
+        ("index"
+         (lambda (self elem)
+           (let ((container (dict-ref self "__containerdict__")))
+             (let ((i 0))
+               (let ((found #f))
+                 (let ((max (len self)))
+                   (begin
+                     (call/ec
+                      (lambda (break)
+                        (let ((loop (void)))
+                          (begin
+                            (set! loop
+                              (lambda ()
+                                (if (if (<= 0 i) (< i max) #f)
+                                  (begin
+                                    (call/ec
+                                     (lambda (continue)
+                                       (if (equal? (dict-ref container i) elem)
+                                         (begin
+                                           (if (not found)
+                                             (set! found i)
+                                             (void))
+                                           (set! i (+ i 1)))
+                                         (set! i (+ i 1)))))
+                                    (loop))
+                                  (void))))
+                            (loop)
+                            (void)))))
+                     (if (not found)
+                       (error
+                        (format "no such elem: ~a in list ~a" elem container))
+                       found))))))))
+        ("count"
+         (lambda (self elem)
+           (let ((container (dict-ref self "__containerdict__")))
+             (let ((i 0))
+               (let ((cnt 0))
+                 (let ((max (len self)))
+                   (begin
+                     (call/ec
+                      (lambda (break)
+                        (let ((loop (void)))
+                          (begin
+                            (set! loop
+                              (lambda ()
+                                (if (if (<= 0 i) (< i max) #f)
+                                  (begin
+                                    (call/ec
+                                     (lambda (continue)
+                                       (if (equal? (dict-ref container i) elem)
+                                         (begin
+                                           (set! cnt (+ cnt 1))
+                                           (set! i (+ i 1)))
+                                         (set! i (+ i 1)))))
+                                    (loop))
+                                  (void))))
+                            (loop)
+                            (void)))))
+                     cnt)))))))))))
+   (set! g$a g$o)
+   (set! g$b g$o)
+   (set-field! g$o "x" 1)))

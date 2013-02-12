@@ -1,0 +1,227 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define g$x (void))
+ (define g$a (void))
+ (begin
+   (set! len
+     (lambda (seq24)
+       (call/ec
+        (lambda (return)
+          (let ((cnt25 0))
+            (begin
+              (if (let ((t11 (py-list? seq24)))
+                    (begin
+                      (if t11
+                        t11
+                        (let ((t12 (set? seq24)))
+                          (begin (if t12 t12 (tuple? seq24)))))))
+                (let ((container26 (dict-ref seq24 "__containerdict__")))
+                  (begin
+                    (call/ec
+                     (lambda (break)
+                       ((lambda ($seq13 $loop14)
+                          (begin
+                            (begin (for-container $seq13 $loop14) (void))))
+                        container26
+                        (lambda (entry27)
+                          (call/ec
+                           (lambda (continue) (set! cnt25 (+ 1 cnt25))))))))
+                    (return cnt25)))
+                (cond
+                 (else
+                  (call/ec
+                   (lambda (break)
+                     ((lambda ($seq15 $loop16)
+                        (begin (begin (for-container $seq15 $loop16) (void))))
+                      seq24
+                      (lambda (entry27)
+                        (call/ec
+                         (lambda (continue) (set! cnt25 (+ cnt25 1))))))))
+                  (return cnt25))))))))))
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict29)
+       (call/ec
+        (lambda (return)
+          (let (($localo30
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo30 "__init__") tmp-dict29)
+              (return $localo30)))))))
+   (set! set
+     (lambda (tmp-dict32)
+       (call/ec
+        (lambda (return)
+          (let (($localo33 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo33 "__init__") tmp-dict32)
+              (return $localo33)))))))
+   (set! tuple
+     (lambda (tmp-dict35)
+       (call/ec
+        (lambda (return)
+          (let (($localo36
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo36 "__init__") tmp-dict35)
+              (return $localo36)))))))
+   (set! gbl-dict (dict))
+   (dict-set!
+    gbl-dict
+    object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (dict-set!
+    gbl-dict
+    List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self37 tmpdict38)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict38)
+             (set-field!
+              self37
+              "__containerdict__"
+              (dict-ref tmpdict38 "__containerdict__"))
+             (set-field! self37 "__containerdict__" tmpdict38))))))))
+   (dict-set!
+    gbl-dict
+    set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self39 tmpdict40)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict40)
+             (set-field!
+              self39
+              "__containerdict__"
+              (dict-ref tmpdict40 "__containerdict__"))
+             (set-field! self39 "__containerdict__" tmpdict40))))))))
+   (dict-set!
+    gbl-dict
+    tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self41 tmp-dict42)
+        (call/ec
+         (lambda (return)
+           (if (let ((t17 (py-list? tmp-dict42)))
+                 (begin
+                   (if t17
+                     t17
+                     (let ((t18 (tuple? tmp-dict42)))
+                       (begin (if t18 t18 (set? tmp-dict42)))))))
+             (set-field!
+              self41
+              "__containerdict__"
+              (dict-ref tmp-dict42 "__containerdict__"))
+             (set-field! self41 "__containerdict__" tmp-dict42))))))))
+   (set! g$a (List (dict (0 "b") (1 (List (dict (0 "A") (1 "B")))) (2 "c"))))
+   (py-print g$a)
+   (py-print
+    (let ((e11 g$a))
+      (begin
+        (let ((i12 0))
+          (begin
+            (if (py-list? e11)
+              (py-list-ref e11 i12)
+              (if (tuple? e11)
+                (tuple-ref e11 i12)
+                (if (dict? e11)
+                  (dict-ref e11 i12)
+                  (error "cannot index object")))))))))
+   (py-print
+    (let ((e13 g$a))
+      (begin
+        (let ((i14 1))
+          (begin
+            (if (py-list? e13)
+              (py-list-ref e13 i14)
+              (if (tuple? e13)
+                (tuple-ref e13 i14)
+                (if (dict? e13)
+                  (dict-ref e13 i14)
+                  (error "cannot index object")))))))))
+   (py-print
+    (let ((e15 g$a))
+      (begin
+        (let ((i16 2))
+          (begin
+            (if (py-list? e15)
+              (py-list-ref e15 i16)
+              (if (tuple? e15)
+                (tuple-ref e15 i16)
+                (if (dict? e15)
+                  (dict-ref e15 i16)
+                  (error "cannot index object")))))))))
+   (py-print "before deleting....")
+   (len g$a)
+   (let ((b17 g$a))
+     (begin
+       (let ((i18 0))
+         (begin
+           (if (tuple? b17)
+             (error "Cannot delete from tuples!")
+             (if (py-list? b17)
+               (py-list-remove! b17 i18)
+               (if (dict? b17)
+                 (dict-remove! b17 i18)
+                 (if (string? b17)
+                   (error "Cannot delete from string!")
+                   (void)))))))))
+   (py-print g$a)
+   (py-print "after deleting...")
+   (len g$a)
+   (py-print
+    (let ((e21
+           (let ((e19 g$a))
+             (begin
+               (let ((i20 0))
+                 (begin
+                   (if (py-list? e19)
+                     (py-list-ref e19 i20)
+                     (if (tuple? e19)
+                       (tuple-ref e19 i20)
+                       (if (dict? e19)
+                         (dict-ref e19 i20)
+                         (error "cannot index object"))))))))))
+      (begin
+        (let ((i22 0))
+          (begin
+            (if (py-list? e21)
+              (py-list-ref e21 i22)
+              (if (tuple? e21)
+                (tuple-ref e21 i22)
+                (if (dict? e21)
+                  (dict-ref e21 i22)
+                  (error "cannot index object")))))))))
+   (call/ec
+    (lambda (break)
+      ((lambda ($seq19 $loop20)
+         (begin (begin (for-container $seq19 $loop20) (void))))
+       g$a
+       (lambda (i23)
+         (call/ec
+          (lambda (continue)
+            (begin (set! g$x i23) (begin (py-print g$x)))))))))
+   ((get-field g$a "append") "D")
+   (py-print g$a)))

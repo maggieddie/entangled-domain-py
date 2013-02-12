@@ -1,0 +1,63 @@
+Number of States = 176
+
+set: 
+	proc
+	class
+a: 
+	num
+$localo17: 
+	 object: 
+		#hash((0 . #<set: "newvalue">) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b) (2 c)) (c18 c17))>) ("__class__" . #<set: List>))
+List: 
+	class
+	proc
+tmp-dict16: 
+	 object: 
+		#hash((0 . #<set: 1 "newvalue">) (1 . #<set: 2>) (2 . #<set: 3>))
+tuple: 
+	proc
+	class
+tmpdict25: 
+	 object: 
+		#hash((0 . #<set: 1 "newvalue">) (1 . #<set: 2>) (2 . #<set: 3>))
+self24: 
+	 object: 
+		#hash((0 . #<set: "newvalue">) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b) (2 c)) (c18 c17))>) ("__class__" . #<set: List>))
+c: 
+	num
+i12: 
+	num
+index: 
+	num
+newvalue: 
+	string
+g$bar1: 
+	proc
+g$bar2: 
+	proc
+g$bar3: 
+	proc
+g$new_elem: 
+	string
+g$changedlst: 
+	 object: 
+		#hash((0 . #<set: "newvalue">) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b) (2 c)) (c18 c17))>) ("__class__" . #<set: List>))
+object: 
+	proc
+	class
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e13: 
+	 object: 
+		#hash((0 . #<set: "newvalue">) ("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 a) (1 b) (2 c)) (c18 c17))>) ("__class__" . #<set: List>))
+i14: 
+	num
+return: 
+	kontP
+	kontP
+	kontP
+	kontP
+	kontP

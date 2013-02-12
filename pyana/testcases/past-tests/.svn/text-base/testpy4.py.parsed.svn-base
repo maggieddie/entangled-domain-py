@@ -1,0 +1,27 @@
+(program
+ (class (A)
+   (suite
+    (def
+     (__init__ self)
+     (suite
+      (expr
+       (indexed print (called (indexed self (dot __class__) (dot __mro__)))))
+      (= ((indexed self (dot str))) "in A's init")))
+    (def (getStr self) (suite (return (indexed self (dot str)))))))
+ (class (C)
+   (suite
+    (def
+     (__init__ self)
+     (suite
+      (expr
+       (indexed print (called (indexed self (dot __class__) (dot __mro__)))))
+      (= ((indexed self (dot str))) "in C's init")))))
+ (class (B C A)
+   (suite (def (bb self) (suite (= ((indexed self (dot strNum))) 10000)))))
+ (= (b) (indexed B (called)))
+ (= (var1) (indexed b (dot getStr) (called)))
+ (expr (indexed print (called var1)))
+ (expr (indexed b (dot bb) (called)))
+ (= (var2) (indexed b (dot strNum)))
+ (expr (indexed print (called var2))))
+

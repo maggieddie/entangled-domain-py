@@ -1,0 +1,176 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define mat (void))
+ (define vec1 (void))
+ (define vec2 (void))
+ (set-global!
+  len
+  (lambda (seq13)
+    (call/ec
+     (lambda (return)
+       (let ((cnt14 0))
+         (cond
+          ((or (py-list? seq13) (set? seq13) (tuple? seq13))
+           (let ((container15 (dict-ref seq13 "__containerdict__")))
+             (for-each entry16 container15 (set! cnt14 (+ 1 cnt14)))
+             (return cnt14)))
+          (else
+           (for-each entry16 seq13 (set! cnt14 (+ cnt14 1)))
+           (return cnt14))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict18)
+    (call/ec
+     (lambda (return)
+       (let (($localo19
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo19 "__init__") tmp-dict18)
+         (return $localo19))))))
+ (set-global!
+  set
+  (lambda (tmp-dict21)
+    (call/ec
+     (lambda (return)
+       (let (($localo22
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo22 "__init__") tmp-dict21)
+         (return $localo22))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict24)
+    (call/ec
+     (lambda (return)
+       (let (($localo25
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo25 "__init__") tmp-dict24)
+         (return $localo25))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self26 tmpdict27)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict27)
+           (set-field!
+            self26
+            "__containerdict__"
+            (dict-ref tmpdict27 "__containerdict__"))
+           (set-field! self26 "__containerdict__" tmpdict27))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self28 tmpdict29)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict29)
+           (set-field!
+            self28
+            "__containerdict__"
+            (dict-ref tmpdict29 "__containerdict__"))
+           (set-field! self28 "__containerdict__" tmpdict29))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self30 tmp-dict31)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict31) (tuple? tmp-dict31) (set? tmp-dict31))
+           (set-field!
+            self30
+            "__containerdict__"
+            (dict-ref tmp-dict31 "__containerdict__"))
+           (set-field! self30 "__containerdict__" tmp-dict31))))))))
+ (set-global! vec1 ((get-global List) (dict (0 2) (1 4) (2 6))))
+ (set-global! vec2 ((get-global List) (dict (0 4) (1 3) (2 (- 9)))))
+ (py-print
+  ((get-global List)
+   (let ((res (dict)) ($i 0) (y (void)) (x (void)))
+     (for-each
+      x
+      (get-global vec1)
+      (for-each
+       y
+       (get-global vec2)
+       (begin (dict-set! res $i (* x y)) (set! $i (+ $i 1)))))
+     res)))
+ (py-print
+  ((get-global List)
+   (let ((res (dict)) ($i 0) (y (void)) (x (void)))
+     (for-each
+      x
+      (get-global vec1)
+      (for-each
+       y
+       (get-global vec2)
+       (if (and (> (+ x y) 6))
+         (begin (dict-set! res $i (+ x y)) (set! $i (+ $i 1)))
+         (void))))
+     res))
+  (get-global vec2))
+ (set-global!
+  mat
+  ((get-global List)
+   (dict
+    (0 ((get-global List) (dict (0 1) (1 2) (2 3))))
+    (1 ((get-global List) (dict (0 4) (1 5) (2 6))))
+    (2 ((get-global List) (dict (0 7) (1 8) (2 9)))))))
+ (py-print
+  ((get-global List)
+   (let ((res (dict)) ($i 0) (i (void)))
+     (for-each
+      i
+      ((get-global List) (dict (0 0) (1 1) (2 2)))
+      (begin
+        (dict-set!
+         res
+         $i
+         ((get-global List)
+          (let ((res (dict)) ($i 0) (row (void)))
+            (for-each
+             row
+             (get-global mat)
+             (begin
+               (dict-set!
+                res
+                $i
+                (let ((e11 row))
+                  (let ((i12 i))
+                    (cond
+                     ((py-list? e11) (py-list-ref e11 i12))
+                     ((tuple? e11) (tuple-ref e11 i12))
+                     ((dict? e11) (dict-ref e11 i12))
+                     (else (error "cannot index object"))))))
+               (set! $i (+ $i 1))))
+            res)))
+        (set! $i (+ $i 1))))
+     res))))

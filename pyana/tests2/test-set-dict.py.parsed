@@ -1,0 +1,23 @@
+(program
+ (= (ss) (set "A" "D" "C"))
+ (expr (indexed print (called ss)))
+ (expr (indexed print (called (indexed len (called ss)))))
+ (for x ss (suite (expr (indexed print (called x)))))
+ (= (sl) (list "hi" "there"))
+ (= (ss2) (indexed set (called sl)))
+ (expr (indexed print (called ss2)))
+ (expr (indexed print (called "test-tuple......")))
+ (= (tpl) (tuple "Super" "Cool"))
+ (= (tpl2) (indexed tuple (called sl)))
+ (= (tpl3) (indexed tuple (called tpl2)))
+ (= (tpl4) (indexed tuple (called ss)))
+ (expr (indexed print (called tpl)))
+ (expr (indexed print (called tpl2)))
+ (expr (indexed print (called tpl3)))
+ (expr (indexed print (called tpl4)))
+ (expr
+  (indexed
+   print
+   (called
+    (indexed tuple (called (tuple (list 1 2) "test" (set "nested"))))))))
+

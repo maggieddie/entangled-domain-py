@@ -1,0 +1,5 @@
+(program
+ (def (f a b) (suite (return (list a b))))
+ (= (x) (indexed f (called 1 "hi") (subscript 0)))
+ (= (y) (indexed f (called 2 "there") (subscript 1))))
+

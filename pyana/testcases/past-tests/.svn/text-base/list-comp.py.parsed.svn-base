@@ -1,0 +1,36 @@
+(program
+ (= (vec) (list 2 4 6))
+ (expr
+  (indexed
+   print
+   (called (list (comprehension (term 3 ("*" x)) (compfor x vec))))))
+ (expr
+  (indexed
+   print
+   (called (list (comprehension (list x (power x 2)) (compfor x vec))))))
+ (= (freshfruit) (list " banana" "  loganberry " "passion fruit  "))
+ (expr
+  (indexed
+   print
+   (called (list (comprehension weapon (compfor weapon freshfruit))))))
+ (expr
+  (indexed
+   print
+   (called
+    (list
+     (comprehension
+      (term 3 ("*" x))
+      (compfor x vec (compif (comparison x (">" 3)))))))))
+ (expr
+  (indexed
+   print
+   (called
+    (list
+     (comprehension
+      (term 3 ("*" x))
+      (compfor x vec (compif (comparison x ("<" 2)))))))))
+ (expr
+  (indexed
+   print
+   (called (list (comprehension (tuple x (power x 2)) (compfor x vec)))))))
+

@@ -1,0 +1,9 @@
+(program
+ (=
+  (v1)
+  (dict ("a" 1) ("b" (dict ("c" 2))) ("d" (list "hi" (dict (False "bar"))))))
+ (= (v2) (indexed v1 (subscript "b")))
+ (= (v3) (indexed v1 (subscript "d")))
+ (= (v4) (indexed v3 (subscript 0)))
+ (= (v5) (indexed v3 (subscript 1) (subscript False))))
+

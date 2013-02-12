@@ -1,0 +1,41 @@
+Number of States = 108
+
+Types Info --- 
+
+set:
+	class
+
+object:
+	class
+
+a:
+	100
+
+continue:
+
+g$res2:
+	300
+
+fun_inside:
+	class
+
+aa:
+	100
+
+tuple:
+	class
+
+return:
+	exp
+
+gbl-dict:
+	dict4
+
+g$test_fun:
+	class
+
+$current-handler:
+
+List:
+	class
+

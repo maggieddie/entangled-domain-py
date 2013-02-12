@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ucombinator/!svn/ver/1548/projects/pyana/microbench
+END
+search-part1.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part1.py.lexed
+END
+search-part1.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part1.py
+END
+search-part2.py.lexed
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part2.py.lexed
+END
+search-part2.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part2.py
+END
+search-part3.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part3.py
+END
+search-part1.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part1.py.desug
+END
+search-part2.py.desug
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part2.py.desug
+END
+Search.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/Search.py
+END
+search-part1.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part1.py.parsed
+END
+search-original.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-original.py
+END
+search-part2.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part2.py.parsed
+END
+search-part3.py.parsed
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part3.py.parsed
+END
+search-part1.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part1.py.trans
+END
+search-part2.py.trans
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part2.py.trans
+END
+search-part1.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part1.py.anormalnt
+END
+search-part1.py.info
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ucombinator/!svn/ver/1423/projects/pyana/microbench/search-part1.py.info
+END
+search-part2.py.anormalnt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/search-part2.py.anormalnt
+END
+taint_backend.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ucombinator/!svn/ver/1418/projects/pyana/microbench/taint_backend.py
+END

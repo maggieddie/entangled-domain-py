@@ -1,0 +1,30 @@
+(program
+ (= (SCRIPT_PAT) (list "<" "s" "r" "i" "p" "t" "/" ">"))
+ (def
+  (issubstring s p)
+  (suite
+   (= (i) 0)
+   (while
+    (comparison
+     i
+     ("<=" (arith (indexed len (called s)) ("-" (indexed len (called p))))))
+    (suite
+     (= (j) i)
+     (for
+      c
+      p
+      (suite
+       (cond
+        ((comparison c ("!=" (indexed s (subscript j)))) (suite (break)))
+        (else
+         (suite
+          (= (j) (arith j ("+" 1)))
+          (cond
+           ((comparison (arith j ("-" i)) ("==" (indexed len (called p))))
+            (suite (return True)))))))))
+     (= (i) (arith i ("+" 1)))))
+   (return False)))
+ (= (ls) (list "a" "<" "s" "r" "i" "p" "t" "/" ">"))
+ (= (res) (indexed issubstring (called ls SCRIPT_PAT)))
+ (expr (indexed print (called res))))
+

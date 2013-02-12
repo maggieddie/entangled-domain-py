@@ -1,0 +1,77 @@
+(program
+ (class (Search)
+   (suite
+    (def
+     (__init__ self input)
+     (suite
+      (=
+       ((indexed self (dot resp)))
+       (indexed Response (called (indexed Request (called input)))))))
+    (def
+     (doSearch self)
+     (suite
+      (expr (indexed self (dot resp) (dot req) (dot santinize_proc) (called)))
+      (cond
+       ((comparison
+         (indexed self (dot resp) (dot req) (dot getData) (called))
+         ("==" ("-" 1)))
+        (suite
+         (expr (indexed print (called "no scripting allowed")))
+         (return))))
+      (=
+       (l)
+       (indexed
+        len
+        (called (indexed self (dot resp) (dot req) (dot getData) (called)))))
+      (cond
+       ((comparison l (">" 3))
+        (suite (= ((indexed self (dot resp) (dot result))) (list))))
+       (else
+        (suite
+         (=
+          ((indexed self (dot resp) (dot result)))
+          (list
+           (tuple "Colors" "colors.html")
+           (tuple "Numbers" "numbers.html")
+           (tuple "Numbers and Colors" "numbersandcolors.html")
+           (tuple
+            "Numbers and Colors With Tag"
+            "numbersandcolorswithtag.html"))))))
+      (expr (indexed self (dot resp) (dot gen_body) (called)))))
+    (def
+     (render self)
+     (suite
+      (expr (indexed print (called (indexed self (dot resp) (dot body)))))))))
+ (def
+  (test_init_input)
+  (suite
+   (=
+    (simulated_cgi_entry1)
+    (dict
+     ("terms" (list "red" "blue" "three"))
+     ("boolean" OR)
+     ("case" CASE_SENSITIVE)
+     ("files"
+      (list
+       "colors.html"
+       "numbers.html"
+       "numbersandcolors.html"
+       "numbersandcolorswithtag.html"))))
+   (return (indexed simulated_cgi_entry1 (subscript "terms")))))
+ (def
+  (mock_mal_strlst)
+  (suite (return (list "e" "<" "s" "c" "r" "i" "p" "t" ">"))))
+ (def
+  (gen_malicious_input)
+  (suite
+   (=
+    (simulated_cgi_entry2)
+    (dict ("terms" (indexed mock_mal_strlst (called)))))
+   (return (indexed simulated_cgi_entry2 (subscript "terms")))))
+ (= (srch1) (indexed Search (called (indexed test_init_input (called)))))
+ (expr (indexed srch1 (dot doSearch) (called)))
+ (expr (indexed srch1 (dot render) (called)))
+ (= (srch2) (indexed Search (called (indexed gen_malicious_input (called)))))
+ (expr (indexed srch2 (dot doSearch) (called)))
+ (expr (indexed srch2 (dot render) (called))))
+

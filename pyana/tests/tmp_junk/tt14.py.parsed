@@ -1,0 +1,7 @@
+(program
+ (= (a) o)
+ (= (b) o)
+ (= ((indexed b (dot x))) (list 1 3 "hi"))
+ (= (y) (indexed o (dot x)))
+ (= (z) (indexed y (subscript 2))))
+

@@ -1,0 +1,195 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define str_my (void))
+ (define num (void))
+ (define WebFib (void))
+ (define form (void))
+ (define fib (void))
+ (set-global!
+  len
+  (lambda (seq14)
+    (call/ec
+     (lambda (return)
+       (let ((cnt15 0))
+         (cond
+          ((or (py-list? seq14) (set? seq14) (tuple? seq14))
+           (let ((container16 (dict-ref seq14 "__containerdict__")))
+             (for-each entry17 container16 (set! cnt15 (+ 1 cnt15)))
+             (return cnt15)))
+          (else
+           (for-each entry17 seq14 (set! cnt15 (+ cnt15 1)))
+           (return cnt15))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict19)
+    (call/ec
+     (lambda (return)
+       (let (($localo20
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo20 "__init__") tmp-dict19)
+         (return $localo20))))))
+ (set-global!
+  set
+  (lambda (tmp-dict22)
+    (call/ec
+     (lambda (return)
+       (let (($localo23
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo23 "__init__") tmp-dict22)
+         (return $localo23))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict25)
+    (call/ec
+     (lambda (return)
+       (let (($localo26
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo26 "__init__") tmp-dict25)
+         (return $localo26))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self27 tmpdict28)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict28)
+           (set-field!
+            self27
+            "__containerdict__"
+            (dict-ref tmpdict28 "__containerdict__"))
+           (set-field! self27 "__containerdict__" tmpdict28))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self29 tmpdict30)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict30)
+           (set-field!
+            self29
+            "__containerdict__"
+            (dict-ref tmpdict30 "__containerdict__"))
+           (set-field! self29 "__containerdict__" tmpdict30))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self31 tmp-dict32)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict32) (tuple? tmp-dict32) (set? tmp-dict32))
+           (set-field!
+            self31
+            "__containerdict__"
+            (dict-ref tmp-dict32 "__containerdict__"))
+           (set-field! self31 "__containerdict__" tmp-dict32))))))))
+ ((lambda ()
+    (begin
+      (set-global!
+       WebFib
+       (lambda (n)
+         (call/ec
+          (lambda (return)
+            (let (($localo11
+                   (dict
+                    ("__class__" (get-global WebFib))
+                    ("__type__" "instWebFib"))))
+              ((get-field $localo11 "__init__") n)
+              (return $localo11))))))
+      (dict-set!
+       gbl-dict
+       (get-global WebFib)
+       (dict
+        ("__base__" (list object))
+        ("__class__" (get-global WebFib))
+        ("__type__" "class")
+        ("__init__"
+         (lambda (self n)
+           (call/ec
+            (lambda (return)
+              (let () (set-field! self "n" n) (set-field! self "res" 0))))))
+        ("sanitizN"
+         (lambda (self) (call/ec (lambda (return) (let () (void))))))
+        ("do_fib"
+         (lambda (self)
+           (call/ec
+            (lambda (return)
+              (let ((tmp (void)) (a (void)) (b (void)) (i (void)))
+                (set! a 0)
+                (set! b 1)
+                (set! i 0)
+                (while
+                 (< i (get-field self "n"))
+                 (let ()
+                   (set! tmp a)
+                   (set! a b)
+                   (set! b (+ tmp b))
+                   (set! i (+ i 1))))
+                (set-field! self "res" a))))))))
+      (dict-set!
+       (dict-ref gbl-dict (get-global WebFib))
+       "__mro__"
+       (list (get-global WebFib) object)))))
+ (set-global!
+  str_my
+  (lambda (any_int)
+    (call/ec
+     (lambda (return)
+       (let () (return (* (- any_int (- any_int 1)) "get-tainted")))))))
+ (py-print
+  "Content-type: text/html\r\n\r\n \n<html>\n<head>\n<title>Web Fibonacci</title> \n</head><body>\n<h1>Web Fibonacci Calcultor</h1> \n ")
+ (set-global! form (dict ("terms" 10)))
+ (set-global!
+  num
+  (let ((e12 (get-global form)))
+    (let ((i13 "terms"))
+      (cond
+       ((py-list? e12) (py-list-ref e12 i13))
+       ((tuple? e12) (tuple-ref e12 i13))
+       ((dict? e12) (dict-ref e12 i13))
+       (else (error "cannot index object"))))))
+ (py-print
+  (+
+   (+
+    "<form action = webfib.py method=GET> <p> <input type=\"text\" name = \"number\" value= "
+    ((get-global str_my) (get-global num)))
+   " size=3"))
+ (set-global! fib ((get-global WebFib) (get-global num)))
+ ((get-field (get-global fib) "do_fib"))
+ (py-print "<p><input type=\"submit\" value = \"GetResult\"> </form> <p><hr>")
+ (py-print
+  (+
+   (+
+    "<p> result is "
+    ((get-global str_my) (get-field (get-global fib) "res")))
+   "<br> </body></html>"))
+ (py-print (get-field (get-global fib) "res")))

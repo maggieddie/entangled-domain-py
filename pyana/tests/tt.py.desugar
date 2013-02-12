@@ -1,0 +1,138 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define g$a (void))
+ (define g$y (void))
+ (define g$b (void))
+ (begin
+   (set! object (lambda () (void)))
+   (set! List
+     (lambda (tmp-dict49)
+       (call/ec
+        (lambda (return)
+          (let (($localo50
+                 (dict ("__class__" List) ("__type__" "instPyList"))))
+            (begin
+              ((get-field $localo50 "__init__") tmp-dict49)
+              (return $localo50)))))))
+   (set! set
+     (lambda (tmp-dict52)
+       (call/ec
+        (lambda (return)
+          (let (($localo53 (dict ("__class__" set) ("__type__" "instSet"))))
+            (begin
+              ((get-field $localo53 "__init__") tmp-dict52)
+              (return $localo53)))))))
+   (set! tuple
+     (lambda (tmp-dict55)
+       (call/ec
+        (lambda (return)
+          (let (($localo56
+                 (dict ("__class__" tuple) ("__type__" "instTuple"))))
+            (begin
+              ((get-field $localo56 "__init__") tmp-dict55)
+              (return $localo56)))))))
+   (set! gbl-dict (dict))
+   (dict-set!
+    gbl-dict
+    object
+    (dict
+     ("__base__" (list))
+     ("__mro__" (list object))
+     ("__init__" (lambda v void))))
+   (dict-set!
+    gbl-dict
+    List
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list List object))
+     ("__init__"
+      (lambda (self57 tmpdict58)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict58)
+             (set-field!
+              self57
+              "__containerdict__"
+              (dict-ref tmpdict58 "__containerdict__"))
+             (set-field! self57 "__containerdict__" tmpdict58))))))))
+   (dict-set!
+    gbl-dict
+    set
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list set object))
+     ("__init__"
+      (lambda (self59 tmpdict60)
+        (call/ec
+         (lambda (return)
+           (if (py-list? tmpdict60)
+             (set-field!
+              self59
+              "__containerdict__"
+              (dict-ref tmpdict60 "__containerdict__"))
+             (set-field! self59 "__containerdict__" tmpdict60))))))))
+   (dict-set!
+    gbl-dict
+    tuple
+    (dict
+     ("__base__" (list object))
+     ("__mro__" (list tuple object))
+     ("__init__"
+      (lambda (self61 tmp-dict62)
+        (call/ec
+         (lambda (return)
+           (if (let ((t27 (py-list? tmp-dict62)))
+                 (begin
+                   (if t27
+                     t27
+                     (let ((t28 (tuple? tmp-dict62)))
+                       (begin (if t28 t28 (set? tmp-dict62)))))))
+             (set-field!
+              self61
+              "__containerdict__"
+              (dict-ref tmp-dict62 "__containerdict__"))
+             (set-field! self61 "__containerdict__" tmp-dict62))))))))
+   (set! g$a (List (dict (0 0) (1 1) (2 2) (3 3))))
+   (let ((b42 g$a))
+     (begin
+       (let ((i43 1))
+         (begin
+           (if (py-list? b42)
+             (py-list-set! b42 i43 (List (dict (0 "1") (1 "2") (2 "3"))))
+             (if (dict? b42)
+               (dict-set! b42 i43 (List (dict (0 "1") (1 "2") (2 "3"))))
+               (void)))))))
+   (set! g$y
+     (let ((e44 g$a))
+       (begin
+         (let ((i45 1))
+           (begin
+             (if (py-list? e44)
+               (py-list-ref e44 i45)
+               (if (tuple? e44)
+                 (tuple-ref e44 i45)
+                 (if (dict? e44)
+                   (dict-ref e44 i45)
+                   (error "cannot index object")))))))))
+   (set! g$b
+     (let ((e46 g$y))
+       (begin
+         (let ((i47 1))
+           (begin
+             (if (py-list? e46)
+               (py-list-ref e46 i47)
+               (if (tuple? e46)
+                 (tuple-ref e46 i47)
+                 (if (dict? e46)
+                   (dict-ref e46 i47)
+                   (error "cannot index object")))))))))
+   (py-print g$y)
+   (py-print g$b)))

@@ -1,0 +1,39 @@
+k:
+	proc
+
+f:
+	proc
+
+a:
+	int
+
+b:
+	string
+
+g$f:
+	proc
+
+k14:
+	proc
+
+cc:
+	proc
+
+x:
+	py-list
+
+return:
+	proc
+
+k15:
+	proc
+
+k16:
+	proc
+
+rv17:
+	py-list
+
+g$c:
+	py-list
+

@@ -1,0 +1,21 @@
+g$__name__:
+	string
+
+g$a:
+	Type-of-g$o
+
+g$o:
+	Type-of-g$o
+
+g$b:
+	Type-of-g$o
+
+g$o.x:
+	int
+
+g$y:
+	int
+
+g$a.x:
+	int
+

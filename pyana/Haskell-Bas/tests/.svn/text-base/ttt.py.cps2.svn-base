@@ -1,0 +1,17 @@
+(program
+ (define g$othercontainer (void))
+ (define g$mydict (void))
+ (dict-k
+  ("carl" 40)
+  ("alan" 2)
+  ("bob" 1)
+  ("danny" 3)
+  (lambda (rv0)
+    (set-then!
+     g$mydict
+     rv0
+     (py-list*-k
+      1
+      3
+      5
+      (lambda (rv1) (set-then! g$othercontainer rv1 ($halt (void)))))))))

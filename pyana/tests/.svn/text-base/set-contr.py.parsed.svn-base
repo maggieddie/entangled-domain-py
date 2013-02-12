@@ -1,0 +1,10 @@
+(program
+ (= (l) (indexed list (called)))
+ (expr (indexed l (dot append) (called 100)))
+ (= (s2) (indexed set (called l)))
+ (= (d2) (dict))
+ (expr (indexed print (called s)))
+ (expr (indexed print (called s2)))
+ (expr (indexed print (called l)))
+ (expr (indexed print (called d2))))
+

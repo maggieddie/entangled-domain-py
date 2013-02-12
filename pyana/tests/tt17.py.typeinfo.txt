@@ -1,0 +1,72 @@
+Number of States = 194
+
+set: 
+	proc
+	class
+$localo23: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "hi") (1 b55)) (c13 c12))>) ("__class__" . #<set: List>))
+List: 
+	class
+	proc
+tmp-dict22: 
+	 object: 
+		#hash((0 . #<set: "hi">) (1 . #<set: #(struct:OLoc (dict (#f "bar")) (c12 c11))>))
+tuple: 
+	proc
+	class
+tmpdict31: 
+	 object: 
+		#hash((0 . #<set: "hi">) (1 . #<set: #(struct:OLoc (dict (#f "bar")) (c12 c11))>))
+self30: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "hi") (1 b55)) (c13 c12))>) ("__class__" . #<set: List>))
+g$v2: 
+	 object: 
+		#hash(("c" . #<set: 2>))
+g$v5: 
+	string
+g$v3: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "hi") (1 b55)) (c13 c12))>) ("__class__" . #<set: List>))
+g$v1: 
+	 object: 
+		#hash(("d" . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c16 c15))>) ("a" . #<set: 1>) ("b" . #<set: #(struct:OLoc (dict ("c" 2)) (c11 c10))>))
+g$v4: 
+	string
+object: 
+	class
+	proc
+gbl-dict: 
+	 object: 
+		#hash()
+$current-handler: 
+continue: 
+e11: 
+	 object: 
+		#hash(("d" . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c16 c15))>) ("a" . #<set: 1>) ("b" . #<set: #(struct:OLoc (dict ("c" 2)) (c11 c10))>))
+i12: 
+	string
+e13: 
+	 object: 
+		#hash(("d" . #<set: #(struct:OLoc (dict ("__class__" List) ("__type__" "instPyList")) (c16 c15))>) ("a" . #<set: 1>) ("b" . #<set: #(struct:OLoc (dict ("c" 2)) (c11 c10))>))
+i14: 
+	string
+e15: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "hi") (1 b55)) (c13 c12))>) ("__class__" . #<set: List>))
+i16: 
+	num
+e17: 
+	 object: 
+		#hash(("__type__" . #<set: "instPyList">) ("__containerdict__" . #<set: #(struct:OLoc (dict (0 "hi") (1 b55)) (c13 c12))>) ("__class__" . #<set: List>))
+i18: 
+	num
+e19: 
+	 object: 
+		#hash((#f . #<set: "bar">))
+i20: 
+	bool
+return: 
+	kontP
+	kontP

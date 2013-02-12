@@ -1,0 +1,84 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$p (void))
+ (define g$w (void))
+ (define g$y (void))
+ (define g$z (void))
+ (define g$qx (void))
+ (define g$res (void))
+ (define g$res2 (void))
+ (define g$resy (void))
+ (define g$foo (void))
+ (define g$res_historyA (void))
+ (set-then!
+  g$w
+  g$o
+  (set-then!
+   g$y
+   g$o
+   (set-field!
+    g$w
+    a
+    2
+    (lambda (rv0)
+      (get-field
+       g$y
+       a
+       (lambda (rv1)
+         (set-then!
+          g$z
+          rv1
+          (set-then!
+           g$foo
+           (lambda (obj k2)
+             ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+              (lambda (return k3)
+                ((lambda (k4)
+                   (set-field! obj b "Hi" (lambda (rv5) (return obj k4))))
+                 k3))
+              k2))
+           (g$foo
+            g$w
+            (lambda (rv6)
+              (set-then!
+               g$qx
+               rv6
+               (get-field
+                g$w
+                b
+                (lambda (rv7)
+                  (set-then!
+                   g$res
+                   rv7
+                   (get-field
+                    g$qx
+                    b
+                    (lambda (rv8)
+                      (set-then!
+                       g$p
+                       rv8
+                       (get-field
+                        g$o
+                        b
+                        (lambda (rv9)
+                          (set-then!
+                           g$res2
+                           rv9
+                           (get-field
+                            g$y
+                            b
+                            (lambda (rv10)
+                              (set-then!
+                               g$resy
+                               rv10
+                               (get-field
+                                g$w
+                                a
+                                (lambda (rv11)
+                                  (set-then!
+                                   g$res_historyA
+                                   rv11
+                                   ($halt (void)))))))))))))))))))))))))))))

@@ -1,0 +1,15 @@
+(program
+ (def
+  (loop index lst)
+  (suite
+   (= (total_len) (indexed len (called lst)))
+   (cond
+    ((comparison index ("<" total_len))
+     (suite
+      (expr (indexed print (called (indexed lst (subscript index)))))
+      (= (index) (arith 1 ("+" index)))
+      (expr (indexed loop (called index lst)))))
+    (else (suite (return))))))
+ (= (glst) (list 1 2 3 4))
+ (expr (indexed loop (called 0 glst))))
+

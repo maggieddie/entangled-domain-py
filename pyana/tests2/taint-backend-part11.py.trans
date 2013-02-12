@@ -1,0 +1,385 @@
+(program
+ (define gbl-dict (void))
+ (define object (void))
+ (define List (void))
+ (define set (void))
+ (define tuple (void))
+ (define len (void))
+ (define input2 (void))
+ (define test_init_input (void))
+ (define test2 (void))
+ (define OR (void))
+ (define gen_malicious_input (void))
+ (define input3 (void))
+ (define test1 (void))
+ (define default_mal_strlst (void))
+ (define proc_results (void))
+ (define santinize_proc (void))
+ (define issubstring (void))
+ (define lst_to_str (void))
+ (define SCRIPT_PAT (void))
+ (define input4 (void))
+ (define input1 (void))
+ (define CASE_SENSITIVE (void))
+ (set-global!
+  len
+  (lambda (seq36)
+    (call/ec
+     (lambda (return)
+       (let ((cnt37 0))
+         (cond
+          ((or (py-list? seq36) (set? seq36) (tuple? seq36))
+           (let ((container38 (dict-ref seq36 "__containerdict__")))
+             (for-each entry39 container38 (set! cnt37 (+ 1 cnt37)))
+             (return cnt37)))
+          (else
+           (for-each entry39 seq36 (set! cnt37 (+ cnt37 1)))
+           (return cnt37))))))))
+ (set-global! object (lambda () (void)))
+ (set-global!
+  List
+  (lambda (tmp-dict41)
+    (call/ec
+     (lambda (return)
+       (let (($localo42
+              (dict
+               ("__class__" (get-global List))
+               ("__type__" "instPyList"))))
+         ((get-field $localo42 "__init__") tmp-dict41)
+         (return $localo42))))))
+ (set-global!
+  set
+  (lambda (tmp-dict44)
+    (call/ec
+     (lambda (return)
+       (let (($localo45
+              (dict ("__class__" (get-global set)) ("__type__" "instSet"))))
+         ((get-field $localo45 "__init__") tmp-dict44)
+         (return $localo45))))))
+ (set-global!
+  tuple
+  (lambda (tmp-dict47)
+    (call/ec
+     (lambda (return)
+       (let (($localo48
+              (dict
+               ("__class__" (get-global tuple))
+               ("__type__" "instTuple"))))
+         ((get-field $localo48 "__init__") tmp-dict47)
+         (return $localo48))))))
+ (set-global! gbl-dict (dict))
+ (dict-set!
+  gbl-dict
+  object
+  (dict
+   ("__base__" (list))
+   ("__mro__" (list object))
+   ("__init__" (lambda v void))))
+ (dict-set!
+  gbl-dict
+  List
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list List object))
+   ("__init__"
+    (lambda (self49 tmpdict50)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict50)
+           (set-field!
+            self49
+            "__containerdict__"
+            (dict-ref tmpdict50 "__containerdict__"))
+           (set-field! self49 "__containerdict__" tmpdict50))))))))
+ (dict-set!
+  gbl-dict
+  set
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list set object))
+   ("__init__"
+    (lambda (self51 tmpdict52)
+      (call/ec
+       (lambda (return)
+         (if (py-list? tmpdict52)
+           (set-field!
+            self51
+            "__containerdict__"
+            (dict-ref tmpdict52 "__containerdict__"))
+           (set-field! self51 "__containerdict__" tmpdict52))))))))
+ (dict-set!
+  gbl-dict
+  tuple
+  (dict
+   ("__base__" (list object))
+   ("__mro__" (list tuple object))
+   ("__init__"
+    (lambda (self53 tmp-dict54)
+      (call/ec
+       (lambda (return)
+         (if (or (py-list? tmp-dict54) (tuple? tmp-dict54) (set? tmp-dict54))
+           (set-field!
+            self53
+            "__containerdict__"
+            (dict-ref tmp-dict54 "__containerdict__"))
+           (set-field! self53 "__containerdict__" tmp-dict54))))))))
+ (set-global! OR "OR")
+ (set-global! CASE_SENSITIVE "Sensitive")
+ (set-global!
+  SCRIPT_PAT
+  ((get-global List)
+   (dict (0 "<") (1 "s") (2 "c") (3 "r") (4 "i") (5 "p") (6 "t") (7 ">"))))
+ (set-global!
+  lst_to_str
+  (lambda (lst)
+    (call/ec
+     (lambda (return)
+       (let ((l (void)) (i (void)) (res_str (void)))
+         (set! l (len lst))
+         (set! i 0)
+         (set! res_str "")
+         (while
+          (< i l)
+          (let ()
+            (set! res_str
+              (+
+               res_str
+               (let ((e11 lst))
+                 (let ((i12 i))
+                   (cond
+                    ((py-list? e11) (py-list-ref e11 i12))
+                    ((tuple? e11) (tuple-ref e11 i12))
+                    ((dict? e11) (dict-ref e11 i12))
+                    (else (error "cannot index object")))))))
+            (set! i (+ i 1))))
+         (return res_str))))))
+ (set-global!
+  issubstring
+  (lambda (s p)
+    (call/ec
+     (lambda (return)
+       (let ((c (void)) (j (void)) (i (void)))
+         (set! i 0)
+         (while
+          (<= i (- (len s) (len p)))
+          (let ()
+            (set! j i)
+            (for-each
+             i15
+             p
+             (begin
+               (set! c i15)
+               (let ()
+                 (cond
+                  ((not-equal?
+                    c
+                    (let ((e13 s))
+                      (let ((i14 j))
+                        (cond
+                         ((py-list? e13) (py-list-ref e13 i14))
+                         ((tuple? e13) (tuple-ref e13 i14))
+                         ((dict? e13) (dict-ref e13 i14))
+                         (else (error "cannot index object"))))))
+                   (let () (break)))
+                  (else
+                   (let ()
+                     (set! j (+ j 1))
+                     (cond
+                      ((equal? (- j i) (len p)) (let () (return #t))))))))))
+            (set! i (+ i 1))))
+         (return #f))))))
+ (set-global!
+  santinize_proc
+  (lambda (lst)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (return ((get-global issubstring) lst (get-global SCRIPT_PAT))))))))
+ (set-global!
+  proc_results
+  (lambda (terms results)
+    (call/ec
+     (lambda (return)
+       (let ((is_valid (void)) (l (void)) (indx (void)))
+         (set! is_valid ((get-global santinize_proc) terms))
+         (cond
+          (is_valid
+           (let () (py-print "failed because of script") (return (- 1)))))
+         (py-print "<div id= \"search_results\">\n<ol>)")
+         (set! l (len results))
+         (cond
+          ((equal? l 0)
+           (let ()
+             (py-print
+              (+
+               "<h3>Your search did not return any results.</h3>"
+               ((get-global lst_to_str) terms))))))
+         (set! indx 0)
+         (while
+          (< indx l)
+          (let ()
+            (py-print
+             (+
+              (+
+               (+
+                (+
+                 "<li <a href=\"test/"
+                 (let ((e18
+                        (let ((e16 results))
+                          (let ((i17 indx))
+                            (cond
+                             ((py-list? e16) (py-list-ref e16 i17))
+                             ((tuple? e16) (tuple-ref e16 i17))
+                             ((dict? e16) (dict-ref e16 i17))
+                             (else (error "cannot index object")))))))
+                   (let ((i19 1))
+                     (cond
+                      ((py-list? e18) (py-list-ref e18 i19))
+                      ((tuple? e18) (tuple-ref e18 i19))
+                      ((dict? e18) (dict-ref e18 i19))
+                      (else (error "cannot index object"))))))
+                "?search=true&term=")
+               ((get-global lst_to_str) terms))
+              "\">"))
+            (py-print
+             (+
+              (let ((e22
+                     (let ((e20 results))
+                       (let ((i21 indx))
+                         (cond
+                          ((py-list? e20) (py-list-ref e20 i21))
+                          ((tuple? e20) (tuple-ref e20 i21))
+                          ((dict? e20) (dict-ref e20 i21))
+                          (else (error "cannot index object")))))))
+                (let ((i23 0))
+                  (cond
+                   ((py-list? e22) (py-list-ref e22 i23))
+                   ((tuple? e22) (tuple-ref e22 i23))
+                   ((dict? e22) (dict-ref e22 i23))
+                   (else (error "cannot index object")))))
+              "</a>\n"))
+            (set! indx (+ indx 1))))
+         (py-print "</ol>\n</div>\n"))))))
+ (set-global!
+  test_init_input
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((res (void)) (simulated_cgi_entry1 (void)))
+         (set! simulated_cgi_entry1
+           (dict
+            ("terms"
+             ((get-global List) (dict (0 "red") (1 "blue") (2 "three"))))
+            ("boolean" (get-global OR))
+            ("case" (get-global CASE_SENSITIVE))
+            ("files"
+             ((get-global List)
+              (dict
+               (0 "colors.html")
+               (1 "numbers.html")
+               (2 "numbersandcolors.html")
+               (3 "numbersandcolorswithtag.html"))))))
+         (set! res
+           ((get-global List)
+            (dict
+             (0 ((get-global tuple) (dict (0 "Colors") (1 "colors.html"))))
+             (1 ((get-global tuple) (dict (0 "Numbers") (1 "numbers.html"))))
+             (2
+              ((get-global tuple)
+               (dict (0 "Numbers and Colors") (1 "numbersandcolors.html"))))
+             (3
+              ((get-global tuple)
+               (dict
+                (0 "Numbers and Colors With Tag")
+                (1 "numbersandcolorswithtag.html")))))))
+         (return
+          ((get-global tuple)
+           (dict
+            (0
+             (let ((e24 simulated_cgi_entry1))
+               (let ((i25 "terms"))
+                 (cond
+                  ((py-list? e24) (py-list-ref e24 i25))
+                  ((tuple? e24) (tuple-ref e24 i25))
+                  ((dict? e24) (dict-ref e24 i25))
+                  (else (error "cannot index object"))))))
+            (1 res)))))))))
+ (set-global!
+  default_mal_strlst
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ()
+         (return
+          ((get-global List)
+           (dict
+            (0 "<")
+            (1 "/")
+            (2 "s")
+            (3 "c")
+            (4 "i")
+            (5 "p")
+            (6 "t")
+            (7 ">")))))))))
+ (set-global!
+  gen_malicious_input
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((simulated_cgi_entry2 (void)) (res (void)))
+         (set! simulated_cgi_entry2
+           (dict ("terms" ((get-global default_mal_strlst)))))
+         (set! res ((get-global List) (dict)))
+         (return
+          ((get-global tuple)
+           (dict
+            (0
+             (let ((e26 simulated_cgi_entry2))
+               (let ((i27 "terms"))
+                 (cond
+                  ((py-list? e26) (py-list-ref e26 i27))
+                  ((tuple? e26) (tuple-ref e26 i27))
+                  ((dict? e26) (dict-ref e26 i27))
+                  (else (error "cannot index object"))))))
+            (1 res)))))))))
+ (set-global! test1 ((get-global test_init_input)))
+ (set-global!
+  input1
+  (let ((e28 (get-global test1)))
+    (let ((i29 0))
+      (cond
+       ((py-list? e28) (py-list-ref e28 i29))
+       ((tuple? e28) (tuple-ref e28 i29))
+       ((dict? e28) (dict-ref e28 i29))
+       (else (error "cannot index object"))))))
+ (set-global!
+  input2
+  (let ((e30 (get-global test1)))
+    (let ((i31 1))
+      (cond
+       ((py-list? e30) (py-list-ref e30 i31))
+       ((tuple? e30) (tuple-ref e30 i31))
+       ((dict? e30) (dict-ref e30 i31))
+       (else (error "cannot index object"))))))
+ ((get-global proc_results) (get-global input1) (get-global input2))
+ (py-print "-------------------------------")
+ (set-global! test2 ((get-global gen_malicious_input)))
+ (set-global!
+  input3
+  (let ((e32 (get-global test2)))
+    (let ((i33 0))
+      (cond
+       ((py-list? e32) (py-list-ref e32 i33))
+       ((tuple? e32) (tuple-ref e32 i33))
+       ((dict? e32) (dict-ref e32 i33))
+       (else (error "cannot index object"))))))
+ (set-global!
+  input4
+  (let ((e34 (get-global test2)))
+    (let ((i35 1))
+      (cond
+       ((py-list? e34) (py-list-ref e34 i35))
+       ((tuple? e34) (tuple-ref e34 i35))
+       ((dict? e34) (dict-ref e34 i35))
+       (else (error "cannot index object"))))))
+ ((get-global proc_results) (get-global input3) (get-global input4)))

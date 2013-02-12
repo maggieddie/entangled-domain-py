@@ -1,0 +1,5 @@
+(program
+ (def (foo) (suite (return 2)))
+ (def (bar) (suite (return (indexed foo (called)))))
+ (= (a) (indexed bar (called))))
+
